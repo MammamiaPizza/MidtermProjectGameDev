@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byjvjqb6i1e6u"
-path="res://.godot/imported/Tiles 01.png-cf705bafac1b59e5aa1a5054ddf82821.ctex"
+uid="uid://bhso4ruod0mdo"
+path="res://.godot/imported/Boskage Background.png-846654969eec7bd41d70dfa616f86203.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Test Asset/Tiles/Others Tiles/Tiles 01.png"
-dest_files=["res://.godot/imported/Tiles 01.png-cf705bafac1b59e5aa1a5054ddf82821.ctex"]
+source_file="res://asset/Test Asset/titlemap/Backgrouds/Boskage Background.png"
+dest_files=["res://.godot/imported/Boskage Background.png-846654969eec7bd41d70dfa616f86203.ctex"]
 
 [params]
 

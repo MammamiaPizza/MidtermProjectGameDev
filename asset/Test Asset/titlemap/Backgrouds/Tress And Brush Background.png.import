@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6wfhgyc8lvqs"
-path="res://.godot/imported/Tiles 02.png-cdc213de5c7d48f454b9a328dc571a59.ctex"
+uid="uid://dwbkrxd2hdv6l"
+path="res://.godot/imported/Tress And Brush Background.png-510f11148fab741116d36a5b8d636864.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Test Asset/Tiles/Others Tiles/Tiles 02.png"
-dest_files=["res://.godot/imported/Tiles 02.png-cdc213de5c7d48f454b9a328dc571a59.ctex"]
+source_file="res://asset/Test Asset/titlemap/Backgrouds/Tress And Brush Background.png"
+dest_files=["res://.godot/imported/Tress And Brush Background.png-510f11148fab741116d36a5b8d636864.ctex"]
 
 [params]
 

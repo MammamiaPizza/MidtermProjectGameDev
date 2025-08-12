@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v1n5qx120epe"
-path="res://.godot/imported/Tiles Group 02.png-8b6f262d37a369ec36ed79e106833fd7.ctex"
+uid="uid://ot0rocv3tnxq"
+path="res://.godot/imported/Mountains Background.png-25946ac4db1ddde72591a6a9cca56b91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Test Asset/Tiles/Others Tiles/Tiles Group 02.png"
-dest_files=["res://.godot/imported/Tiles Group 02.png-8b6f262d37a369ec36ed79e106833fd7.ctex"]
+source_file="res://asset/Test Asset/titlemap/Backgrouds/Mountains Background.png"
+dest_files=["res://.godot/imported/Mountains Background.png-25946ac4db1ddde72591a6a9cca56b91.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwbkrxd2hdv6l"
-path="res://.godot/imported/Tress And Brush Background.png-31cf1f8f5bf06522191debe7923c22ba.ctex"
+uid="uid://dc2whrgkvpoht"
+path="res://.godot/imported/icon.svg-635c9cd9560944100972280930a50328.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Test Asset/Backgrouds/Tress And Brush Background.png"
-dest_files=["res://.godot/imported/Tress And Brush Background.png-31cf1f8f5bf06522191debe7923c22ba.ctex"]
+source_file="res://asset/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-635c9cd9560944100972280930a50328.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

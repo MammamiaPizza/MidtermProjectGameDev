@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blgk46vena8ph"
-path="res://.godot/imported/Tiles 02 Brush.png-214d7353156216cc70ea5aef49e55b78.ctex"
+uid="uid://d1rw3ir2xrpnw"
+path="res://.godot/imported/Grass Tiles 02.png-f84b7fa1e7bb0a0fa8d2a50d13b750e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Test Asset/Tiles/Others Tiles/Tiles 02 Brush.png"
-dest_files=["res://.godot/imported/Tiles 02 Brush.png-214d7353156216cc70ea5aef49e55b78.ctex"]
+source_file="res://asset/Test Asset/titlemap/Tiles/Others Tiles/Grass Tiles 02.png"
+dest_files=["res://.godot/imported/Grass Tiles 02.png-f84b7fa1e7bb0a0fa8d2a50d13b750e4.ctex"]
 
 [params]
 
