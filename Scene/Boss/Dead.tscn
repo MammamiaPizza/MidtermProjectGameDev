@@ -1255,7 +1255,7 @@ position = Vector2(-72, 96)
 scale = Vector2(4.725, 4.725)
 sprite_frames = SubResource("SpriteFrames_wg0mq")
 animation = &"Attack2"
-frame_progress = 0.525367
+frame_progress = 0.951811
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-61, 147)

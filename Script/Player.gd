@@ -8,22 +8,31 @@ func _ready() -> void:
 	$regenStamina.start()
 
 func _process(delta: float) -> void:
-
-	if Input.is_action_just_pressed("iframedodge"):	
-		dodge()
-
+	
 	var axis = Input.get_axis("left", "right")
 	velocity = Vector2(axis * speed, velocity.y)
 	
 	if !is_on_floor():
 		velocity.y += gravity
+
+	if Input.is_action_just_pressed("iframedodge"):	
+		dodge()
 	
 	if Input.is_action_just_pressed("jump"):
 		velocity.y -= 200
 	
 	if Input.is_action_just_pressed("down"):	
 		position.y += 1
-		
+	
+	if (velocity.x > 1):
+		$Sprite2D.flip_h = false
+	elif (velocity.x < -1):
+		$Sprite2D.flip_h = true
+	
+	if Input.is_action_just_pressed("AttackMelee"):
+		attack()
+	
+	
 	move_and_slide()
 	
 func dodge():
@@ -36,3 +45,6 @@ func dodge():
 func _on_regen_stamina_timeout() -> void:
 	if stamina<100:
 		stamina += 1
+
+func attack():
+	
