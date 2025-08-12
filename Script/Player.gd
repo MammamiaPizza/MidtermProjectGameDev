@@ -3,9 +3,13 @@ extends CharacterBody2D
 var speed = 200
 var gravity = 3
 var stamina = 100
+var doublejump = true
+
 
 func _ready() -> void:
 	$regenStamina.start()
+	$Attack.hide()
+	$Attack/CollisionShape2D.disabled = true
 
 func _process(delta: float) -> void:
 	
@@ -14,24 +18,31 @@ func _process(delta: float) -> void:
 	
 	if !is_on_floor():
 		velocity.y += gravity
+	elif is_on_floor():
+		doublejump = true
 
-	if Input.is_action_just_pressed("iframedodge"):	
+	if Input.is_action_pressed("iframedodge"):	
 		dodge()
 	
 	if Input.is_action_just_pressed("jump"):
-		velocity.y -= 200
+		jumping()
 	
-	if Input.is_action_just_pressed("down"):	
+	if Input.is_action_pressed("down") and is_on_floor():	
 		position.y += 1
 	
-	if (velocity.x > 1):
+	if (axis > 0):
 		$Sprite2D.flip_h = false
-	elif (velocity.x < -1):
+		#$Attack/AnimatedSprite2D.flip_h = false
+		#$Attack/CollisionShape2D.scale.x *= 1
+		$Attack.scale.x = 1
+	elif (axis < 0):
 		$Sprite2D.flip_h = true
+		#$Attack/AnimatedSprite2D.flip_h = true
+		#$Attack/CollisionShape2D.scale.x *= -1
+		$Attack.scale.x = -1
 	
 	if Input.is_action_just_pressed("AttackMelee"):
 		attack()
-	
 	
 	move_and_slide()
 	
@@ -47,4 +58,18 @@ func _on_regen_stamina_timeout() -> void:
 		stamina += 1
 
 func attack():
+	#print("attack!")
+	$Attack/CollisionShape2D.disabled = false
+	$Attack.show()
+	$Attack/AnimatedSprite2D.play("default")
+	await $Attack/AnimatedSprite2D.animation_finished
+	$Attack/CollisionShape2D.disabled = true
+	$Attack.hide()
+
+func jumping():
+	if !is_on_floor() and doublejump:
+		velocity.y -= 200
+		doublejump = false
+	elif is_on_floor():
+		velocity.y -= 200
 	

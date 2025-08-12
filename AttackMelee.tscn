@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://fak8n3ehsw7u"]
+
+[ext_resource type="Texture2D" uid="uid://dtjq8krrutwk" path="res://asset/espada de escudeiro (1).png" id="1_05etm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mud5u"]
+atlas = ExtResource("1_05etm")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvocf"]
+atlas = ExtResource("1_05etm")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmp2f"]
+atlas = ExtResource("1_05etm")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pik8"]
+atlas = ExtResource("1_05etm")
+region = Rect2(0, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adgam"]
+atlas = ExtResource("1_05etm")
+region = Rect2(0, 512, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8cdnm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mud5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvocf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmp2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pik8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adgam")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1g3l"]
+size = Vector2(197.545, 187.273)
+
+[node name="Attack" type="Area2D" groups=["attack"]]
+scale = Vector2(0.64, 0.64)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["attack"]]
+position = Vector2(108, 9)
+scale = Vector2(1.66, 1.66)
+sprite_frames = SubResource("SpriteFrames_8cdnm")
+frame = 4
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["attack"]]
+position = Vector2(95.3125, 1.5625)
+shape = SubResource("RectangleShape2D_b1g3l")
