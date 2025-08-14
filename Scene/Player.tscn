@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://eqo2nnuacpxv" path="res://Script/Player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://dc2whrgkvpoht" path="res://asset/icon.svg" id="1_xhfnw"]
-[ext_resource type="PackedScene" uid="uid://fak8n3ehsw7u" path="res://AttackMelee.tscn" id="3_jvxg0"]
+[ext_resource type="PackedScene" uid="uid://fak8n3ehsw7u" path="res://Scene/AttackMelee.tscn" id="3_jvxg0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
 size = Vector2(123, 126)
