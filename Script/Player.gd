@@ -4,12 +4,13 @@ var speed = 200
 var gravity = 3
 var stamina = 100
 var doublejump = true
+var alive = true
 
 
 func _ready() -> void:
 	$regenStamina.start()
 	$Attack.hide()
-	$Attack/CollisionShape2D.disabled = true
+	#$Attack/CollisionShape2D.disabled = true
 
 func _process(delta: float) -> void:
 	
