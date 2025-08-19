@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1ys0vcw26wun"
+path="res://.godot/imported/ครึ่งทางแล้วสินะ ยังต้องพยายามอีกหน่อยนะ.wav-370689c2b066608018ef7120b75cb02b.sample"
+
+[deps]
+
+source_file="res://asset/dialog/voice/ครึ่งทางแล้วสินะ ยังต้องพยายามอีกหน่อยนะ.wav"
+dest_files=["res://.godot/imported/ครึ่งทางแล้วสินะ ยังต้องพยายามอีกหน่อยนะ.wav-370689c2b066608018ef7120b75cb02b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

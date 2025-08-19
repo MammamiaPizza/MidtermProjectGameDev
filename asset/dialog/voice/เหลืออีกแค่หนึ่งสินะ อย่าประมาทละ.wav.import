@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d4nqdcs8tcg5i"
+path="res://.godot/imported/เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ.wav-1494bfd3ac653831fc5d386459c71e75.sample"
+
+[deps]
+
+source_file="res://asset/dialog/voice/เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ.wav"
+dest_files=["res://.godot/imported/เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ.wav-1494bfd3ac653831fc5d386459c71e75.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

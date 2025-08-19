@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1qvbbpslb3kn"
+path="res://.godot/imported/เทพเจ้ามักจะหยิ่งในศักดิ์ศรี และไม่ชอบสุงสิงกัน.wav-4a63eb5c719d032951a57f7454c06e3f.sample"
+
+[deps]
+
+source_file="res://asset/dialog/voice/เทพเจ้ามักจะหยิ่งในศักดิ์ศรี และไม่ชอบสุงสิงกัน.wav"
+dest_files=["res://.godot/imported/เทพเจ้ามักจะหยิ่งในศักดิ์ศรี และไม่ชอบสุงสิงกัน.wav-4a63eb5c719d032951a57f7454c06e3f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

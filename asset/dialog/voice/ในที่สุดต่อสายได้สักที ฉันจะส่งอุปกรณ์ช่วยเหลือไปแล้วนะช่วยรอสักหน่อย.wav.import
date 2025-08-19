@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://q0lybi3scepx"
+path="res://.godot/imported/ในที่สุดต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย.wav-5a1b2db908ac524bd0d637fa93ccff7c.sample"
+
+[deps]
+
+source_file="res://asset/dialog/voice/ในที่สุดต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย.wav"
+dest_files=["res://.godot/imported/ในที่สุดต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย.wav-5a1b2db908ac524bd0d637fa93ccff7c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
