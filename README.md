@@ -1,8 +1,8 @@
-#โครงงานเกมส์ Mid-Term
+## โครงงานเกมส์ Mid-Term
 
-วิชา Computer Game Development CP352203
+#วิชา Computer Game Development CP352203
 
-สมาชิก
+#สมาชิก
 1.ธนภูมิ แทนทุมมา 673380271-3 CP-CS Sec-1 
 
 2.ปุณณวิชญ์ พงษ์สวโรจน์ 673380281-0 CP-CS Sec-1
