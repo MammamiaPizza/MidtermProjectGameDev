@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://nkh06e2ed3sy"]
+[gd_scene load_steps=8 format=4 uid="uid://nkh06e2ed3sy"]
 
 [ext_resource type="Texture2D" uid="uid://bcjnytqrip5y1" path="res://TestBeforeMake/Test Asset/titlemap/Backgrouds/Mountains And CLouds Background.png" id="1_hotdq"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player.tscn" id="2_1wxxd"]
 [ext_resource type="TileSet" uid="uid://b7x6sld4uggip" path="res://TestBeforeMake/Test Asset/titlemap/new_tile_set.tres" id="3_ngiey"]
 [ext_resource type="Texture2D" uid="uid://dwbkrxd2hdv6l" path="res://TestBeforeMake/Test Asset/titlemap/Backgrouds/Tress And Brush Background.png" id="4_1wxxd"]
 [ext_resource type="Script" uid="uid://h3jfaqaq66mn" path="res://TestBeforeMake/Test/testcollision.gd" id="4_ngiey"]
+[ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="6_px6wa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngiey"]
 
@@ -38,5 +39,8 @@ texture = ExtResource("4_1wxxd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_ngiey")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="." groups=["platform"]]
+tile_set = ExtResource("6_px6wa")
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
