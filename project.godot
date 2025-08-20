@@ -34,6 +34,7 @@ Ground=""
 platform=""
 player=""
 attack=""
+Enemy=""
 
 [input]
 
