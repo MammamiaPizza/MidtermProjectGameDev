@@ -16,3 +16,4 @@ data_*/
 mono_crash.*.json
 addons/godot-wasm/bin/windows/~godot-wasm.dll
 addons/godot-git-plugin/win64/~libgit_plugin.windows.editor.x86_64.dll
+/addons/godot-git-plugin/win64
