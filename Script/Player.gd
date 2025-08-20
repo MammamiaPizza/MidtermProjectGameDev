@@ -5,6 +5,7 @@ var gravity = 3
 var stamina = 100
 var doublejump = true
 var alive = true
+var checkdodge = false
 
 
 func _ready() -> void:
@@ -44,14 +45,18 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("AttackMelee"):
 		attack()
-	
+		speed = 200
+		
 	move_and_slide()
 	
 func dodge():
+	$Attack/AnimatedSprite2D.set_frame(0)
+	$Attack/CollisionShape2D.disabled = true
+	$Attack.hide()
 	if stamina > 20:
 			stamina = stamina - 20
-			speed = 800
-			await get_tree().create_timer(0.1).timeout
+			speed = 400
+			await get_tree().create_timer(0.3).timeout
 			speed = 200
 
 func _on_regen_stamina_timeout() -> void:
@@ -59,7 +64,6 @@ func _on_regen_stamina_timeout() -> void:
 		stamina += 1
 
 func attack():
-	#print("attack!")
 	$Attack/CollisionShape2D.disabled = false
 	$Attack.show()
 	$Attack/AnimatedSprite2D.play("default")
@@ -74,3 +78,8 @@ func jumping():
 	elif is_on_floor():
 		velocity.y -= 200
 	
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if area.is_in_group("attackByBoss"):
+		print("Hello")

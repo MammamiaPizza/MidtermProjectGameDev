@@ -33,8 +33,9 @@ version_control/autoload_on_startup=true
 Ground=""
 platform=""
 player=""
-attack=""
 Enemy=""
+attackByBoss=""
+attackByPlayer=""
 
 [input]
 

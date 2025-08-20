@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxlh3634jlcsk"]
+[gd_scene load_steps=6 format=3 uid="uid://cxlh3634jlcsk"]
 
 [ext_resource type="Script" uid="uid://eqo2nnuacpxv" path="res://Script/Player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://dc2whrgkvpoht" path="res://asset/icon.svg" id="1_xhfnw"]
@@ -7,8 +7,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
 size = Vector2(123, 126)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvxg0"]
+size = Vector2(118.182, 118.182)
+
 [node name="Node2D" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.22, 0.22)
+collision_layer = 0
 script = ExtResource("1_kpjcp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
@@ -23,4 +27,11 @@ wait_time = 0.25
 [node name="Attack" parent="." instance=ExtResource("3_jvxg0")]
 position = Vector2(14.415, 0)
 
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(1.62558e-06, -5.4186e-07)
+shape = SubResource("RectangleShape2D_jvxg0")
+
 [connection signal="timeout" from="regenStamina" to="." method="_on_regen_stamina_timeout"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
