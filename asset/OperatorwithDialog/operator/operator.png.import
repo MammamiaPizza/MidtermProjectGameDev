@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dumb3ard8opgt"
-path="res://.godot/imported/operator.png-358c6b145897eff35772f188a37568b9.ctex"
+path="res://.godot/imported/operator.png-654548213ee86d1e39bb610e97ce6a78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/operator/operator.png"
-dest_files=["res://.godot/imported/operator.png-358c6b145897eff35772f188a37568b9.ctex"]
+source_file="res://asset/OperatorwithDialog/operator/operator.png"
+dest_files=["res://.godot/imported/operator.png-654548213ee86d1e39bb610e97ce6a78.ctex"]
 
 [params]
 

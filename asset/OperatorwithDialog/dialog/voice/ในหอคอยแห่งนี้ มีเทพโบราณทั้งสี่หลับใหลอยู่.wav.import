@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxop41t216ffb"
+path="res://.godot/imported/ในหอคอยแห่งนี้ มีเทพโบราณทั้งสี่หลับใหลอยู่.wav-0ac62f7e8e7e760463457601a9ffa4e9.sample"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/dialog/voice/ในหอคอยแห่งนี้ มีเทพโบราณทั้งสี่หลับใหลอยู่.wav"
+dest_files=["res://.godot/imported/ในหอคอยแห่งนี้ มีเทพโบราณทั้งสี่หลับใหลอยู่.wav-0ac62f7e8e7e760463457601a9ffa4e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

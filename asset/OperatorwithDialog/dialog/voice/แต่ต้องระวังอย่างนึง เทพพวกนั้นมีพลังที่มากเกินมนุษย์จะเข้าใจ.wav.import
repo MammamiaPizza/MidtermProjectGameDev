@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8tknj7mppcee"
+path="res://.godot/imported/แต่ต้องระวังอย่างนึง เทพพวกนั้นมีพลังที่มากเกินมนุษย์จะเข้าใจ.wav-546b3904c8e883e98399fcf08eef775e.sample"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/dialog/voice/แต่ต้องระวังอย่างนึง เทพพวกนั้นมีพลังที่มากเกินมนุษย์จะเข้าใจ.wav"
+dest_files=["res://.godot/imported/แต่ต้องระวังอย่างนึง เทพพวกนั้นมีพลังที่มากเกินมนุษย์จะเข้าใจ.wav-546b3904c8e883e98399fcf08eef775e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

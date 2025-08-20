@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://s6n8ekq2qqva"
+path="res://.godot/imported/เดี๋ยวฉันจะอธิบายความสามารถของพวกมันให้ฟัง จำให้ดีละ.wav-9f7ab7e0c46d0ef43f77e226505b135e.sample"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/dialog/voice/เดี๋ยวฉันจะอธิบายความสามารถของพวกมันให้ฟัง จำให้ดีละ.wav"
+dest_files=["res://.godot/imported/เดี๋ยวฉันจะอธิบายความสามารถของพวกมันให้ฟัง จำให้ดีละ.wav-9f7ab7e0c46d0ef43f77e226505b135e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

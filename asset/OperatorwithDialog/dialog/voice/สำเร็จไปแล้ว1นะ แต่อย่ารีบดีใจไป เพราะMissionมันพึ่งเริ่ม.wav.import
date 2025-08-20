@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dq2n27y67s6xt"
+path="res://.godot/imported/สำเร็จไปแล้ว1นะ แต่อย่ารีบดีใจไป เพราะMissionมันพึ่งเริ่ม.wav-1719ee5d17ccf28f9c99f1157ff9b3a4.sample"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/dialog/voice/สำเร็จไปแล้ว1นะ แต่อย่ารีบดีใจไป เพราะMissionมันพึ่งเริ่ม.wav"
+dest_files=["res://.godot/imported/สำเร็จไปแล้ว1นะ แต่อย่ารีบดีใจไป เพราะMissionมันพึ่งเริ่ม.wav-1719ee5d17ccf28f9c99f1157ff9b3a4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
