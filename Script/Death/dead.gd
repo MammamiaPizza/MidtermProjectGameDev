@@ -26,7 +26,8 @@ func _on_attack_time_timeout() -> void:
 		$AnimatedSprite2D.play(randommove)
 		await $AnimatedSprite2D.animation_finished
 		$Hit/Attack2.disabled = false
+		$Hit/AnimatedSprite2D2.play("Attack2")
 		$Hit/AnimatedSprite2D2.flip_h = true
-		await get_tree().create_timer(0.2).timeout
+		await $Hit/AnimatedSprite2D2.animation_finished
 		$Hit/Attack2.disabled = true
 		
