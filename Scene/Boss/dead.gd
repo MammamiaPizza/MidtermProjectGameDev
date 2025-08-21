@@ -4,6 +4,7 @@ extends CharacterBody2D
 var Moveset: Array = ["Attack1"]
 @onready var target : CharacterBody2D
 var speed = 300
+var damage = 10000000
 var randommove
 
 func _ready() -> void:
@@ -22,4 +23,5 @@ func _on_attack_time_timeout() -> void:
 		await get_tree().create_timer(0.85).timeout
 		$Hit/Attack1.disabled = true
 	
-		
+func getDamage() -> int:
+	return damage

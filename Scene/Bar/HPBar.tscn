@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://5skj1vbaj7s"]
+[gd_scene load_steps=2 format=3 uid="uid://5skj1vbaj7s"]
+
+[ext_resource type="Script" uid="uid://bnnwebpal1afj" path="res://Scene/Bar/hp_bar.gd" id="1_vqi6b"]
 
 [node name="TextureProgressBar" type="TextureProgressBar"]
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_vqi6b")
