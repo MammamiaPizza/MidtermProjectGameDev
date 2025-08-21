@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://nkh06e2ed3sy"]
+[gd_scene load_steps=7 format=4 uid="uid://nkh06e2ed3sy"]
 
 [ext_resource type="Texture2D" uid="uid://bcjnytqrip5y1" path="res://TestBeforeMake/Test Asset/titlemap/Backgrouds/Mountains And CLouds Background.png" id="1_hotdq"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player.tscn" id="2_1wxxd"]
 [ext_resource type="TileSet" uid="uid://b7x6sld4uggip" path="res://TestBeforeMake/Test Asset/titlemap/new_tile_set.tres" id="3_ngiey"]
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="3_px6wa"]
 [ext_resource type="PackedScene" uid="uid://c51bk8gubpoi6" path="res://Scene/Boss/Dead.tscn" id="5_yx1ll"]
+[ext_resource type="PackedScene" uid="uid://5skj1vbaj7s" path="res://Scene/Bar/HPBar.tscn" id="6_px6wa"]
 
 [node name="TestBoss" type="Node2D"]
 
@@ -31,8 +32,14 @@ position = Vector2(137, 634)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2.82, 2.82)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
 [node name="Dead" parent="." instance=ExtResource("5_yx1ll")]
 position = Vector2(665, 625)
 scale = Vector2(0.1, 0.1)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="TextureProgressBar" parent="CanvasLayer2" instance=ExtResource("6_px6wa")]
+offset_left = 94.0
+offset_top = 300.0
+offset_right = 134.0
+offset_bottom = 340.0

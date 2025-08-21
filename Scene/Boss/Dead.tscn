@@ -1,7 +1,7 @@
-[gd_scene load_steps=406 format=3 uid="uid://c51bk8gubpoi6"]
+[gd_scene load_steps=407 format=3 uid="uid://c51bk8gubpoi6"]
 
 [ext_resource type="Texture2D" uid="uid://drjqiqmdpmnou" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00000.png" id="1_dmeo4"]
-[ext_resource type="Script" uid="uid://cjwnh4f6dtds5" path="res://Scene/Boss/dead.gd" id="1_q8t34"]
+[ext_resource type="Script" uid="uid://cjwnh4f6dtds5" path="res://Script/Death/dead.gd" id="1_q8t34"]
 [ext_resource type="Texture2D" uid="uid://dct7yp3a8lqrb" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00001.png" id="2_q8t34"]
 [ext_resource type="Texture2D" uid="uid://cvtbt2pa68dkd" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00002.png" id="3_6a2k8"]
 [ext_resource type="Texture2D" uid="uid://cvj4r36gobexu" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00003.png" id="4_3h8pq"]
@@ -398,6 +398,7 @@
 [ext_resource type="Texture2D" uid="uid://gcv2jl4p0d54" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame6.png" id="296_fpat5"]
 [ext_resource type="Texture2D" uid="uid://c1x63mqo7xb76" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame7.png" id="297_pgeon"]
 [ext_resource type="Texture2D" uid="uid://db10y2qcqgqt5" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame8.png" id="298_u4ikh"]
+[ext_resource type="Script" uid="uid://clsoagbaaw7mi" path="res://Script/Death/hit.gd" id="391_e4bhh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rm2fl"]
 animations = [{
@@ -1656,6 +1657,7 @@ position = Vector2(-34.5, 4.5)
 shape = SubResource("RectangleShape2D_dmeo4")
 
 [node name="Hit" type="Area2D" parent="." groups=["attackByBoss"]]
+script = ExtResource("391_e4bhh")
 
 [node name="Attack1" type="CollisionShape2D" parent="Hit" groups=["attackByBoss"]]
 position = Vector2(-9, -2.5)

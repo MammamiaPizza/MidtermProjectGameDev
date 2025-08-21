@@ -2,10 +2,13 @@ extends CharacterBody2D
 
 signal gethit
 
-var speed = 200
-var gravity = 3
 var hp = 100
 var stamina = 100
+var damage = 20
+
+var speed = 200
+var gravity = 3
+
 var doublejump = true
 var alive = true
 var checkdodge = false
@@ -85,6 +88,6 @@ func jumping():
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByBoss"):
-		var damageinput = area.getDamage()
-		hp -= damageinput
-		gethit.emit()
+		var getdamagefromattack = area.getDamage()
+		print(getdamagefromattack)
+		
