@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://nkh06e2ed3sy"]
+[gd_scene load_steps=7 format=4 uid="uid://nkh06e2ed3sy"]
 
 [ext_resource type="Texture2D" uid="uid://bcjnytqrip5y1" path="res://TestBeforeMake/Test Asset/titlemap/Backgrouds/Mountains And CLouds Background.png" id="1_hotdq"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player.tscn" id="2_1wxxd"]
 [ext_resource type="TileSet" uid="uid://b7x6sld4uggip" path="res://TestBeforeMake/Test Asset/titlemap/new_tile_set.tres" id="3_ngiey"]
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="3_px6wa"]
 [ext_resource type="PackedScene" uid="uid://c51bk8gubpoi6" path="res://Scene/Boss/Dead.tscn" id="5_yx1ll"]
+[ext_resource type="Script" uid="uid://dx4m3lbmmw7hw" path="res://TestBeforeMake/Test/Healthbar.gd" id="6_px6wa"]
 
 [node name="TestBoss" type="Node2D"]
 
@@ -34,5 +35,22 @@ zoom = Vector2(2.82, 2.82)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Dead" parent="." instance=ExtResource("5_yx1ll")]
-position = Vector2(665, 625)
+position = Vector2(710, 601)
 scale = Vector2(0.1, 0.1)
+<<<<<<< Updated upstream
+=======
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -32.0
+offset_right = 241.0
+offset_bottom = -5.0
+grow_vertical = 0
+value = 100.0
+script = ExtResource("6_px6wa")
+>>>>>>> Stashed changes
