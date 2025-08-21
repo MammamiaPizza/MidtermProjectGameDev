@@ -11,8 +11,9 @@ specular_color = Color(0.808137, 3.27289e-06, 7.70092e-07, 1)
 specular_color = Color(0.474797, 1.11302e-06, 3.60981e-07, 1)
 
 [node name="TextureProgressBar" type="TextureProgressBar"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 24.0
+offset_bottom = 1.0
+value = 100.0
 texture_under = SubResource("CanvasTexture_vqi6b")
 texture_over = SubResource("CanvasTexture_i0dhc")
 texture_progress = SubResource("CanvasTexture_menxm")
