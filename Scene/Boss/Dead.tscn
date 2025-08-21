@@ -1680,6 +1680,7 @@ shape = SubResource("RectangleShape2D_cqud1")
 disabled = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Hit" groups=["attackByBoss"]]
+visible = false
 position = Vector2(-4075, 27)
 scale = Vector2(37.4969, 37.4969)
 sprite_frames = SubResource("SpriteFrames_wg0mq")
@@ -1689,4 +1690,9 @@ frame_progress = 0.28389
 [node name="AttackTime" type="Timer" parent="."]
 wait_time = 3.5
 
+[node name="ChangePhase" type="Timer" parent="."]
+wait_time = 180.0
+one_shot = true
+
 [connection signal="timeout" from="AttackTime" to="." method="_on_attack_time_timeout"]
+[connection signal="timeout" from="ChangePhase" to="." method="_on_change_phase_timeout"]
