@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal gethit
 
 var hp = 100
-var stamina = 100
+var stamina = 1000000
 var damage = 20
 
 var speed = 200
@@ -11,7 +11,6 @@ var gravity = 3
 
 var doublejump = true
 var alive = true
-var checkdodge = false
 
 
 func _ready() -> void:
@@ -65,10 +64,13 @@ func dodge():
 	$Attack/CollisionShape2D.disabled = true
 	$Attack.hide()
 	if stamina > 20:
+			$Hitbox/CollisionShape2D.disabled = true
 			stamina = stamina - 20
 			speed = 400
 			await get_tree().create_timer(0.3).timeout
+			#await get_tree().create_timer(5).timeout
 			speed = 200
+			$Hitbox/CollisionShape2D.disabled = false
 
 func _on_regen_stamina_timeout() -> void:
 	if stamina<100:

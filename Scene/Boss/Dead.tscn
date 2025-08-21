@@ -732,7 +732,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("108_f8x2l")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack2",
 "speed": 24.0
 }, {
@@ -1231,7 +1231,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("272_8dp7a")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack4",
 "speed": 24.0
 }, {
@@ -1602,10 +1602,10 @@ size = Vector2(245, 683)
 size = Vector2(1014, 797)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6a2k8"]
-size = Vector2(3032, 3792)
+size = Vector2(15626, 20761)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3h8pq"]
-size = Vector2(3216.5, 3780)
+size = Vector2(17690.5, 21457)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqud1"]
 size = Vector2(2178, 2018)
@@ -1637,7 +1637,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("298_u4ikh")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack2",
 "speed": 5.0
 }]
@@ -1650,7 +1650,7 @@ script = ExtResource("1_q8t34")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_rm2fl")
-animation = &"Attack1"
+animation = &"Idle"
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-34.5, 4.5)
@@ -1665,12 +1665,12 @@ shape = SubResource("RectangleShape2D_q8t34")
 disabled = true
 
 [node name="Attack2" type="CollisionShape2D" parent="Hit" groups=["attackByBoss"]]
-position = Vector2(-1583, 7.99996)
+position = Vector2(-7880, 587.5)
 shape = SubResource("RectangleShape2D_6a2k8")
 disabled = true
 
 [node name="Attack3" type="CollisionShape2D" parent="Hit" groups=["attackByBoss"]]
-position = Vector2(1701.75, 14)
+position = Vector2(8938.75, 338.5)
 shape = SubResource("RectangleShape2D_3h8pq")
 disabled = true
 
@@ -1680,8 +1680,8 @@ shape = SubResource("RectangleShape2D_cqud1")
 disabled = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Hit" groups=["attackByBoss"]]
-position = Vector2(-1611, 77)
-scale = Vector2(4.725, 4.725)
+position = Vector2(-4075, 27)
+scale = Vector2(37.4969, 37.4969)
 sprite_frames = SubResource("SpriteFrames_wg0mq")
 animation = &"Attack2"
 frame_progress = 0.28389
