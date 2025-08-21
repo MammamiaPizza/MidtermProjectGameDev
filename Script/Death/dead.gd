@@ -71,3 +71,4 @@ func _on_attack_time_timeout() -> void:
 
 func _on_change_phase_timeout() -> void:
 	Moveset.append("Attack4")
+	cooldown = 1.5
