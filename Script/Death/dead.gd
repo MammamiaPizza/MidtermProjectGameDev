@@ -2,12 +2,13 @@ extends CharacterBody2D
 
 class_name Dead
 
-var Moveset : Array = ["Attack1", "AttackWhole"]
-#var Moveset : Array = ["AttackWhole"]
+#var Moveset : Array = ["Attack1", "AttackWhole"]
+var Moveset : Array = ["AttackWhole"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
 var hp = 10000
 var randommove
 var cooldown = 3.5
+var checkrandom = true
 
 func _ready() -> void:
 	$AttackTime.start()
@@ -16,6 +17,8 @@ func _ready() -> void:
 
 func _on_attack_time_timeout() -> void:
 	randommove = Moveset.pick_random()
+	print(target.position.x)
+	print(position.x)
 	if randommove == "Attack1":
 		position = target.global_position
 		$AnimatedSprite2D.play(randommove)
@@ -24,7 +27,6 @@ func _on_attack_time_timeout() -> void:
 		await get_tree().create_timer(0.2).timeout
 		$Hit/Attack1.disabled = true
 		await $AnimatedSprite2D.animation_finished
-	
 	
 	elif randommove == "AttackWhole":
 		if (position.x > target.position.x):
@@ -66,9 +68,19 @@ func _on_attack_time_timeout() -> void:
 	
 	$AnimatedSprite2D.play("Idle")
 	$Hit/AnimatedSprite2D2.hide()
-	await get_tree().create_timer(cooldown).timeout
+	$CooldownMove.start()
 
 
 func _on_change_phase_timeout() -> void:
 	Moveset.append("Attack4")
 	cooldown = 1.5
+
+
+func _on_hit_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("attackByPlayer"):
+		hp -= area.damage
+		print(hp)
+
+
+func _on_cooldown_move_timeout() -> void:
+	$AttackTime.start()

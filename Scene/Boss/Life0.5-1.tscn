@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://yxbhfix1ybgt"]
+[gd_scene load_steps=101 format=3 uid="uid://yxbhfix1ybgt"]
 
 [ext_resource type="Texture2D" uid="uid://dbf8oh2ld856t" path="res://asset/Boss/Life/First/2din_00000.png" id="1_ah6nl"]
 [ext_resource type="Texture2D" uid="uid://esj8s4bgwtg4" path="res://asset/Boss/Life/First/2din_00001.png" id="2_pcvis"]
@@ -400,15 +400,23 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rdpvs"]
 size = Vector2(504, 1021)
 
-[node name="Node2D" type="Node2D" groups=["Enemy"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah6nl"]
+size = Vector2(506, 1012)
 
-[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+[node name="Life0_5_1" type="CharacterBody2D" groups=["Enemy"]]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" groups=["Enemy"]]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 sprite_frames = SubResource("SpriteFrames_df5ia")
 animation = &"Idle"
 frame_progress = 0.384488
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(3, 6.5)
 shape = SubResource("RectangleShape2D_rdpvs")
+
+[node name="HitArea" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="BodyHit" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(1, 9)
+shape = SubResource("RectangleShape2D_ah6nl")
+disabled = true

@@ -4,7 +4,6 @@ signal gethit
 
 var hp = 100
 var stamina = 1000000
-var damage = 20
 
 var speed = 200
 var gravity = 3
@@ -86,10 +85,10 @@ func attack():
 
 func jumping():
 	if !is_on_floor() and doublejump:
-		velocity.y -= 200
+		velocity.y -= 250
 		doublejump = false
 	elif is_on_floor():
-		velocity.y -= 200
+		velocity.y -= 250
 	
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByBoss"):

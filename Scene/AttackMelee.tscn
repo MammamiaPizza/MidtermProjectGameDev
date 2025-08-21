@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://fak8n3ehsw7u"]
+[gd_scene load_steps=10 format=3 uid="uid://fak8n3ehsw7u"]
 
 [ext_resource type="Texture2D" uid="uid://dtjq8krrutwk" path="res://TestBeforeMake/Test Asset/espada de escudeiro (1).png" id="1_05etm"]
+[ext_resource type="Script" uid="uid://b8hpdyr4nq5nf" path="res://Scene/attack_melee.gd" id="1_13dmc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mud5u"]
 atlas = ExtResource("1_05etm")
@@ -50,6 +51,7 @@ size = Vector2(197.545, 187.273)
 
 [node name="Attack" type="Area2D" groups=["attackByPlayer"]]
 scale = Vector2(0.64, 0.64)
+script = ExtResource("1_13dmc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["attackByPlayer"]]
 position = Vector2(108, 9)
@@ -62,3 +64,5 @@ frame_progress = 1.0
 position = Vector2(95.3125, 1.5625)
 shape = SubResource("RectangleShape2D_b1g3l")
 disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

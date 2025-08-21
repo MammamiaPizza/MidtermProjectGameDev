@@ -1,4 +1,4 @@
-[gd_scene load_steps=407 format=3 uid="uid://c51bk8gubpoi6"]
+[gd_scene load_steps=408 format=3 uid="uid://c51bk8gubpoi6"]
 
 [ext_resource type="Texture2D" uid="uid://drjqiqmdpmnou" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00000.png" id="1_dmeo4"]
 [ext_resource type="Script" uid="uid://cjwnh4f6dtds5" path="res://Script/Death/dead.gd" id="1_q8t34"]
@@ -1642,6 +1642,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4bhh"]
+size = Vector2(257, 694)
+
 [node name="Dead" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 2
 motion_mode = 1
@@ -1687,12 +1690,24 @@ sprite_frames = SubResource("SpriteFrames_wg0mq")
 animation = &"Attack2"
 frame_progress = 0.28389
 
+[node name="HitArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(-32.5, 2)
+shape = SubResource("RectangleShape2D_e4bhh")
+
 [node name="AttackTime" type="Timer" parent="."]
-wait_time = 3.5
+one_shot = true
 
 [node name="ChangePhase" type="Timer" parent="."]
 wait_time = 180.0
 one_shot = true
 
+[node name="CooldownMove" type="Timer" parent="."]
+wait_time = 3.5
+one_shot = true
+
+[connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]
 [connection signal="timeout" from="AttackTime" to="." method="_on_attack_time_timeout"]
 [connection signal="timeout" from="ChangePhase" to="." method="_on_change_phase_timeout"]
+[connection signal="timeout" from="CooldownMove" to="." method="_on_cooldown_move_timeout"]
