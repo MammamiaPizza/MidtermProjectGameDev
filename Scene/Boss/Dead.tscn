@@ -1602,7 +1602,7 @@ size = Vector2(245, 683)
 size = Vector2(1014, 797)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6a2k8"]
-size = Vector2(15626, 20761)
+size = Vector2(15626, 21273)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3h8pq"]
 size = Vector2(17690.5, 21457)
@@ -1650,7 +1650,7 @@ script = ExtResource("1_q8t34")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_rm2fl")
-animation = &"Idle"
+animation = &"Attack3"
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-34.5, 4.5)
@@ -1665,7 +1665,7 @@ shape = SubResource("RectangleShape2D_q8t34")
 disabled = true
 
 [node name="Attack2" type="CollisionShape2D" parent="Hit" groups=["attackByBoss"]]
-position = Vector2(-7880, 587.5)
+position = Vector2(-7880, 331.5)
 shape = SubResource("RectangleShape2D_6a2k8")
 disabled = true
 
