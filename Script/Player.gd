@@ -91,11 +91,9 @@ func jumping():
 	elif is_on_floor():
 		velocity.y -= 200
 	
-
-
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByBoss"):
 		var getdamagefromattack = area.getDamage()
 		hp -= getdamagefromattack
-		print("Hello")
+
 		

@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 class_name Dead
 
-#var Moveset : Array = ["Attack1", "AttackWhole"]
-var Moveset : Array = ["AttackWhole"]
+var Moveset : Array = ["Attack1", "AttackWhole"]
+#var Moveset : Array = ["AttackWhole"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
 var hp = 10000
 var randommove
@@ -25,6 +25,7 @@ func _on_attack_time_timeout() -> void:
 		$Hit/Attack1.disabled = true
 		await $AnimatedSprite2D.animation_finished
 	
+	
 	elif randommove == "AttackWhole":
 		if (position.x > target.position.x):
 			$AnimatedSprite2D.play("Attack2")
@@ -34,10 +35,12 @@ func _on_attack_time_timeout() -> void:
 			$Hit/AnimatedSprite2D2.flip_h = true
 			$Hit/AnimatedSprite2D2.play("Attack2")
 			$Hit/AnimatedSprite2D2.show()
+			
 			await $Hit/AnimatedSprite2D2.animation_finished
 			$Hit/Attack2.disabled = false
-			await get_tree().create_timer(0.01).timeout
-			$Hit/Attack2.disabled = true	
+			await get_tree().create_timer(0.05).timeout
+			$Hit/Attack2.disabled = true
+			
 		elif (position.x < target.position.x):
 			$AnimatedSprite2D.play("Attack3")
 			await $AnimatedSprite2D.animation_finished
@@ -46,9 +49,10 @@ func _on_attack_time_timeout() -> void:
 			$Hit/AnimatedSprite2D2.flip_h = false
 			$Hit/AnimatedSprite2D2.play("Attack2")
 			$Hit/AnimatedSprite2D2.show()
+			
 			await $Hit/AnimatedSprite2D2.animation_finished
 			$Hit/Attack3.disabled = false
-			await get_tree().create_timer(0.01).timeout
+			await get_tree().create_timer(0.05).timeout
 			$Hit/Attack3.disabled = true
 		
 	elif randommove == "Attack4":

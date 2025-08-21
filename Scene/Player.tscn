@@ -12,7 +12,6 @@ size = Vector2(118.182, 118.182)
 
 [node name="Node2D" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.22, 0.22)
-collision_layer = 0
 script = ExtResource("1_kpjcp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
