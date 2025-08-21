@@ -1,6 +1,7 @@
 [gd_scene load_steps=406 format=3 uid="uid://c51bk8gubpoi6"]
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://drjqiqmdpmnou" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00000.png" id="1_dmeo4"]
 [ext_resource type="Script" uid="uid://cjwnh4f6dtds5" path="res://Scene/Boss/dead.gd" id="1_q8t34"]
 [ext_resource type="Texture2D" uid="uid://dct7yp3a8lqrb" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00001.png" id="2_q8t34"]
@@ -66,6 +67,8 @@
 [ext_resource type="Texture2D" uid="uid://w6xmg6gmfyhl" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00061.png" id="62_4oodj"]
 [ext_resource type="Texture2D" uid="uid://bjaupyl4tu6yk" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00062.png" id="63_ns54e"]
 =======
+=======
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://drjqiqmdpmnou" path="res://asset/Boss/Death/animation/attack/hit1/death 2_00000.png" id="1_dmeo4"]
 [ext_resource type="Script" uid="uid://cjwnh4f6dtds5" path="res://Script/Death/dead.gd" id="1_q8t34"]
 [ext_resource type="Texture2D" uid="uid://dct7yp3a8lqrb" path="res://asset/Boss/Death/animation/attack/hit1/death 2_00001.png" id="2_q8t34"]
@@ -130,6 +133,9 @@
 [ext_resource type="Texture2D" uid="uid://br55vr0xi06gv" path="res://asset/Boss/Death/animation/attack/hit1/death 2_00060.png" id="61_afvv4"]
 [ext_resource type="Texture2D" uid="uid://w6xmg6gmfyhl" path="res://asset/Boss/Death/animation/attack/hit1/death 2_00061.png" id="62_4oodj"]
 [ext_resource type="Texture2D" uid="uid://bjaupyl4tu6yk" path="res://asset/Boss/Death/animation/attack/hit1/death 2_00062.png" id="63_ns54e"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://cic4mw4411fhh" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00000.png" id="64_rrafo"]
 [ext_resource type="Texture2D" uid="uid://b808kkmkrgypd" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00001.png" id="65_by3ou"]
