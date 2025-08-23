@@ -1,6 +1,7 @@
-[gd_scene load_steps=104 format=3 uid="uid://0exppuspuctf"]
+[gd_scene load_steps=108 format=3 uid="uid://0exppuspuctf"]
 
 [ext_resource type="Texture2D" uid="uid://c6ocr14paollr" path="res://asset/Boss/Life/Merge/3fin_00000.png" id="1_a7v1v"]
+[ext_resource type="Script" uid="uid://dvfrw14fjg8k5" path="res://Script/lifeMerge.gd" id="1_x3etr"]
 [ext_resource type="Texture2D" uid="uid://daxe0n1yd7ktd" path="res://asset/Boss/Life/Merge/3fin_00001.png" id="2_my8mk"]
 [ext_resource type="Texture2D" uid="uid://jiike36fs0qe" path="res://asset/Boss/Life/Merge/3fin_00002.png" id="3_x3etr"]
 [ext_resource type="Texture2D" uid="uid://cqmvybnapya4i" path="res://asset/Boss/Life/Merge/3fin_00003.png" id="4_ein4o"]
@@ -101,6 +102,7 @@
 [ext_resource type="Texture2D" uid="uid://ecfr8mb6pbxx" path="res://asset/Boss/Life/Merge/3fin_00098.png" id="99_ul8j5"]
 [ext_resource type="Texture2D" uid="uid://cs0q8gn2obbq0" path="res://asset/Boss/Life/Merge/3fin_00099.png" id="100_udq7i"]
 [ext_resource type="Texture2D" uid="uid://dtb2m64pk0xl8" path="res://asset/Boss/Life/Merge/3fin_00100.png" id="101_2loxb"]
+[ext_resource type="Script" uid="uid://b53s8c1vleqee" path="res://Script/Life/AttackLifeMerge.gd" id="102_my8mk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kskbh"]
 animations = [{
@@ -416,13 +418,35 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucn1v"]
 size = Vector2(401, 928)
 
-[node name="Node2D" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3etr"]
+size = Vector2(568, 988)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ein4o"]
+size = Vector2(457, 947)
+
+[node name="LifeMerge" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_x3etr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 sprite_frames = SubResource("SpriteFrames_kskbh")
 animation = &"Idle"
 frame_progress = 0.951476
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-2.5, 31)
 shape = SubResource("RectangleShape2D_ucn1v")
+
+[node name="HitArea" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="HitBox" type="CollisionShape2D" parent="HitArea" groups=["Enemy"]]
+position = Vector2(-10, -7)
+shape = SubResource("RectangleShape2D_x3etr")
+
+[node name="AttackArea" type="Area2D" parent="." groups=["attackByBoss"]]
+script = ExtResource("102_my8mk")
+
+[node name="Attack" type="CollisionShape2D" parent="AttackArea" groups=["attackByBoss"]]
+position = Vector2(9.5, -19.5)
+shape = SubResource("RectangleShape2D_ein4o")
+
+[node name="RandomAttack" type="Timer" parent="."]

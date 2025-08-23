@@ -1,6 +1,7 @@
-[gd_scene load_steps=101 format=3 uid="uid://1h3hibvtv1yv"]
+[gd_scene load_steps=105 format=3 uid="uid://1h3hibvtv1yv"]
 
 [ext_resource type="Texture2D" uid="uid://b8y5lmkrrkgbh" path="res://asset/Boss/Life/Second/1_00000.png" id="1_56jat"]
+[ext_resource type="Script" uid="uid://bxusimem6redv" path="res://Script/life_0.5_2.gd" id="1_h41ar"]
 [ext_resource type="Texture2D" uid="uid://cvvmuyibmw1qk" path="res://asset/Boss/Life/Second/1_00001.png" id="2_77407"]
 [ext_resource type="Texture2D" uid="uid://c47l6rjkyyos4" path="res://asset/Boss/Life/Second/1_00002.png" id="3_h41ar"]
 [ext_resource type="Texture2D" uid="uid://jb0si8pw6g43" path="res://asset/Boss/Life/Second/1_00003.png" id="4_s5dn0"]
@@ -98,6 +99,7 @@
 [ext_resource type="Texture2D" uid="uid://cv20b0e413uga" path="res://asset/Boss/Life/Second/1_00095.png" id="96_wlt13"]
 [ext_resource type="Texture2D" uid="uid://c2vb1ave12ogo" path="res://asset/Boss/Life/Second/1_00096.png" id="97_4demm"]
 [ext_resource type="Texture2D" uid="uid://cdy254bj30cc4" path="res://asset/Boss/Life/Second/1_00097.png" id="98_mbr1y"]
+[ext_resource type="Script" uid="uid://85argttswg8h" path="res://Script/Life/AttackLifeTwo.gd" id="99_77407"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y6do6"]
 animations = [{
@@ -404,15 +406,35 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56jat"]
 size = Vector2(571, 991)
 
-[node name="Node2D" type="Node2D" groups=["Enemy"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77407"]
+size = Vector2(568, 988)
 
-[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h41ar"]
+size = Vector2(457, 947)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" groups=["Enemy"]]
+[node name="Life0_5-2" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_h41ar")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 sprite_frames = SubResource("SpriteFrames_y6do6")
 animation = &"Idle"
 frame_progress = 0.0347629
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-6.5, -5.5)
 shape = SubResource("RectangleShape2D_56jat")
+
+[node name="HitArea" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="HitBox" type="CollisionShape2D" parent="HitArea" groups=["Enemy"]]
+position = Vector2(-10, -7)
+shape = SubResource("RectangleShape2D_77407")
+
+[node name="AttackArea" type="Area2D" parent="." groups=["attackByBoss"]]
+script = ExtResource("99_77407")
+
+[node name="Attack" type="CollisionShape2D" parent="AttackArea" groups=["attackByBoss"]]
+position = Vector2(9.5, -19.5)
+shape = SubResource("RectangleShape2D_h41ar")
+
+[node name="RandomAttack" type="Timer" parent="."]
