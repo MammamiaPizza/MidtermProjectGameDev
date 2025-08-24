@@ -436,5 +436,6 @@ script = ExtResource("99_77407")
 [node name="Attack" type="CollisionShape2D" parent="AttackArea" groups=["attackByBoss"]]
 position = Vector2(9.5, -19.5)
 shape = SubResource("RectangleShape2D_h41ar")
+disabled = true
 
 [node name="RandomAttack" type="Timer" parent="."]

@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 class_name Dead
 
-#var Moveset : Array = ["Attack1", "AttackWhole"]
-var Moveset : Array = ["AttackWhole"]
+var Moveset : Array = ["Attack1", "AttackWhole"]
+#var Moveset : Array = ["AttackWhole"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
 var hp = 10000
 var randommove
