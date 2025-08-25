@@ -8,6 +8,7 @@
 [node name="TestBoss" type="Node2D"]
 
 [node name="MountainsAndCLoudsBackground" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(655, 360)
 scale = Vector2(6.08668, 6.08668)
 texture = ExtResource("1_hotdq")
