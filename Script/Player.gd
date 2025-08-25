@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 signal gethit
 
+var shadow = preload("res://Scene/shadow.tscn")
+
 var hp = 100
 var stamina = 1000000
 
@@ -10,6 +12,7 @@ var gravity = 3
 
 var doublejump = true
 var alive = true
+var checkdash = false
 
 
 func _ready() -> void:
@@ -29,6 +32,9 @@ func _process(delta: float) -> void:
 
 		if Input.is_action_pressed("iframedodge"):	
 			dodge()
+			
+		if checkdash:
+			add_child(shadow)
 		
 		if Input.is_action_just_pressed("jump"):
 			jumping()
@@ -64,12 +70,19 @@ func dodge():
 	$Attack.hide()
 	if stamina > 20:
 			$Hitbox/CollisionShape2D.disabled = true
+			checkdash = true
 			stamina = stamina - 20
 			speed = 400
 			await get_tree().create_timer(0.3).timeout
 			#await get_tree().create_timer(5).timeout
+			checkdash = false
 			speed = 200
 			$Hitbox/CollisionShape2D.disabled = false
+
+func createTrail() -> void:
+	var trail = shadow.instantiate()
+	trail.location = global_position
+	trail.scale = scale
 
 func _on_regen_stamina_timeout() -> void:
 	if stamina<100:
@@ -94,5 +107,3 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByBoss"):
 		var getdamagefromattack = area.getDamage()
 		hp -= getdamagefromattack
-
-		

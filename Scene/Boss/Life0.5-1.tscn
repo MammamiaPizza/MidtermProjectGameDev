@@ -1,6 +1,6 @@
 [gd_scene load_steps=104 format=3 uid="uid://yxbhfix1ybgt"]
 
-[ext_resource type="Script" uid="uid://c7sbve6sqllhc" path="res://Script/life_0.5_1.gd" id="1_0nfg0"]
+[ext_resource type="Script" uid="uid://c7sbve6sqllhc" path="res://Script/Life/life_0.5_1.gd" id="1_0nfg0"]
 [ext_resource type="Texture2D" uid="uid://dbf8oh2ld856t" path="res://asset/Boss/Life/First/2din_00000.png" id="1_ah6nl"]
 [ext_resource type="Texture2D" uid="uid://esj8s4bgwtg4" path="res://asset/Boss/Life/First/2din_00001.png" id="2_pcvis"]
 [ext_resource type="Texture2D" uid="uid://l22sbdyjgh0v" path="res://asset/Boss/Life/First/2din_00002.png" id="3_0nfg0"]

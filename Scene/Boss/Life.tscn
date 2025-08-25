@@ -1,7 +1,7 @@
 [gd_scene load_steps=108 format=3 uid="uid://0exppuspuctf"]
 
 [ext_resource type="Texture2D" uid="uid://c6ocr14paollr" path="res://asset/Boss/Life/Merge/3fin_00000.png" id="1_a7v1v"]
-[ext_resource type="Script" uid="uid://dvfrw14fjg8k5" path="res://Script/lifeMerge.gd" id="1_x3etr"]
+[ext_resource type="Script" uid="uid://dvfrw14fjg8k5" path="res://Script/Life/lifeMerge.gd" id="1_x3etr"]
 [ext_resource type="Texture2D" uid="uid://daxe0n1yd7ktd" path="res://asset/Boss/Life/Merge/3fin_00001.png" id="2_my8mk"]
 [ext_resource type="Texture2D" uid="uid://jiike36fs0qe" path="res://asset/Boss/Life/Merge/3fin_00002.png" id="3_x3etr"]
 [ext_resource type="Texture2D" uid="uid://cqmvybnapya4i" path="res://asset/Boss/Life/Merge/3fin_00003.png" id="4_ein4o"]

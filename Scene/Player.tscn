@@ -32,5 +32,9 @@ position = Vector2(14.415, 0)
 position = Vector2(1.62558e-06, -5.4186e-07)
 shape = SubResource("RectangleShape2D_jvxg0")
 
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-59.0909, 0)
+texture = ExtResource("1_xhfnw")
+
 [connection signal="timeout" from="regenStamina" to="." method="_on_regen_stamina_timeout"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

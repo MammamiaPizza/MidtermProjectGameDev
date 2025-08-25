@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxfd11ueqmm72"]
+
+[ext_resource type="Texture2D" uid="uid://dc2whrgkvpoht" path="res://asset/icon.svg" id="1_x7acu"]
+[ext_resource type="Script" uid="uid://cniaerb2ekspc" path="res://Scene/shadow.gd" id="2_w70vg"]
+
+[node name="Shadow" type="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0.32549)
+texture = ExtResource("1_x7acu")
+script = ExtResource("2_w70vg")
