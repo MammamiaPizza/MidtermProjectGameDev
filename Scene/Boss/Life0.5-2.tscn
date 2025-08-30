@@ -413,6 +413,8 @@ size = Vector2(568, 988)
 size = Vector2(457, 947)
 
 [node name="Life0_5-2" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_h41ar")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
@@ -439,3 +441,5 @@ shape = SubResource("RectangleShape2D_h41ar")
 disabled = true
 
 [node name="RandomAttack" type="Timer" parent="."]
+
+[connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]

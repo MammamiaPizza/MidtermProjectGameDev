@@ -425,6 +425,8 @@ size = Vector2(568, 988)
 size = Vector2(457, 947)
 
 [node name="LifeMerge" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_x3etr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
@@ -437,6 +439,7 @@ position = Vector2(-2.5, 31)
 shape = SubResource("RectangleShape2D_ucn1v")
 
 [node name="HitArea" type="Area2D" parent="." groups=["Enemy"]]
+collision_mask = 3
 
 [node name="HitBox" type="CollisionShape2D" parent="HitArea" groups=["Enemy"]]
 position = Vector2(-10, -7)
@@ -451,3 +454,5 @@ shape = SubResource("RectangleShape2D_ein4o")
 disabled = true
 
 [node name="RandomAttack" type="Timer" parent="."]
+
+[connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]
