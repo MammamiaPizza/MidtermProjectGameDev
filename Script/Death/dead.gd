@@ -17,8 +17,8 @@ func _ready() -> void:
 
 func _on_attack_time_timeout() -> void:
 	randommove = Moveset.pick_random()
-	print(target.position.x)
-	print(position.x)
+	#print(target.position.x)
+	#print(position.x)
 	if randommove == "Attack1":
 		position = target.global_position
 		$AnimatedSprite2D.play(randommove)

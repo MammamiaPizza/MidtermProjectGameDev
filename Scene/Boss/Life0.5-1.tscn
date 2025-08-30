@@ -403,35 +403,45 @@ animations = [{
 size = Vector2(504, 1021)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ah6nl"]
-size = Vector2(506, 1012)
+size = Vector2(1032.1, 2251.85)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nfg0"]
-size = Vector2(495, 997)
+size = Vector2(1012.35, 2251.85)
 
 [node name="Life0_5_1" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 2
 script = ExtResource("1_0nfg0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
+scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_df5ia")
 animation = &"Idle"
 frame_progress = 0.384488
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(3, 6.5)
+scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_rdpvs")
 
 [node name="HitArea" type="Area2D" parent="." groups=["Enemy"]]
+scale = Vector2(0.45, 0.45)
 
 [node name="BodyHit" type="CollisionShape2D" parent="HitArea" groups=["Enemy"]]
-position = Vector2(1, 9)
+position = Vector2(3.33333, 11.1111)
+scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_ah6nl")
 
 [node name="AttackArea" type="Area2D" parent="." groups=["attackByBoss"]]
+scale = Vector2(0.45, 0.45)
 script = ExtResource("98_pcvis")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" groups=["attackByBoss"]]
-position = Vector2(-0.5, 5.5)
+position = Vector2(3.33333, 8.88887)
+scale = Vector2(0.45, 0.45)
 shape = SubResource("RectangleShape2D_0nfg0")
 disabled = true
 
 [node name="RandomAttack" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="RandomAttack" to="." method="_on_random_attack_timeout"]
