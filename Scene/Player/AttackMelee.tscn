@@ -47,21 +47,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1g3l"]
-size = Vector2(197.545, 187.273)
+size = Vector2(150, 148.438)
 
 [node name="Attack" type="Area2D" groups=["attackByPlayer"]]
 scale = Vector2(0.64, 0.64)
 script = ExtResource("1_13dmc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["attackByPlayer"]]
-position = Vector2(108, 9)
-scale = Vector2(1.66, 1.66)
+position = Vector2(-6.25006, 1.56256)
 sprite_frames = SubResource("SpriteFrames_8cdnm")
 frame = 4
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["attackByPlayer"]]
-position = Vector2(95.3125, 1.5625)
+position = Vector2(-6.25, 6.25)
 shape = SubResource("RectangleShape2D_b1g3l")
 disabled = true
 

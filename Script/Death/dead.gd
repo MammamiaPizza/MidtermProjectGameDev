@@ -2,8 +2,10 @@ extends CharacterBody2D
 
 class_name Dead
 
-#var Moveset : Array = ["Attack1", "AttackWhole"]
-var Moveset : Array = ["Attack1"]
+signal changePhase
+
+var Moveset : Array = ["Attack1", "AttackWhole"]
+#var Moveset : Array = ["Attack1"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
 var hp = 10000
 var randommove
@@ -72,8 +74,10 @@ func _on_attack_time_timeout() -> void:
 
 
 func _on_change_phase_timeout() -> void:
+	#print("hello")
 	Moveset.append("Attack4")
 	cooldown = 1.5
+	changePhase.emit()
 
 
 func _on_hit_area_area_entered(area: Area2D) -> void:

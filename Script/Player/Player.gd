@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 signal gethit
 
-var shadow = preload("res://Scene/shadow.tscn")
+var shadow = preload("res://Scene/Player/Shadow.tscn")
 
 var hp = 100
 var stamina = 100
 
 var speed = 200
 var gravity = 3
+var jumpforce = 250
 
 var doublejump = true
 var alive = true
@@ -18,7 +19,7 @@ var i : int
 
 func _ready() -> void:
 	$regenStamina.start()
-	$Attack.hide()
+	$AnimatedSprite2D/Attack.hide()
 
 #controlling part control
 func _process(delta: float) -> void:
@@ -27,6 +28,14 @@ func _process(delta: float) -> void:
 		#get axis left or right then set position
 		var axis = Input.get_axis("left", "right")
 		velocity = Vector2(axis * speed, velocity.y)
+		
+		#check condition to play animation if on air can jump or fall
+		if velocity == Vector2.ZERO:
+			$AnimatedSprite2D.play("Idle")
+		elif velocity.y > 0:
+			$AnimatedSprite2D.play("Fall")
+		elif velocity.y < 0:
+			$AnimatedSprite2D.play("jump")
 		
 		#check is it floor if not gravity pull to ground and if yes recharge doublejump
 		if !is_on_floor():
@@ -43,16 +52,19 @@ func _process(delta: float) -> void:
 		
 		if Input.is_action_just_pressed("jump"):
 			jumping()
+			$AnimatedSprite2D.play("jump")
 		
 		if Input.is_action_pressed("down") and is_on_floor():	
 			position.y += 1
 		
-		if (axis > 0):
-			$Sprite2D.flip_h = false
-			$Attack.scale.x = 1
-		elif (axis < 0):
-			$Sprite2D.flip_h = true
-			$Attack.scale.x = -1
+		if (axis > 0) and is_on_floor():
+			#$AnimatedSprite2D.flip_h = false
+			$AnimatedSprite2D.scale.x = 0.5
+			$AnimatedSprite2D.play("Walking")
+		elif (axis < 0) and is_on_floor():
+			#$AnimatedSprite2D.flip_h = true
+			$AnimatedSprite2D.scale.x = -0.5
+			$AnimatedSprite2D.play("Walking")
 		
 		if Input.is_action_just_pressed("AttackMelee"):
 			attack()
@@ -68,9 +80,9 @@ func _process(delta: float) -> void:
 	
 func dodge():
 	#before start should make all component ready to open
-	$Attack/AnimatedSprite2D.set_frame(0)
-	$Attack/CollisionShape2D.disabled = true
-	$Attack.hide()
+	$AnimatedSprite2D/Attack/AnimatedSprite2D.set_frame(0)
+	$AnimatedSprite2D/Attack/CollisionShape2D.disabled = true
+	$AnimatedSprite2D/Attack.hide()
 	#checkdash link to createTrail in Process
 	if stamina > 20:
 			$Hitbox/CollisionShape2D.disabled = true
@@ -87,8 +99,8 @@ func dodge():
 #create Shadow follow after dash
 func createTrail() -> void:
 	var trail = shadow.instantiate()
-	trail.position = position
-	trail.scale = scale
+	trail.position = global_position
+	trail.scale = $AnimatedSprite2D.global_scale
 	get_tree().current_scene.add_child(trail)
 	
 
@@ -97,19 +109,21 @@ func _on_regen_stamina_timeout() -> void:
 		stamina += 1
 
 func attack():
-	$Attack/CollisionShape2D.disabled = false
-	$Attack.show()
-	$Attack/AnimatedSprite2D.play("default")
-	await $Attack/AnimatedSprite2D.animation_finished
-	$Attack/CollisionShape2D.disabled = true
-	$Attack.hide()
+	$AnimatedSprite2D/Attack/CollisionShape2D.disabled = false
+	$AnimatedSprite2D/Attack.show()
+	$AnimatedSprite2D/Attack/AnimatedSprite2D.play("default")
+	await $AnimatedSprite2D/Attack/AnimatedSprite2D.animation_finished
+	$AnimatedSprite2D/Attack/CollisionShape2D.disabled = true
+	$AnimatedSprite2D/Attack.hide()
 
 func jumping():
 	if !is_on_floor() and doublejump:
-		velocity.y -= 250
+		velocity.y = 0
+		velocity.y -= jumpforce
 		doublejump = false
 	elif is_on_floor():
-		velocity.y -= 250
+		velocity.y = 0
+		velocity.y -= jumpforce
 	
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByBoss"):

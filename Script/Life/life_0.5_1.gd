@@ -42,3 +42,4 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
 		hp -= area.getDamage()
 		#print(hp)
+		
