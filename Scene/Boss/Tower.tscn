@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://7q53nowtwedw"]
 
-[ext_resource type="Script" uid="uid://bb5hnbvy5nryk" path="res://Scene/Boss/tower.gd" id="1_07xis"]
-[ext_resource type="Texture2D" uid="uid://bjub1x2gnqgex" path="res://asset/ChatGPT Image 20 ส.ค. 2568 14_12_06.png" id="1_dbq77"]
-[ext_resource type="Texture2D" uid="uid://cuub32up6tcvx" path="res://asset/Google_AI_Studio_2025-08-20T07_49_51.948Z.png" id="2_07xis"]
+[ext_resource type="Script" uid="uid://bb5hnbvy5nryk" path="res://Script/Death/tower.gd" id="1_07xis"]
+[ext_resource type="Texture2D" uid="uid://bjub1x2gnqgex" path="res://asset/Boss/Death/ChatGPT Image 20 ส.ค. 2568 14_12_06.png" id="1_dbq77"]
+[ext_resource type="Texture2D" uid="uid://cuub32up6tcvx" path="res://asset/Boss/Death/Google_AI_Studio_2025-08-20T07_49_51.948Z.png" id="2_07xis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_52jj8"]
 size = Vector2(448, 940)

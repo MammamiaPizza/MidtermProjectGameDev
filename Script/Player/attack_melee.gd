@@ -1,6 +1,6 @@
 extends Area2D
 
-var damage = 20
+var damage = 50
 
 func getDamage() -> int:
 	return damage
