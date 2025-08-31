@@ -9,7 +9,7 @@ var stamina = 100
 
 var speed = 200
 var gravity = 3
-var jumpforce = 250
+var jumpforce = 350
 
 var doublejump = true
 var alive = true
@@ -74,7 +74,7 @@ func _process(delta: float) -> void:
 	
 	#check dead
 	if hp <= 0:
-		alive = false
+		#alive = false
 		#queue_free()
 		hide()
 	
