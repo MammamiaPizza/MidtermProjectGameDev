@@ -1,13 +1,26 @@
-[gd_scene load_steps=7 format=4 uid="uid://bcg2u6fv2soqh"]
+[gd_scene load_steps=9 format=4 uid="uid://bcg2u6fv2soqh"]
 
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="1_3e0tl"]
 [ext_resource type="Script" uid="uid://vtp6brdjyrjd" path="res://Scene/Level/dead_level.gd" id="1_14i0j"]
 [ext_resource type="PackedScene" uid="uid://c51bk8gubpoi6" path="res://Scene/Boss/Dead.tscn" id="2_4ywva"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player/Player.tscn" id="2_fqeg3"]
 [ext_resource type="Texture2D" uid="uid://d14as6x0e0nyn" path="res://asset/map/ChatGPT Image 15 ส.ค. 2568 15_38_09.png" id="3_d8qpg"]
+[ext_resource type="PackedScene" uid="uid://cno5ogm4dy45g" path="res://Scene/UI/UI.tscn" id="6_1cb1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d8qpg"]
 size = Vector2(21, 824)
+
+[sub_resource type="GDScript" id="GDScript_1cb1g"]
+script/source = "extends Control
+
+@onready var player = $\"../Player\"
+@onready var boss = $\"../Dead\"
+
+func _process(delta: float) -> void:
+	$Interface/CanvasLayer/TextureProgressBar.value = player.stamina
+	$Interface/CanvasLayer/TextureProgressBar2.value = player.hp
+	$Interface/CanvasLayer/BossBar.value = boss.hp / 100
+"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_14i0j")
@@ -35,7 +48,7 @@ scale = Vector2(0.2, 0.2)
 platform_wall_layers = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
+zoom = Vector2(1.3, 1.3)
 
 [node name="TowerLocate" type="Marker2D" parent="."]
 position = Vector2(119, 143)
@@ -60,6 +73,16 @@ light_mask = 3
 visibility_layer = 3
 position = Vector2(1545, 362)
 shape = SubResource("RectangleShape2D_d8qpg")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_1cb1g")
+
+[node name="Interface" parent="UI" instance=ExtResource("6_1cb1g")]
+layout_mode = 1
 
 [connection signal="towerPowerOn" from="." to="Dead" method="_on_node_2d_tower_power_on"]
 [connection signal="changePhase" from="Dead" to="." method="_on_dead_change_phase"]

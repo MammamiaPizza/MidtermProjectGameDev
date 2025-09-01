@@ -10,7 +10,7 @@ var Moveset : Array = ["Attack1", "AttackWhole"]
 var hp = 10000
 var randommove
 var cooldown = 3.5
-var checkrandom = true
+#var checkrandom = true
 var sealcheck = false
 
 func _ready() -> void:

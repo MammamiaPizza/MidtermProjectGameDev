@@ -11,9 +11,6 @@ var tower2 = towerScene.instantiate()
 var tower3 = towerScene.instantiate()
 var tower4 = towerScene.instantiate()
 
-func _ready() -> void:
-	createTower()
-	
 
 func _on_dead_change_phase() -> void:
 	get_tree().paused = true
@@ -41,6 +38,7 @@ func createTower():
 	tower4.position = Vector2(2000,500)
 	tower4.setTarget($TowerLocate4.position)
 	
+	
 func TowerOpen():
-	print("Hello")
+	#print("Hello")
 	towerPowerOn.emit()

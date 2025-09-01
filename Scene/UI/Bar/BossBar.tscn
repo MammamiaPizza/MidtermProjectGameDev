@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccl33bw75tdd2"]
 
-[ext_resource type="Texture2D" uid="uid://dsnjtqo2bxdl" path="res://asset/UI/BossBar (1).png" id="1_4s765"]
-[ext_resource type="Texture2D" uid="uid://cbvpofbu5f13w" path="res://asset/UI/BossBar.png" id="2_5bmva"]
-[ext_resource type="Texture2D" uid="uid://dv5se4db2rby0" path="res://asset/UI/Skull.png" id="3_5bmva"]
+[ext_resource type="Texture2D" uid="uid://dsnjtqo2bxdl" path="res://asset/UI/Bar/BossBar (1).png" id="1_4s765"]
+[ext_resource type="Texture2D" uid="uid://cbvpofbu5f13w" path="res://asset/UI/Bar/BossBar.png" id="2_5bmva"]
+[ext_resource type="Texture2D" uid="uid://dv5se4db2rby0" path="res://asset/UI/Bar/Skull.png" id="3_5bmva"]
 
 [node name="BossBar" type="TextureProgressBar"]
 anchors_preset = 15

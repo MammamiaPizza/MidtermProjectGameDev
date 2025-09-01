@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsnjtqo2bxdl"
-path="res://.godot/imported/BossBar (1).png-7ca1e089e64609c10683c9a8239f3e9c.ctex"
+uid="uid://dv5se4db2rby0"
+path="res://.godot/imported/Skull.png-f5b3656b5c044a8e2b9655d181397f3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/UI/BossBar (1).png"
-dest_files=["res://.godot/imported/BossBar (1).png-7ca1e089e64609c10683c9a8239f3e9c.ctex"]
+source_file="res://asset/UI/Bar/Skull.png"
+dest_files=["res://.godot/imported/Skull.png-f5b3656b5c044a8e2b9655d181397f3e.ctex"]
 
 [params]
 

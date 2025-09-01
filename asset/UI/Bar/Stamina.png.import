@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v18ehue05uhx"
-path="res://.godot/imported/RobloxScreenShot20250110_171724789.png-d0e5874f7abef34c861aea966270dbdb.ctex"
+uid="uid://bx0gju604cnwb"
+path="res://.godot/imported/Stamina.png-aba83d827d12e3ed2332655e29083cf6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/UI/RobloxScreenShot20250110_171724789.png"
-dest_files=["res://.godot/imported/RobloxScreenShot20250110_171724789.png-d0e5874f7abef34c861aea966270dbdb.ctex"]
+source_file="res://asset/UI/Bar/Stamina.png"
+dest_files=["res://.godot/imported/Stamina.png-aba83d827d12e3ed2332655e29083cf6.ctex"]
 
 [params]
 

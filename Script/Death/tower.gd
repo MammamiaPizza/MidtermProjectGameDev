@@ -4,7 +4,13 @@ signal TowerIsOpen
 
 var hp : int = 7
 
+
+
 var target : Vector2
+
+func _ready() -> void:
+	self.TowerIsOpen.connect(Callable(get_parent(), "TowerOpen"))
+
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
@@ -13,6 +19,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if hp <= 0:
 			$Area2D/CollisionShape2D.disabled = true
 			$Area2D.queue_free()
+			TowerIsOpen.emit()
 
 
 func _process(delta: float) -> void:
@@ -22,4 +29,3 @@ func _process(delta: float) -> void:
 	
 func setTarget(targetposition : Vector2) -> void:
 	target = targetposition
-	
