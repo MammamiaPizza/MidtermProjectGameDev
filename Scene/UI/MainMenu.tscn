@@ -1,8 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvaixmw2mgc2i"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://is7bjg8k1sh3" path="res://Scene/UI/main_menu.gd" id="1_r6j2u"]
 [ext_resource type="VideoStream" uid="uid://diu3m7so8s52l" path="res://asset/map/Aincrad-_Sword-Art-Online_-Unreal-Engine-TheGabmeister-_1080p_-h264_-youtube_.ogv" id="2_sqy52"]
 
+=======
+>>>>>>> Stashed changes
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
