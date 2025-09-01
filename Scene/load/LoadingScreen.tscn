@@ -65,7 +65,6 @@
 [ext_resource type="Texture2D" uid="uid://cx1oygv3muf1d" path="res://asset/Load/white_00060.png" id="63_ih7cr"]
 [ext_resource type="Texture2D" uid="uid://furx3wnn0pgt" path="res://asset/Load/white_00061.png" id="64_o2olq"]
 
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_e5ppl"]
 animations = [{
 "frames": [{
