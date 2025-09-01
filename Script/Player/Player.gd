@@ -129,7 +129,3 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 
 func _on_shadow_trail_timeout() -> void:
 	createTrail()
-
-
-func _on_node_2d_tower_power_on() -> void:
-	$CollisionShape2D.disabled = true

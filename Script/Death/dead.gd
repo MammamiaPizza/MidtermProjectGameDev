@@ -11,7 +11,7 @@ var hp = 10000
 var randommove
 var cooldown = 3.5
 var checkrandom = true
-var sealcheck = true
+var sealcheck = false
 
 func _ready() -> void:
 	$AttackTime.start()
@@ -99,7 +99,6 @@ func _on_node_2d_tower_power_on() -> void:
 		$CooldownMove.stop()
 	else:
 		debuffBoss()
-	
 
 var debuffSet = [1,2,3]
 
@@ -117,5 +116,6 @@ func _process(delta: float) -> void:
 	if sealcheck:
 		var direction = Vector2(625,300) - global_position
 		velocity = direction.normalized() * 20 
+		$Body.disabled = true
 		move_and_slide()
 		

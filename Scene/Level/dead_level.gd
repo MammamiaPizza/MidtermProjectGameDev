@@ -13,6 +13,7 @@ var tower4 = towerScene.instantiate()
 
 func _ready() -> void:
 	createTower()
+	tower.hide()
 
 func _on_dead_change_phase() -> void:
 	get_tree().paused = true
@@ -33,6 +34,7 @@ func createTower():
 	add_child(tower4)
 	tower4.scale = $Dead.scale
 	tower4.position = Vector2(2000,500)
+	
 	
 func _process(delta: float) -> void:
 	if changePhase:

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://cno5ogm4dy45g"]
+
+[ext_resource type="Texture2D" uid="uid://kvwjwe4x3nun" path="res://asset/UI/Title.png" id="1_vwsht"]
+[ext_resource type="PackedScene" uid="uid://c5dsjcym5hnpc" path="res://Scene/UI/Bar/Stamina.tscn" id="2_us0s5"]
+[ext_resource type="PackedScene" uid="uid://5skj1vbaj7s" path="res://Scene/UI/Bar/HPBar.tscn" id="3_5yiys"]
+[ext_resource type="PackedScene" uid="uid://ccl33bw75tdd2" path="res://Scene/UI/Bar/BossBar.tscn" id="4_us0s5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -37.0
+offset_right = -521.0
+offset_bottom = -521.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(41.5, 629.824)
+scale = Vector2(0.246479, 0.246479)
+texture = ExtResource("1_vwsht")
+
+[node name="TextureProgressBar" parent="CanvasLayer" instance=ExtResource("2_us0s5")]
+offset_left = 69.5
+offset_top = 633.824
+offset_right = 1000.5
+offset_bottom = 739.824
+
+[node name="TextureProgressBar2" parent="CanvasLayer" instance=ExtResource("3_5yiys")]
+offset_left = 69.5
+offset_top = 601.824
+offset_right = 1000.5
+offset_bottom = 707.824
+
+[node name="BossBar" parent="CanvasLayer" instance=ExtResource("4_us0s5")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -496.0
+offset_top = -104.0
+offset_right = 763.0
+offset_bottom = 394.0
+grow_vertical = 1
+scale = Vector2(0.835, 0.835)
+size_flags_horizontal = 4
+value = 99.0
