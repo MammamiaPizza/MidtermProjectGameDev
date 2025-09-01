@@ -39,7 +39,7 @@ func _on_attack_time_timeout() -> void:
 			$Hit/Attack1.disabled = false
 			await get_tree().create_timer(0.2).timeout
 			$Hit/Attack1.disabled = true
-			await $AnimatedSprite2D.animation_finished
+			await $body.animation_finished
 		
 		elif randommove == "Attack2":
 			if (position.x > target.position.x):
