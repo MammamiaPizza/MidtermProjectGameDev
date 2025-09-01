@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal gethit
+signal death
 
 var shadow = preload("res://Scene/Player/Shadow.tscn")
 
@@ -70,8 +71,10 @@ func _process(delta: float) -> void:
 	#check dead
 	if hp <= 0:
 		alive = false
-		#queue_free()
-		hide()
+		hp == 100
+		queue_free()
+		#hide()
+		death.emit()
 	
 func dodge():
 	#before start should make all component ready to open

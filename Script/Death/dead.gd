@@ -11,7 +11,8 @@ var hp = 10000
 var randommove
 var cooldown = 3.5
 #var checkrandom = true
-var sealcheck = false
+var sealcheck = true
+
 
 func _ready() -> void:
 	$AttackTime.start()
@@ -97,6 +98,11 @@ func _on_node_2d_tower_power_on() -> void:
 		sealcheck = true
 		$AttackTime.stop()
 		$CooldownMove.stop()
+		var scaletween = create_tween()
+		scaletween.tween_property(self, "scale", Vector2(0.14, 0.14), 2)
+		await scaletween.finished
+		scaletween.tween_property(self, "scale", Vector2(0, 0), 2)
+		self.queue_free()
 	else:
 		debuffBoss()
 
