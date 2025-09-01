@@ -17,7 +17,7 @@ func _on_dead_change_phase() -> void:
 	changePhase = true
 	$UI/VideoStreamPlayer.play()
 	createTower()
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(3).timeout
 	get_tree().paused = false
 	
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=4 uid="uid://w6lof451gxg7"]
 
 [ext_resource type="Texture2D" uid="uid://bvr1xu5s7usnk" path="res://asset/map/star_rail_bg_by_kaerralind_dfvq4bl-pre.jpg" id="1_4w2nd"]
-[ext_resource type="Script" uid="uid://gc2w7w2ir1xe" path="res://Scene/Level/dimension_level.gd" id="1_07ivq"]
+[ext_resource type="Script" path="res://Scene/Level/dimension_level.gd" id="1_07ivq"]
 [ext_resource type="Texture2D" uid="uid://d14as6x0e0nyn" path="res://asset/map/ChatGPT Image 15 ส.ค. 2568 15_38_09.png" id="1_tgqvm"]
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="2_4w2nd"]
 [ext_resource type="PackedScene" uid="uid://fm0t8ierk500" path="res://Scene/Boss/dimension.tscn" id="3_07ivq"]
