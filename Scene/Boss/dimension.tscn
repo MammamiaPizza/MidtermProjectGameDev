@@ -1163,6 +1163,7 @@ shape = SubResource("RectangleShape2D_6q0ve")
 disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hit"]
+visible = false
 position = Vector2(-1680, 38)
 rotation = -0.301917
 scale = Vector2(4.23906, 2.2375)
@@ -1170,6 +1171,7 @@ sprite_frames = SubResource("SpriteFrames_r2blc")
 animation = &"Attack2"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Hit"]
+visible = false
 rotation = 0.234166
 scale = Vector2(14.1016, 14.1016)
 sprite_frames = SubResource("SpriteFrames_73yly")
@@ -1178,6 +1180,7 @@ frame = 20
 frame_progress = 1.0
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Hit"]
+visible = false
 position = Vector2(1716, 26)
 rotation = -0.340032
 scale = Vector2(4.36319, 2.60897)

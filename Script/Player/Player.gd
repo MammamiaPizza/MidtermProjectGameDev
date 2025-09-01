@@ -4,7 +4,7 @@ signal gethit
 signal death
 
 var shadow = preload("res://Scene/Player/Shadow.tscn")
-
+var gravity_set = 1
 var hp = 100
 var stamina = 100
 
@@ -42,7 +42,14 @@ func _process(delta: float) -> void:
 		
 		#check is it floor if not gravity pull to ground and if yes recharge doublejump
 		if !is_on_floor():
-			velocity.y += gravity
+			if(gravity_set == 1):
+				velocity.y += gravity
+			elif(gravity_set == 2):
+				velocity.x += gravity
+			elif(gravity_set == 3):
+				velocity.y -= gravity
+			elif(gravity_set == 4):
+				velocity.x -= gravity
 		elif is_on_floor():
 			doublejump = true
 
@@ -105,7 +112,6 @@ func createTrail() -> void:
 	trail.scale = $AnimatedSprite2D.global_scale
 	get_tree().current_scene.add_child(trail)
 	
-
 func _on_regen_stamina_timeout() -> void:
 	if stamina<100:
 		stamina += 1

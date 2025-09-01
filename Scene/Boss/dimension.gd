@@ -12,8 +12,8 @@ var randommove
 var cooldown = 3.5
 #var checkrandom = true
 var sealcheck = false
-
-
+var phasetwo = false
+var gravityset = 0
 func _ready() -> void:
 	$AttackTime.start()
 	$body.play("Idle")
@@ -21,6 +21,10 @@ func _ready() -> void:
 
 func _on_attack_time_timeout() -> void:
 	randommove = Moveset.pick_random()
+	if gravityset != 0 :
+		gravityset = randi_range(1,4)
+		target.gravity_set = gravityset
+		$".".rotateevery(gravityset)
 	#print(target.position.x)
 	#print(position.x)
 	if !sealcheck:
@@ -47,7 +51,7 @@ func _on_attack_time_timeout() -> void:
 				await $body.animation_finished
 				$body.play("Attack2")
 				await $body.animation_finished
-				$Hit/Attack2.set_frame_and_progress(0, 0)
+				$Hit/AnimatedSprite2D.set_frame_and_progress(0, 0)
 				$Hit/AnimatedSprite2D.play("Attack2")
 				$Hit/AnimatedSprite2D.show()
 				
@@ -88,17 +92,16 @@ func _on_attack_time_timeout() -> void:
 		$CooldownMove.start()
 	else:
 		return
-
-func _on_change_phase_timeout() -> void:
-	#print("hello")
-	Moveset.append("Attack4")
-	cooldown = 1.5
-	changePhase.emit()
+	
 
 func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
 		hp -= area.damage
-
+		if hp < 0:
+			phasetwo = true
+			$TileMapLayer2.Enabled = false
+			$TileMapLayer3.Enabled = true
+			gravityset = 2
 func _on_cooldown_move_timeout() -> void:
 	$AttackTime.start()
 
