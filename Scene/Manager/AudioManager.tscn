@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://5ck8vdimevr8"]
+
+[node name="AudioManager" type="Node"]
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]

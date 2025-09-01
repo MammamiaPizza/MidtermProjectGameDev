@@ -36,6 +36,8 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.play("Fall")
 		elif velocity.y < 0:
 			$AnimatedSprite2D.play("jump")
+		elif axis != 0:
+			$AnimatedSprite2D.play("Walking")
 		
 		#check is it floor if not gravity pull to ground and if yes recharge doublejump
 		if !is_on_floor():
@@ -45,10 +47,6 @@ func _process(delta: float) -> void:
 
 		if Input.is_action_just_pressed("iframedodge"):
 			dodge()
-			
-		#make Shadow after dash is on (Make A lot)
-		#if checkdash:
-			#createTrail()
 		
 		if Input.is_action_just_pressed("jump"):
 			jumping()
@@ -57,14 +55,11 @@ func _process(delta: float) -> void:
 		if Input.is_action_pressed("down") and is_on_floor():	
 			position.y += 1
 		
-		if (axis > 0) and is_on_floor():
-			#$AnimatedSprite2D.flip_h = false
+		if (axis > 0):
 			$AnimatedSprite2D.scale.x = 0.5
-			$AnimatedSprite2D.play("Walking")
-		elif (axis < 0) and is_on_floor():
-			#$AnimatedSprite2D.flip_h = true
+			
+		elif (axis < 0):
 			$AnimatedSprite2D.scale.x = -0.5
-			$AnimatedSprite2D.play("Walking")
 		
 		if Input.is_action_just_pressed("AttackMelee"):
 			attack()
@@ -74,7 +69,7 @@ func _process(delta: float) -> void:
 	
 	#check dead
 	if hp <= 0:
-		#alive = false
+		alive = false
 		#queue_free()
 		hide()
 	
@@ -129,7 +124,12 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByBoss"):
 		var getdamagefromattack = area.getDamage()
 		hp -= getdamagefromattack
+		gethit.emit()
 
 
 func _on_shadow_trail_timeout() -> void:
 	createTrail()
+
+
+func _on_node_2d_tower_power_on() -> void:
+	$CollisionShape2D.disabled = true
