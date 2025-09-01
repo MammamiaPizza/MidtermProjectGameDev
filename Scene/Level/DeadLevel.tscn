@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://bcg2u6fv2soqh"]
+[gd_scene load_steps=7 format=4 uid="uid://bcg2u6fv2soqh"]
 
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="1_3e0tl"]
 [ext_resource type="Script" uid="uid://vtp6brdjyrjd" path="res://Scene/Level/dead_level.gd" id="1_14i0j"]
 [ext_resource type="PackedScene" uid="uid://c51bk8gubpoi6" path="res://Scene/Boss/Dead.tscn" id="2_4ywva"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player/Player.tscn" id="2_fqeg3"]
 [ext_resource type="Texture2D" uid="uid://d14as6x0e0nyn" path="res://asset/map/ChatGPT Image 15 ส.ค. 2568 15_38_09.png" id="3_d8qpg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8qpg"]
+size = Vector2(21, 824)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_14i0j")
@@ -23,12 +26,13 @@ tile_map_data = PackedByteArray("AABCABMABAABAAkAAABCABQABAABAAoAAABCABUABAABAAs
 tile_set = ExtResource("1_3e0tl")
 
 [node name="Dead" parent="." instance=ExtResource("2_4ywva")]
-position = Vector2(629, 448)
+position = Vector2(647, 446)
 scale = Vector2(0.25, 0.25)
 
 [node name="Player" parent="." instance=ExtResource("2_fqeg3")]
 position = Vector2(199, 646)
 scale = Vector2(0.2, 0.2)
+platform_wall_layers = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
@@ -44,6 +48,18 @@ position = Vector2(23, 471)
 
 [node name="TowerLocate4" type="Marker2D" parent="."]
 position = Vector2(1184, 528)
+
+[node name="InviWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InviWall" groups=["Ground"]]
+position = Vector2(-268.5, 336)
+shape = SubResource("RectangleShape2D_d8qpg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InviWall" groups=["Ground"]]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(1545, 362)
+shape = SubResource("RectangleShape2D_d8qpg")
 
 [connection signal="towerPowerOn" from="." to="Dead" method="_on_node_2d_tower_power_on"]
 [connection signal="changePhase" from="Dead" to="." method="_on_dead_change_phase"]

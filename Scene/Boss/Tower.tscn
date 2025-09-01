@@ -18,21 +18,26 @@ collision_mask = 3
 script = ExtResource("1_07xis")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+process_mode = 2
 scale = Vector2(0.195, 0.195)
 texture = ExtResource("1_dbq77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+process_mode = 2
 position = Vector2(13.5, 52.5)
 shape = SubResource("RectangleShape2D_52jj8")
 
 [node name="Area2D" type="Area2D" parent="."]
+process_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+process_mode = 2
 position = Vector2(15, 42)
 scale = Vector2(0.404, 0.419)
 texture = ExtResource("2_07xis")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+process_mode = 2
 position = Vector2(3, 55)
 shape = SubResource("CapsuleShape2D_i3gxm")
 
