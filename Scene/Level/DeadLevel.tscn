@@ -49,25 +49,20 @@ position = Vector2(199, 646)
 scale = Vector2(0.2, 0.2)
 platform_wall_layers = 1
 
-<<<<<<< Updated upstream
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 zoom = Vector2(1.3, 1.3)
-=======
-[node name="Camera2D" type="Camera2D" parent="Player"]
-scale = Vector2(1.3, 1.3)
->>>>>>> Stashed changes
 
 [node name="TowerLocate" type="Marker2D" parent="."]
-position = Vector2(158, 227)
+position = Vector2(119, 143)
 
 [node name="TowerLocate2" type="Marker2D" parent="."]
-position = Vector2(1143, 272)
+position = Vector2(1139, 250)
 
 [node name="TowerLocate3" type="Marker2D" parent="."]
-position = Vector2(38, 489)
+position = Vector2(23, 471)
 
 [node name="TowerLocate4" type="Marker2D" parent="."]
-position = Vector2(1173, 521)
+position = Vector2(1184, 528)
 
 [node name="InviWall" type="StaticBody2D" parent="."]
 
@@ -90,11 +85,6 @@ script = SubResource("GDScript_1cb1g")
 
 [node name="Interface" parent="UI" instance=ExtResource("6_1cb1g")]
 layout_mode = 1
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="UI"]
-layout_mode = 0
-offset_right = 857.0
-offset_bottom = 576.0
 
 [connection signal="towerPowerOn" from="." to="Dead" method="_on_node_2d_tower_power_on"]
 [connection signal="changePhase" from="Dead" to="." method="_on_dead_change_phase"]
