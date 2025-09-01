@@ -277,5 +277,3 @@ position = Vector2(628, 341)
 scale = Vector2(0.331313, 0.331313)
 sprite_frames = SubResource("SpriteFrames_e5ppl")
 animation = &"start"
-frame = 43
-frame_progress = 1.0
