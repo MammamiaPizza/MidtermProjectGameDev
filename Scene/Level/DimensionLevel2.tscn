@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://ctywwt226n5v3"]
+[gd_scene load_steps=8 format=4 uid="uid://da0xihqlr6wio"]
 
 [ext_resource type="Texture2D" uid="uid://bvr1xu5s7usnk" path="res://asset/map/star_rail_bg_by_kaerralind_dfvq4bl-pre.jpg" id="1_gytpf"]
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="2_qbui1"]
@@ -13,7 +13,7 @@ size = Vector2(110.488, 6478.39)
 script/source = "extends Control
 
 @onready var player = $\"../Player\"
-@onready var boss = $\"../Dead\"
+@onready var boss = $\"../Dimension\"
 
 func _process(delta: float) -> void:
 	if player != null:

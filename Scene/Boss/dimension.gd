@@ -7,7 +7,7 @@ signal changePhase
 var Moveset : Array = ["Attack1", "Attack2"]
 #var Moveset : Array = ["Attack1"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
-var hp = 10000
+var hp = 10
 var randommove
 var cooldown = 3.5
 #var checkrandom = true
@@ -98,10 +98,17 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
 		hp -= area.damage
 		if hp < 0:
-			phasetwo = true
-			$TileMapLayer2.Enabled = false
-			$TileMapLayer3.Enabled = true
-			gravityset = 2
+			if phasetwo == false:
+				phasetwo = true
+				$"../TileMapLayer2".set_enabled(false)
+				$"../TileMapLayer3".set_enabled(true)
+				gravityset = 2
+				hp = 10000
+				$"../TileMapLayer".set_enabled(false)
+				$"../Sprite2D".hide()
+				target.gravity = 1
+			else:
+				return
 func _on_cooldown_move_timeout() -> void:
 	$AttackTime.start()
 
