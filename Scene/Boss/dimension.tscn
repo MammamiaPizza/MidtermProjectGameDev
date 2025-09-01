@@ -236,6 +236,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_73yly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cjqfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhssh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ptyl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_noc07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_v1e0m")
 }],
 "loop": false,
 "name": &"Attack1",
@@ -253,21 +268,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_73yly")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_cjqfi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_qhssh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_ptyl5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_noc07")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_v1e0m")
 }],
 "loop": false,
 "name": &"Attack2",
@@ -935,74 +935,6 @@ animations = [{
 "loop": false,
 "name": &"Attack2",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("211_6q0ve")
-}, {
-"duration": 1.0,
-"texture": ExtResource("212_ualwe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("213_73yly")
-}, {
-"duration": 1.0,
-"texture": ExtResource("214_cjqfi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("215_qhssh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("216_ptyl5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("217_noc07")
-}, {
-"duration": 1.0,
-"texture": ExtResource("218_v1e0m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("219_iugsr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("220_73yly")
-}, {
-"duration": 1.0,
-"texture": ExtResource("221_cjqfi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("220_73yly")
-}, {
-"duration": 1.0,
-"texture": ExtResource("219_iugsr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("217_noc07")
-}, {
-"duration": 1.0,
-"texture": ExtResource("218_v1e0m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("216_ptyl5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("215_qhssh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("214_cjqfi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("213_73yly")
-}, {
-"duration": 1.0,
-"texture": ExtResource("212_ualwe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("211_6q0ve")
-}],
-"loop": false,
-"name": &"Attack3",
-"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_73yly"]
@@ -1133,7 +1065,7 @@ script = ExtResource("1_kp0jm")
 
 [node name="body" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_aliwu")
-animation = &"Idle"
+animation = &"Attack1"
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-34.5, 4.5)
@@ -1188,6 +1120,8 @@ sprite_frames = SubResource("SpriteFrames_cjqfi")
 animation = &"Attack3"
 frame = 12
 frame_progress = 1.0
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Hit"]
 
 [node name="HitArea" type="Area2D" parent="."]
 

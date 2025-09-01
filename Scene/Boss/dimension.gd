@@ -49,8 +49,10 @@ func _on_attack_time_timeout() -> void:
 				position.y = target.global_position.y
 				$body.play_backwards("warp")
 				await $body.animation_finished
+				$body.scale *= -1
 				$body.play("Attack2")
 				await $body.animation_finished
+				$body.scale *= -1
 				$Hit/AnimatedSprite2D.set_frame_and_progress(0, 0)
 				$Hit/AnimatedSprite2D.play("Attack2")
 				$Hit/AnimatedSprite2D.show()
@@ -67,7 +69,7 @@ func _on_attack_time_timeout() -> void:
 				position.y = target.global_position.y
 				$body.play_backwards("warp")
 				await $body.animation_finished
-				$body.play("Attack3")
+				$body.play("Attack2")
 				await $body.animation_finished
 				$Hit/AnimatedSprite2D3.set_frame_and_progress(0, 0)
 				$Hit/AnimatedSprite2D3.play("Attack3")
