@@ -16,7 +16,7 @@ var doublejump = true
 var alive = true
 var checkdash = false
 
-var i : int
+var godmode = false
 
 func _ready() -> void:
 	$regenStamina.start()
@@ -65,11 +65,15 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("AttackMelee"):
 			attack()
 			speed = 200
+		
+		if Input.is_action_just_pressed("GodMode"):
+			print("CheatOn")
+			godmode = true
 			
 		move_and_slide()
 	
 	#check dead
-	if hp <= 0:
+	if hp <= 0 and !godmode:
 		alive = false
 		hp == 100
 		queue_free()

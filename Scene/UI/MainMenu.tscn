@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvaixmw2mgc2i"]
+[gd_scene load_steps=3 format=3 uid="uid://cvaixmw2mgc2i"]
 
 [ext_resource type="Script" uid="uid://is7bjg8k1sh3" path="res://Script/UI/main_menu.gd" id="1_r6j2u"]
-
+[ext_resource type="VideoStream" uid="uid://bb12jbfwaduu1" path="res://asset/map/Aincrad-_Sword-Art-Online_-Unreal-Engine-TheGabmeister-_1080p_-h264_-youtube_.ogv" id="2_sqy52"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -56,6 +56,16 @@ offset_bottom = 616.0
 theme_override_font_sizes/font_size = 50
 text = "Exit"
 alignment = 0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1284.0
+offset_bottom = 724.0
+stream = ExtResource("2_sqy52")
+volume_db = -13.87
+autoplay = true
+expand = true
+loop = true
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]

@@ -15,6 +15,7 @@ var tower4 = towerScene.instantiate()
 func _on_dead_change_phase() -> void:
 	get_tree().paused = true
 	changePhase = true
+	$UI/VideoStreamPlayer.play()
 	createTower()
 	await get_tree().create_timer(2).timeout
 	get_tree().paused = false
