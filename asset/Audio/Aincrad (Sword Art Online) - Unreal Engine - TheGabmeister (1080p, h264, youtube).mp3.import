@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sncgb2pv64dj"
+path="res://.godot/imported/Aincrad (Sword Art Online) - Unreal Engine - TheGabmeister (1080p, h264, youtube).mp3-0a57efb5f99f0103039af2932f310ecd.mp3str"
+
+[deps]
+
+source_file="res://asset/Audio/Aincrad (Sword Art Online) - Unreal Engine - TheGabmeister (1080p, h264, youtube).mp3"
+dest_files=["res://.godot/imported/Aincrad (Sword Art Online) - Unreal Engine - TheGabmeister (1080p, h264, youtube).mp3-0a57efb5f99f0103039af2932f310ecd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

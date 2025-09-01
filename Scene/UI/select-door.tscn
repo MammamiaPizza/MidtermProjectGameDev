@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dwbn7uvtlu8jw"]
+[gd_scene load_steps=69 format=3 uid="uid://dwbn7uvtlu8jw"]
 
 [ext_resource type="Script" uid="uid://th51nltwb1sw" path="res://Scene/UI/select_door.gd" id="1_fvn6o"]
 [ext_resource type="Texture2D" uid="uid://hnnt6mab6amx" path="res://asset/UI/Door/deathdoor_00000.jpg" id="2_svsa2"]
@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://d00uvg6ggil8d" path="res://asset/map/door/door(15).png" id="61_h635u"]
 [ext_resource type="Texture2D" uid="uid://bwoe8kdhld4m8" path="res://asset/map/door/door(16).png" id="62_vcfie"]
 [ext_resource type="Texture2D" uid="uid://c2mdsatd07iu6" path="res://asset/map/door/door(17).png" id="63_gk67n"]
+[ext_resource type="AudioStream" uid="uid://sncgb2pv64dj" path="res://asset/Audio/Aincrad (Sword Art Online) - Unreal Engine - TheGabmeister (1080p, h264, youtube).mp3" id="64_svsa2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_710lx"]
 animations = [{
@@ -407,6 +408,11 @@ shape = SubResource("RectangleShape2D_lkhqh")
 position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_fvn6o")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("64_svsa2")
+volume_db = -20.0
+autoplay = true
+
 [connection signal="area_entered" from="AnimatedSprite2D3/Area2D3" to="." method="_on_area_2d_3_area_entered"]
 [connection signal="area_exited" from="AnimatedSprite2D3/Area2D3" to="." method="_on_area_2d_3_area_exited"]
 [connection signal="pressed" from="AnimatedSprite2D3/TextureButton" to="." method="_on_texture_button_pressed"]
@@ -423,3 +429,4 @@ shape = SubResource("RectangleShape2D_fvn6o")
 [connection signal="mouse_entered" from="Camera2D/Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
 [connection signal="area_entered" from="Camera2D/Area2D3" to="." method="_on_area_2d_3_area_entered"]
 [connection signal="area_exited" from="Camera2D/Area2D3" to="." method="_on_area_2d_3_area_exited"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

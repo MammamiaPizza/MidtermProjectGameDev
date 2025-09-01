@@ -20,6 +20,7 @@ func _ready() -> void:
 
 
 func _on_attack_time_timeout() -> void:
+	
 	randommove = Moveset.pick_random()
 	if gravityset != 0 :
 		gravityset = randi_range(1,4)
@@ -102,6 +103,11 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 		if hp < 0:
 			if phasetwo == false:
 				phasetwo = true
+				$"../UI/VideoStreamPlayer".visible = true
+				$"../UI/VideoStreamPlayer".play()
+				await $"../UI/VideoStreamPlayer".finished
+				
+				
 				$"../TileMapLayer2".set_enabled(false)
 				$"../TileMapLayer3".set_enabled(true)
 				gravityset = 2
@@ -109,38 +115,14 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 				$"../TileMapLayer".set_enabled(false)
 				$"../Sprite2D".hide()
 				target.gravity = 1
+				$"../UI/VideoStreamPlayer".visible = false
 			else:
 				return
 func _on_cooldown_move_timeout() -> void:
 	$AttackTime.start()
 
-var counttower = 0
 
-func _on_node_2d_tower_power_on() -> void:
-	counttower += 1
-	if counttower >= 4:
-		sealcheck = true
-		$AttackTime.stop()
-		$CooldownMove.stop()
-		var scaletween = create_tween()
-		scaletween.tween_property(self, "scale", Vector2(0.14, 0.14), 2)
-		await scaletween.finished
-		scaletween.tween_property(self, "scale", Vector2(0, 0), 2)
-		self.queue_free()
-	else:
-		debuffBoss()
 
-var debuffSet = [1,2,3]
-
-func debuffBoss():
-	var randomvar = debuffSet.pick_random()
-	debuffSet.remove_at(debuffSet.find(randomvar))
-	if randomvar == 1:
-		Moveset.remove_at(Moveset.find(Moveset.pick_random()))
-	elif randomvar == 2:
-		cooldown = 8
-	elif randomvar == 3:
-		Moveset.remove_at(Moveset.find(Moveset.pick_random()))
 
 func _process(delta: float) -> void:
 	if sealcheck:

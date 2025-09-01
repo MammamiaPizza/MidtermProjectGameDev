@@ -76,3 +76,7 @@ func timedoor() -> void:
 	loading_scene.target_scene = "res://Scene/UI/MainMenu.tscn"
 	get_tree().current_scene.add_child(loading_scene)
 	pass # Replace with function body.
+
+
+func _on_audio_stream_player_finished() -> void:
+	$AudioStreamPlayer.play()
