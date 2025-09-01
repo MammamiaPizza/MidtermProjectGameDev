@@ -53,16 +53,16 @@ platform_wall_layers = 1
 zoom = Vector2(1.3, 1.3)
 
 [node name="TowerLocate" type="Marker2D" parent="."]
-position = Vector2(119, 143)
+position = Vector2(152, 205)
 
 [node name="TowerLocate2" type="Marker2D" parent="."]
-position = Vector2(1139, 250)
+position = Vector2(1160, 244)
 
 [node name="TowerLocate3" type="Marker2D" parent="."]
-position = Vector2(23, 471)
+position = Vector2(66, 477)
 
 [node name="TowerLocate4" type="Marker2D" parent="."]
-position = Vector2(1184, 528)
+position = Vector2(1167, 524)
 
 [node name="InviWall" type="StaticBody2D" parent="."]
 
@@ -85,6 +85,10 @@ script = SubResource("GDScript_1cb1g")
 
 [node name="Interface" parent="UI" instance=ExtResource("6_1cb1g")]
 layout_mode = 1
+offset_left = -178.0
+offset_top = -226.0
+offset_right = -218.0
+offset_bottom = -266.0
 
 [connection signal="towerPowerOn" from="." to="Dead" method="_on_node_2d_tower_power_on"]
 [connection signal="changePhase" from="Dead" to="." method="_on_dead_change_phase"]
