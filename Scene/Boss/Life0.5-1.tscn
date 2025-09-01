@@ -400,8 +400,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0nfg0"]
-radius = 262.222
-height = 1073.33
+radius = 360.0
+height = 1233.33
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ah6nl"]
 size = Vector2(1032.1, 2251.85)
@@ -416,7 +416,7 @@ motion_mode = 1
 script = ExtResource("1_0nfg0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
-scale = Vector2(0.45, 0.45)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_df5ia")
 animation = &"Idle"
 frame_progress = 0.384488
@@ -425,6 +425,7 @@ frame_progress = 0.384488
 position = Vector2(3, 6.5)
 scale = Vector2(0.45, 0.45)
 shape = SubResource("CapsuleShape2D_0nfg0")
+disabled = true
 
 [node name="HitArea" type="Area2D" parent="." groups=["Enemy"]]
 scale = Vector2(0.45, 0.45)
