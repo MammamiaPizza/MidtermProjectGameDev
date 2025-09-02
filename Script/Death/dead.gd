@@ -100,7 +100,13 @@ func _on_node_2d_tower_power_on() -> void:
 		sealcheck = true
 		$AttackTime.stop()
 		$CooldownMove.stop()
+		var deathtween = create_tween()
+		deathtween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		deathtween.tween_property($".", "position", Vector2(625,275), 2)
+		await deathtween.finished
+		get_tree().paused = true
 		var scaletween = create_tween()
+		scaletween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		scaletween.tween_property(self, "scale", Vector2(0.14, 0.14), 2)
 		await scaletween.finished
 		scaletween.tween_property(self, "scale", Vector2(0, 0), 2)
@@ -108,6 +114,7 @@ func _on_node_2d_tower_power_on() -> void:
 		
 		$"../UI/Interface/CanvasLayer".hide()
 		$"../Player/Camera2D".enabled = false
+		$"../Sprite2D".visible = false
 		Bossclean.bosswin()
 		Bossclean.death = true
 		var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
