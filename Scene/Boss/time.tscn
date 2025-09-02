@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://coeodkjnxmlpf"]
+[gd_scene load_steps=103 format=3 uid="uid://coeodkjnxmlpf"]
 
 [ext_resource type="Script" uid="uid://bmagjmrgfpmtn" path="res://Scene/Boss/time.gd" id="1_5otyx"]
 [ext_resource type="Texture2D" uid="uid://c2j2cwfpuhx05" path="res://asset/Boss/Time/time_00000.png" id="1_24ubn"]
@@ -404,7 +404,12 @@ size = Vector2(1015, 1163)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_24ubn"]
 size = Vector2(1014, 1166)
 
+[sub_resource type="LabelSettings" id="LabelSettings_5otyx"]
+font_size = 200
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_5otyx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -415,6 +420,7 @@ animation = &"idle"
 position = Vector2(-6.5, 18.5)
 shape = SubResource("RectangleShape2D_5otyx")
 disabled = true
+one_way_collision = true
 
 [node name="HitArea" type="Area2D" parent="." groups=["Enemy"]]
 collision_mask = 3
@@ -425,9 +431,26 @@ shape = SubResource("RectangleShape2D_24ubn")
 
 [node name="RandomTime" type="Timer" parent="."]
 wait_time = 30.0
+autostart = true
 
 [node name="Timermove" type="Timer" parent="."]
-wait_time = 3.0
+autostart = true
 
+[node name="ResetWorld" type="Timer" parent="."]
+wait_time = 300.0
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -197.0
+offset_top = -533.0
+offset_right = 204.0
+offset_bottom = -278.0
+text = "300"
+label_settings = SubResource("LabelSettings_5otyx")
+horizontal_alignment = 1
+
+[connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]
 [connection signal="timeout" from="RandomTime" to="." method="_on_random_attack_timeout"]
 [connection signal="timeout" from="Timermove" to="." method="_on_timermove_timeout"]
+[connection signal="timeout" from="ResetWorld" to="." method="_on_reset_world_timeout"]
