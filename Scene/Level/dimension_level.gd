@@ -8,4 +8,4 @@ func rotateevery(x) -> void:
 	tween1.tween_property($TileMapLayer3, "rotation", x * 1, 180)
 
 	var tween2 = create_tween()
-	tween2.tween_property($Sprite2D2, "rotation", x * 0.5, 360)
+	tween2.tween_property($Sprite2D2, "rotation", x * 1, 180)

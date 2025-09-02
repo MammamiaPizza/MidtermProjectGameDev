@@ -7,7 +7,7 @@ signal changePhase
 var Moveset : Array = ["Attack1", "Attack2"]
 #var Moveset : Array = ["Attack1"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
-var hp = 10000
+var hp = 10
 var randommove
 var cooldown = 3.5
 #var checkrandom = true

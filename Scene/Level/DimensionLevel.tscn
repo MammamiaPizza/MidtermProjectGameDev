@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=4 uid="uid://w6lof451gxg7"]
 
-[ext_resource type="Texture2D" uid="uid://bvr1xu5s7usnk" path="res://asset/map/star_rail_bg_by_kaerralind_dfvq4bl-pre.jpg" id="1_4w2nd"]
 [ext_resource type="Script" uid="uid://gc2w7w2ir1xe" path="res://Scene/Level/dimension_level.gd" id="1_07ivq"]
 [ext_resource type="Texture2D" uid="uid://d14as6x0e0nyn" path="res://asset/map/ChatGPT Image 15 ส.ค. 2568 15_38_09.png" id="1_tgqvm"]
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="2_4w2nd"]
+[ext_resource type="Texture2D" uid="uid://camodku7ijauu" path="res://asset/map/IMG_1821.JPG" id="2_6a27f"]
 [ext_resource type="PackedScene" uid="uid://fm0t8ierk500" path="res://Scene/Boss/dimension.tscn" id="3_07ivq"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player/Player.tscn" id="4_2ca1t"]
 [ext_resource type="PackedScene" uid="uid://cno5ogm4dy45g" path="res://Scene/UI/UI.tscn" id="5_dyktx"]
@@ -36,8 +36,7 @@ script = ExtResource("1_07ivq")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(902, 311)
-scale = Vector2(8.499, 8.499)
-texture = ExtResource("1_4w2nd")
+texture = ExtResource("2_6a27f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(749, 342)
