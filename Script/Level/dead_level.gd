@@ -16,6 +16,7 @@ var towertween
 
 func _on_dead_change_phase() -> void:
 	if $Player != null:
+		
 		$UI/Operater/CanvasLayer.set_visible(true)
 		$UI/Operater/CanvasLayer/AnimationPlayer.play("Conver")
 		$UI/Operater/CanvasLayer/AudioStreamPlayer.play()
@@ -29,7 +30,7 @@ func _on_dead_change_phase() -> void:
 		$UI/CanvasLayer/VideoStreamPlayer.paused = false
 		get_tree().paused = true
 		changePhase = true
-		
+		$DeathTheme1.stop()
 		$UI/CanvasLayer/VideoStreamPlayer.show()
 		$UI/CanvasLayer/VideoStreamPlayer.play()
 		await  $UI/CanvasLayer/VideoStreamPlayer.finished
@@ -37,6 +38,7 @@ func _on_dead_change_phase() -> void:
 		$UI/CanvasLayer/VideoStreamPlayer.hide()
 		
 		
+		$DeathTheme2.play()
 		
 		#await get_tree().create_timer(1).timeout
 		createTower()

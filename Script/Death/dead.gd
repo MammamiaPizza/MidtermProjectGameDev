@@ -83,6 +83,7 @@ func _on_change_phase_timeout() -> void:
 	Moveset.append("Attack4")
 	cooldown = 1.5
 	changePhase.emit()
+	
 
 func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
