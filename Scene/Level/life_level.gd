@@ -15,7 +15,7 @@ func checkmerge():
 		tween2.tween_property($"Life0_5_2", "position", Vector2(625,250), 2)
 		var tweencolor1 = create_tween()
 		var tweencolor2 = create_tween()
-		tweencolor1.tween_property($Life0_5_1/AnimatedSprite2D.get_mate, "shader_parameter/flashEnabled", 1, 2)
+		tweencolor1.tween_property($Life0_5_1/AnimatedSprite2D.get_shader(), "shader_parameter/flashEnabled", 1, 2)
 		tweencolor2.tween_property($"Life0_5_2", "shader_parameter/flashEnabled", 1, 2)
 		await tween1.finished and tween2.finished
 		tween1.kill()
@@ -31,3 +31,5 @@ func checkmerge():
 func _process(delta: float) -> void:
 	if $Player != null:
 		$Player.hp -= 1 * delta
+	else:
+		return
