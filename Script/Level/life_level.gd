@@ -24,9 +24,9 @@ func checkmerge():
 		
 		await get_tree().create_timer(2).timeout
 		var tween1 = create_tween()
-		tween1.tween_property($Life0_5_1, "position", Vector2(625,250), 2)
+		tween1.tween_property($Life0_5_1, "position", Vector2(625,300), 2)
 		var tween2 = create_tween()
-		tween2.tween_property($"Life0_5_2", "position", Vector2(625,250), 2)
+		tween2.tween_property($"Life0_5_2", "position", Vector2(625,300), 2)
 		var tweencolor1 = create_tween()
 		var tweencolor2 = create_tween()
 		tweencolor1.tween_property($Life0_5_1/AnimatedSprite2D.material, "shader_parameter/flashEnabled", 1, 1 )

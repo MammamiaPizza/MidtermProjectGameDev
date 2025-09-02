@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvaixmw2mgc2i"]
 
-[ext_resource type="Script" uid="uid://is7bjg8k1sh3" path="res://Script/UI/main_menu (2).gd" id="1_sqy52"]
+[ext_resource type="Script" uid="uid://is7bjg8k1sh3" path="res://Script/UI/main_menu.gd" id="1_sqy52"]
 [ext_resource type="VideoStream" uid="uid://bb12jbfwaduu1" path="res://asset/map/Aincrad-_Sword-Art-Online_-Unreal-Engine-TheGabmeister-_1080p_-h264_-youtube_.ogv" id="2_sqy52"]
-
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -29,7 +28,7 @@ offset_right = 1049.0
 offset_bottom = 115.2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 106
-text = "Game Name"
+text = "Fourth impact"
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 32.0
@@ -70,3 +69,4 @@ loop = true
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="." method="_on_button_3_pressed"]

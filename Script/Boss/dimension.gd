@@ -7,7 +7,7 @@ signal changePhase
 var Moveset : Array = ["Attack1", "Attack2"]
 #var Moveset : Array = ["Attack1"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
-var hp = 10
+var hp = 10000
 var randommove
 var cooldown = 3.5
 #var checkrandom = true
@@ -156,8 +156,3 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 
 func _on_cooldown_move_timeout() -> void:
 	$AttackTime.start()
-
-
-
-
-		
