@@ -134,3 +134,5 @@ stream = ExtResource("8_6a27f")
 stream = ExtResource("8_2ca1t")
 volume_db = -20.0
 autoplay = true
+
+[connection signal="death" from="Player" to="." method="_on_player_death"]

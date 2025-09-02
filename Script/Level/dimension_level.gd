@@ -9,3 +9,7 @@ func rotateevery(x) -> void:
 
 	var tween2 = create_tween()
 	tween2.tween_property($Sprite2D2, "rotation", x * 1, 180)
+
+
+func _on_player_death() -> void:
+	$UI/Interface/CanvasLayer.hide()

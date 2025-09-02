@@ -73,15 +73,9 @@ func _process(delta: float) -> void:
 		move_and_slide()
 	
 	#check dead
-	if (hp <= 0 or hp > 100) and !godmode:
-		get_tree().paused = true
-		alive = false
-		hp == 100
-		#queue_free()
-		hide()
+	
 		
-		death.connect(Callable(Bossclean, "whenDead"))
-		death.emit()
+		
 	
 func dodge():
 	#before start should make all component ready to open
@@ -136,6 +130,19 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		gethit.emit()
 		#print("hit")
 		#print(getdamagefromattack)
+		if (hp <= 0 or hp > 100) and !godmode and alive:
+			#get_tree().paused = true
+			alive = false
+			hp = 100
+			#queue_free()
+			hide()
+			death.connect(Callable(Bossclean, "whenDead"))
+			death.emit()
+			await get_tree().create_timer(5).timeout
+			$Camera2D.enabled = false
+			var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
+			loading_scene.target_scene = "res://Scene/UI/select-door.tscn"
+			get_tree().current_scene.add_child(loading_scene)
 
 
 func _on_shadow_trail_timeout() -> void:

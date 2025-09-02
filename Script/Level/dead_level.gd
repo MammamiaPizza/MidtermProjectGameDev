@@ -16,7 +16,6 @@ var towertween
 
 func _on_dead_change_phase() -> void:
 	if $Player != null:
-		
 		$UI/Operater/CanvasLayer.set_visible(true)
 		$UI/Operater/CanvasLayer/AnimationPlayer.play("Conver")
 		$UI/Operater/CanvasLayer/AudioStreamPlayer.play()
@@ -117,4 +116,10 @@ func operaterhelp():
 
 func _on_player_death() -> void:
 	$UI/Interface/CanvasLayer.hide()
-	$UI/Operater/CanvasLayer.hide()
+	$UI/Operater.get_node("CanvasLayer/AudioStreamPlayer").stop()
+	$UI/Operater.get_node("CanvasLayer").hide()
+	
+	$DeathTheme1.stop()
+	$DeathTheme2.stop()
+	$UI/CanvasLayer/VideoStreamPlayer.stop()
+	$UI/CanvasLayer/VideoStreamPlayer.hide()

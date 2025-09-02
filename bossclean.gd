@@ -28,6 +28,8 @@ func getl():
 
 func whenDead():
 	get_tree().current_scene.add_child(lose)
+	await get_tree().create_timer(5).timeout
+	get_tree().current_scene.remove_child(lose)
 	
 func whenWin():
 	get_tree().current_scene.add_child(winscene)

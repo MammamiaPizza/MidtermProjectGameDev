@@ -128,6 +128,7 @@ autoplay = true
 stream = ExtResource("10_lbw4l")
 volume_db = -25.09
 
+[connection signal="death" from="Player" to="." method="_on_player_death"]
 [connection signal="preparemerge" from="Life0_5_1" to="." method="checkmerge"]
 [connection signal="preparemerge" from="Life0_5_2" to="." method="checkmerge"]
 [connection signal="timeout" from="Change" to="." method="_on_timer_timeout"]
