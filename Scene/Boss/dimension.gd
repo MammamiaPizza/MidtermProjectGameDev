@@ -11,7 +11,7 @@ var hp = 10
 var randommove
 var cooldown = 3.5
 #var checkrandom = true
-var alive = true
+var sealcheck = false
 var phasetwo = false
 var gravityset = 0
 func _ready() -> void:
@@ -20,7 +20,6 @@ func _ready() -> void:
 
 
 func _on_attack_time_timeout() -> void:
-<<<<<<< HEAD
 	if hp > 0 :
 		randommove = Moveset.pick_random()
 		if gravityset != 0 :
@@ -31,31 +30,6 @@ func _on_attack_time_timeout() -> void:
 		#print(position.x)
 		if !sealcheck:
 			if randommove == "Attack1":
-=======
-	randommove = Moveset.pick_random()
-	if gravityset != 0 :
-		gravityset = randi_range(1,4)
-		target.gravity_set = gravityset
-		$".".rotateevery(gravityset)
-	#print(target.position.x)
-	#print(position.x)
-	if alive:
-		if randommove == "Attack1":
-			$body.play("warp")
-			await $body.animation_finished
-			position = target.global_position
-			$body.play_backwards("warp")
-			await $body.animation_finished
-			$body.play(randommove)
-			await get_tree().create_timer(0.6).timeout
-			$Hit/Attack1.disabled = false
-			await get_tree().create_timer(0.2).timeout
-			$Hit/Attack1.disabled = true
-			await $body.animation_finished
-		
-		elif randommove == "Attack2":
-			if (position.x > target.position.x):
->>>>>>> 0e8fe2f2b8433aeb3ea1815c8b9612a7bdbf9146
 				$body.play("warp")
 				await $body.animation_finished
 				position = target.global_position
@@ -149,7 +123,6 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 				return
 func _on_cooldown_move_timeout() -> void:
 	$AttackTime.start()
-<<<<<<< HEAD
 
 
 
@@ -161,5 +134,3 @@ func _process(delta: float) -> void:
 		$Body.disabled = true
 		move_and_slide()
 		
-=======
->>>>>>> 0e8fe2f2b8433aeb3ea1815c8b9612a7bdbf9146
