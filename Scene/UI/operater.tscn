@@ -50,7 +50,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_left = 1063.0
@@ -70,12 +69,15 @@ texture = ExtResource("2_14v4m")
 
 [node name="text" type="Label" parent="CanvasLayer/TextureRect2"]
 layout_mode = 0
-offset_left = 84.5976
-offset_top = 133.946
-offset_right = 525.598
-offset_bottom = 156.946
+offset_left = 85.0
+offset_top = 134.0
+offset_right = 523.0
+offset_bottom = 199.0
 scale = Vector2(2.45237, 2.97888)
-text = "ต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย"
+theme_override_font_sizes/font_size = 18
+text = "ต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วย
+รอสักหน่อย"
+text_overrun_behavior = 2
 visible_characters = 0
 visible_ratio = 0.0
 
