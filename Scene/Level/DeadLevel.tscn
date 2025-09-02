@@ -32,6 +32,7 @@ func _process(delta: float) -> void:
 script = ExtResource("1_14i0j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(744, 294)
 scale = Vector2(3.69653, 3.69653)
 texture = ExtResource("3_d8qpg")
@@ -49,6 +50,7 @@ position = Vector2(647, 446)
 scale = Vector2(0.25, 0.25)
 
 [node name="Player" parent="." instance=ExtResource("2_fqeg3")]
+z_index = 1
 position = Vector2(199, 646)
 scale = Vector2(0.2, 0.2)
 platform_wall_layers = 1

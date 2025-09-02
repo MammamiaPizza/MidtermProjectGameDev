@@ -2,7 +2,7 @@ extends StaticBody2D
 
 signal TowerIsOpen
 
-var hp : int = 100
+var hp : int = 2
 
 
 

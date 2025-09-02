@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://c6i4tbvus84cy" path="res://Scene/Boss/dimension.gd" id="1_kp0jm"]
 [ext_resource type="Texture2D" uid="uid://bgk3h7bysmnnd" path="res://asset/Boss/Dimension/animation/standbomb/(22).png" id="2_cujh2"]
 [ext_resource type="Texture2D" uid="uid://bo53fyikpap1i" path="res://asset/Boss/Dimension/animation/ATK/1.png" id="2_kp0jm"]
-[ext_resource type="Script" uid="uid://clsoagbaaw7mi" path="res://Script/Death/hit.gd" id="2_m2kmg"]
 [ext_resource type="Texture2D" uid="uid://chw5lu1a3wyfq" path="res://asset/Boss/Dimension/animation/standbomb/(23).png" id="3_5uubi"]
 [ext_resource type="Texture2D" uid="uid://btiq2agucx0c8" path="res://asset/Boss/Dimension/animation/ATK/2.png" id="3_6q0ve"]
 [ext_resource type="Texture2D" uid="uid://dpwwptknq8yn" path="res://asset/Boss/Dimension/animation/standbomb/(24).png" id="4_ldnvs"]
@@ -258,6 +257,7 @@
 [ext_resource type="Texture2D" uid="uid://qoassujs2ame" path="res://asset/Boss/Dimension/animation/DimensionSlash/slah(9).png" id="219_iugsr"]
 [ext_resource type="Texture2D" uid="uid://lbcnx8vkyx1h" path="res://asset/Boss/Dimension/animation/DimensionSlash/slah(10).png" id="220_73yly"]
 [ext_resource type="Texture2D" uid="uid://cvyu5e0v7upf7" path="res://asset/Boss/Dimension/animation/DimensionSlash/slah(11).png" id="221_cjqfi"]
+[ext_resource type="Script" uid="uid://clsoagbaaw7mi" path="res://Script/Death/hit.gd" id="247_cujh2"]
 [ext_resource type="Texture2D" uid="uid://dv04luw5f70i1" path="res://asset/Boss/Dimension/animation/Bomb/daw(2).png" id="259_phrnu"]
 [ext_resource type="Texture2D" uid="uid://ds1bf5hhwl8ql" path="res://asset/Boss/Dimension/animation/Bomb/daw(3).png" id="260_lleho"]
 [ext_resource type="Texture2D" uid="uid://cnbvy46eiyr5q" path="res://asset/Boss/Dimension/animation/Bomb/daw(4).png" id="261_g1gvg"]
@@ -1304,15 +1304,13 @@ script = ExtResource("1_kp0jm")
 [node name="body" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_aliwu")
 animation = &"Attack2"
-frame = 3
-frame_progress = 1.0
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-34.5, 4.5)
 shape = SubResource("RectangleShape2D_dmeo4")
 
 [node name="Hit" type="Area2D" parent="." groups=["attackByBoss"]]
-script = ExtResource("2_m2kmg")
+script = ExtResource("247_cujh2")
 
 [node name="Attack1" type="CollisionShape2D" parent="Hit" groups=["attackByBoss"]]
 position = Vector2(-10, 7)
@@ -1342,15 +1340,10 @@ position = Vector2(-1680, 38)
 rotation = -0.301917
 scale = Vector2(4.23906, 2.2375)
 sprite_frames = SubResource("SpriteFrames_r2blc")
-<<<<<<< HEAD
 animation = &"Attack"
-=======
-animation = &"Attack2"
-frame = 12
-frame_progress = 1.0
->>>>>>> c35613662a493f1295740a85e16aa763a31972c5
 
 [node name="Attack4ef" type="AnimatedSprite2D" parent="Hit"]
+visible = false
 rotation = 0.234166
 scale = Vector2(14.1016, 14.1016)
 sprite_frames = SubResource("SpriteFrames_73yly")
@@ -1365,6 +1358,7 @@ sprite_frames = SubResource("SpriteFrames_cjqfi")
 animation = &"Attack"
 
 [node name="Attack1ef" type="AnimatedSprite2D" parent="Hit"]
+visible = false
 position = Vector2(52, -22)
 scale = Vector2(8.01491, 8.01491)
 sprite_frames = SubResource("SpriteFrames_4ddc0")
@@ -1393,4 +1387,5 @@ one_shot = true
 
 [connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]
 [connection signal="timeout" from="AttackTime" to="." method="_on_attack_time_timeout"]
+[connection signal="timeout" from="ChangePhase" to="." method="_on_change_phase_timeout"]
 [connection signal="timeout" from="CooldownMove" to="." method="_on_cooldown_move_timeout"]

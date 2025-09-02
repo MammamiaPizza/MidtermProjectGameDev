@@ -12,7 +12,7 @@ func checkmerge():
 		var cameratween = create_tween()
 		cameratween.tween_property($Player/Camera2D, "global_transform", $Marker2D.global_transform, 1)
 		await cameratween.finished
-		$Marker2D/Camera2D.make_current()
+		#$Marker2D/Camera2D.make_current()
 		#$Player/Camera2D.make_current()
 		cameratween.kill()
 		await get_tree().create_timer(2).timeout
@@ -45,7 +45,6 @@ func checkmerge():
 		returncam.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		returncam.tween_property($Marker2D/Camera2D, "global_transform", $Player/Camera2D.global_transform, 1)
 		await returncam.finished
-		$Marker2D.remove_child($Marker2D/Camera2D)
 		$Player/Camera2D.make_current()
 		returncam.kill()
 		get_tree().paused = false

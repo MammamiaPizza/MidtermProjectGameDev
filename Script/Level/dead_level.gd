@@ -12,7 +12,7 @@ var tower2 = towerScene.instantiate()
 var tower3 = towerScene.instantiate()
 var tower4 = towerScene.instantiate()
 var camera = Camera2D.new()
-var cameratween
+var towertween
 
 func _on_dead_change_phase() -> void:
 	if $Player != null:
@@ -32,45 +32,45 @@ func _on_dead_change_phase() -> void:
 		playvideo()
 		await get_tree().create_timer(1).timeout
 		createTower()
-		cameratween = create_tween()
-		cameratween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		towertween = create_tween()
+		towertween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		get_node(tower.get_path()).add_child(camera)
 		camera.make_current()
-		cameratween.tween_property(tower, "position", $TowerLocate.position, 3)
-		await cameratween.finished
+		towertween.tween_property(tower, "position", $TowerLocate.position, 3)
+		await towertween.finished
 		get_node(tower.get_path()).remove_child(camera)
-		cameratween.kill()
+		towertween.kill()
 		
-		cameratween = create_tween()
-		cameratween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		towertween = create_tween()
+		towertween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		get_node(tower2.get_path()).add_child(camera)
 		camera.make_current()
-		cameratween.tween_property(tower2, "position", $TowerLocate2.position, 2.5)
-		await cameratween.finished
+		towertween.tween_property(tower2, "position", $TowerLocate2.position, 2.5)
+		await towertween.finished
 		get_node(tower2.get_path()).remove_child(camera)
-		cameratween.kill()
+		towertween.kill()
 		
-		cameratween = create_tween()
-		cameratween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		towertween = create_tween()
+		towertween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		get_node(tower3.get_path()).add_child(camera)
 		camera.make_current()
-		cameratween.tween_property(tower3, "position", $TowerLocate3.position, 2.5)
-		await cameratween.finished
+		towertween.tween_property(tower3, "position", $TowerLocate3.position, 2.5)
+		await towertween.finished
 		get_node(tower3.get_path()).remove_child(camera)
-		cameratween.kill()
+		towertween.kill()
 		
-		cameratween = create_tween()
-		cameratween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		towertween = create_tween()
+		towertween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		get_node(tower4.get_path()).add_child(camera)
 		camera.make_current()
-		cameratween.tween_property(tower4, "position", $TowerLocate4.position, 2.5)
-		await cameratween.finished
-		cameratween.kill()
-		cameratween = create_tween()
-		cameratween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-		cameratween.tween_property(camera, "global_transform", $Player/Camera2D.global_transform, 3.5)
-		await cameratween.finished
-		print("after4")
+		towertween.tween_property(tower4, "position", $TowerLocate4.position, 2.5)
+		await towertween.finished
+		towertween.kill()
+		towertween = create_tween()
+		towertween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		towertween.tween_property(camera, "global_transform", $Player/Camera2D.global_transform, 3.5)
+		await towertween.finished
+		#print("after4")
 		$UI/Interface/CanvasLayer.show()
 		$Player/Camera2D.make_current()
 		get_tree().paused = false
