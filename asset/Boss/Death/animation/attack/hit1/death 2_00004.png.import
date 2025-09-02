@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsrko1dghn1y3"
-path="res://.godot/imported/death 2_00004.png-56abdf1e4a9b09e4e0161ca46c0dca52.ctex"
+path="res://.godot/imported/death 2_00004.png-c735f8efd56b3df2f30a9a3e6921dd82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Boss/Death/animation/attack/hit1/death 2_00004.png"
-dest_files=["res://.godot/imported/death 2_00004.png-56abdf1e4a9b09e4e0161ca46c0dca52.ctex"]
+source_file="res://asset/Boss/Death/animation/attack/Hit1/death 2_00004.png"
+dest_files=["res://.godot/imported/death 2_00004.png-c735f8efd56b3df2f30a9a3e6921dd82.ctex"]
 
 [params]
 

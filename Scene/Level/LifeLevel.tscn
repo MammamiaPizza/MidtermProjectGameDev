@@ -16,7 +16,7 @@ script/source = "extends Control
 
 @onready var player = $\"../Player\"
 @onready var life1 = $\"../Life0_5_1\"
-@onready var life2 = $\"../Life0_5-2\"
+@onready var life2 = $\"../Life0_5_2\"
 
 @onready var finalLife
 
@@ -26,7 +26,13 @@ func _process(delta: float) -> void:
 		$Interface/CanvasLayer/TextureProgressBar.value = player.stamina
 		$Interface/CanvasLayer/TextureProgressBar2.value = player.hp
 	if life1 != null and life2 != null:
-		$Interface/CanvasLayer/BossBar.value = (life1.hp + life2.hp) / 20
+		$Interface/CanvasLayer/BossBar.value = (life1.hp + life2.hp) /20
+	elif life1 == null and life2 == null:
+		if finalLife != null:
+			$Interface/CanvasLayer/BossBar.value = finalLife.hp / 10
+	
+func setLifeMerge(input):
+	finalLife = input
 "
 
 [node name="Node2D" type="Node2D"]

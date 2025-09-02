@@ -289,6 +289,7 @@ size = Vector2(163, 305)
 size = Vector2(161, 311)
 
 [node name="Node2D" type="CharacterBody2D" groups=["player"]]
+floor_max_angle = 1.78547
 script = ExtResource("1_kpjcp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]
