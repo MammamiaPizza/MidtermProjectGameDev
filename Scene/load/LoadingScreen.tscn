@@ -277,3 +277,7 @@ position = Vector2(628, 341)
 scale = Vector2(0.331313, 0.331313)
 sprite_frames = SubResource("SpriteFrames_e5ppl")
 animation = &"start"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(629, 351)
+scale = Vector2(1.46716, 1.10453)

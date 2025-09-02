@@ -113,15 +113,21 @@ script = SubResource("GDScript_cx3jm")
 [node name="Interface" parent="UI" instance=ExtResource("5_dyktx")]
 layout_mode = 1
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="UI"]
-layout_mode = 0
-offset_right = 1536.0
-offset_bottom = 1024.0
-stream = ExtResource("8_6a27f")
-
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_dyktx")
 volume_db = -20.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1195, 1283)
+enabled = false
+zoom = Vector2(0.85, 0.75)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -1963.0
+offset_top = 768.0
+offset_right = -427.0
+offset_bottom = 1792.0
+stream = ExtResource("8_6a27f")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_2ca1t")

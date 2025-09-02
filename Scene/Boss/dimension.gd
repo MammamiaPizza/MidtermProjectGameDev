@@ -104,10 +104,13 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 			if phasetwo == false:
 				phasetwo = true
 				$"../UI/VideoStreamPlayer".visible = true
+				$"../Camera2D".set_enabled(true)
+				$"../Player"/Camera2D.set_enabled(false)
+
 				$"../UI/VideoStreamPlayer".play()
 				await $"../UI/VideoStreamPlayer".finished
-				
-				
+				$"../Camera2D".set_enabled(false)
+				$"../Player"/Camera2D.set_enabled(true)				
 				$"../TileMapLayer2".set_enabled(false)
 				$"../TileMapLayer3".set_enabled(true)
 				gravityset = 2

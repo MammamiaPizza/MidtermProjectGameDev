@@ -47,6 +47,7 @@ func _on_area_2d_3_area_exited(area: Area2D) -> void:
 func deathdoor() -> void:
 	 # Replace with function body.
 	var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
+	camera.set_enabled(false)
 
 	loading_scene.target_scene = "res://Scene/Level/DeadLevel.tscn"
 	get_tree().current_scene.add_child(loading_scene)
@@ -55,6 +56,7 @@ func deathdoor() -> void:
 func lifedoor() -> void:
 	 # Replace with function body.
 	var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
+	camera.set_enabled(false)
 
 	loading_scene.target_scene = "res://Scene/Level/LifeLevel.tscn"
 	get_tree().current_scene.add_child(loading_scene)
@@ -62,7 +64,8 @@ func lifedoor() -> void:
 
 func dimensiondoor() -> void:
 	var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
-	$CanvasLayer.visible = false
+	
+	camera.set_enabled(false)
 
 	loading_scene.target_scene = "res://Scene/Level/DimensionLevel.tscn"
 	get_tree().current_scene.add_child(loading_scene)
@@ -71,8 +74,7 @@ func dimensiondoor() -> void:
 
 func timedoor() -> void:
 	var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
-	$CanvasLayer.visible = false
-
+	camera.set_enabled(false)
 	loading_scene.target_scene = "res://Scene/UI/MainMenu.tscn"
 	get_tree().current_scene.add_child(loading_scene)
 	pass # Replace with function body.
