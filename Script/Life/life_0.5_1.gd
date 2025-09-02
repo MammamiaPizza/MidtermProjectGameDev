@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 				var direction = Vector2((target.global_position.x - position.x), (target.global_position.y - position.y)).normalized()
 				velocity += direction * delta * speed
 			else:
-				var dir = Vector2((target.global_position.x - position.x - 150), (target.global_position.y - position.y) - 150)
+				var dir = Vector2((target.global_position.x - position.x - 200), (target.global_position.y - position.y) - 150)
 				velocity = dir * speed * delta
 		else:
 			var direction = Vector2(500 - position.x, 250 - position.y)
