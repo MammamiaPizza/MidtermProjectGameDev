@@ -5,6 +5,9 @@ var dimension = false
 var life = false
 var bossdie = 0
 
+var winscene = preload("res://Scene/UI/Win.tscn").instantiate()
+var lose = preload("res://Scene/UI/lose.tscn").instantiate()
+
 func reset():
 	bossdie = 0
 
@@ -22,3 +25,9 @@ func getdi():
 	return dimension
 func getl():
 	return life
+
+func whenDead():
+	get_tree().current_scene.add_child(lose)
+	
+func whenWin():
+	get_tree().current_scene.add_child(winscene)

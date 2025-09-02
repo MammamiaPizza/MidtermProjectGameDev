@@ -113,3 +113,8 @@ func TowerOpen():
 
 func operaterhelp():
 	$UI/Operater.show()
+
+
+func _on_player_death() -> void:
+	$UI/Interface/CanvasLayer.hide()
+	$UI/Operater/CanvasLayer.hide()

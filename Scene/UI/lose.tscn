@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://d14q5dyymut87"]
+
+[ext_resource type="FontFile" uid="uid://dkjc0aks337d4" path="res://asset/Font/Darksoul.otf" id="1_fqr87"]
+[ext_resource type="Script" uid="uid://c1kmkvaa166i5" path="res://Scene/UI/lose.gd" id="1_ia2pe"]
+
+[node name="Lose" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ia2pe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_fqr87")
+theme_override_font_sizes/font_size = 76
+text = "Lose All the Hope"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = 96.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_fqr87")
+theme_override_font_sizes/font_size = 56
+text = "Return"
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

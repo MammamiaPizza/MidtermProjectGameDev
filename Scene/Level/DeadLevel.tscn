@@ -128,3 +128,4 @@ volume_db = -14.99
 [connection signal="operatorhelp" from="." to="." method="operaterhelp"]
 [connection signal="towerPowerOn" from="." to="Dead" method="_on_node_2d_tower_power_on"]
 [connection signal="changePhase" from="Dead" to="." method="_on_dead_change_phase"]
+[connection signal="death" from="Player" to="." method="_on_player_death"]

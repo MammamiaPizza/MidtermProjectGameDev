@@ -74,10 +74,13 @@ func _process(delta: float) -> void:
 	
 	#check dead
 	if (hp <= 0 or hp > 100) and !godmode:
+		get_tree().paused = true
 		alive = false
 		hp == 100
-		queue_free()
-		#hide()
+		#queue_free()
+		hide()
+		
+		death.connect(Callable(Bossclean, "whenDead"))
 		death.emit()
 	
 func dodge():
