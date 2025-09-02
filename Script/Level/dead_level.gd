@@ -29,8 +29,16 @@ func _on_dead_change_phase() -> void:
 		$UI/CanvasLayer/VideoStreamPlayer.paused = false
 		get_tree().paused = true
 		changePhase = true
-		playvideo()
-		await get_tree().create_timer(1).timeout
+		
+		$UI/CanvasLayer/VideoStreamPlayer.show()
+		$UI/CanvasLayer/VideoStreamPlayer.play()
+		await  $UI/CanvasLayer/VideoStreamPlayer.finished
+		$UI/CanvasLayer/VideoStreamPlayer.stop()
+		$UI/CanvasLayer/VideoStreamPlayer.hide()
+		
+		
+		
+		#await get_tree().create_timer(1).timeout
 		createTower()
 		towertween = create_tween()
 		towertween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
@@ -98,12 +106,8 @@ func TowerOpen():
 	#print("Hello")
 	towerPowerOn.emit()
 
-func playvideo():
-	$UI/CanvasLayer/VideoStreamPlayer.show()
-	$UI/CanvasLayer/VideoStreamPlayer.play()
-	await  $UI/CanvasLayer/VideoStreamPlayer.finished
-	$UI/CanvasLayer/VideoStreamPlayer.stop()
-	$UI/CanvasLayer/VideoStreamPlayer.hide()
+#func playvideo():
+	
 
 func operaterhelp():
 	$UI/Operater.show()
