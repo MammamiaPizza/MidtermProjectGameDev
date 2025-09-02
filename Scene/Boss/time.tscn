@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://coeodkjnxmlpf"]
+[gd_scene load_steps=103 format=3 uid="uid://bnnl72y5en7ev"]
 
 [ext_resource type="Script" uid="uid://bmagjmrgfpmtn" path="res://Scene/Boss/time.gd" id="1_5otyx"]
 [ext_resource type="Texture2D" uid="uid://c2j2cwfpuhx05" path="res://asset/Boss/Time/time_00000.png" id="1_24ubn"]
@@ -437,7 +437,7 @@ autostart = true
 autostart = true
 
 [node name="ResetWorld" type="Timer" parent="."]
-wait_time = 300.0
+wait_time = 5.0
 one_shot = true
 
 [node name="Label" type="Label" parent="."]

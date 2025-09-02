@@ -102,14 +102,14 @@ func _on_attack_time_timeout() -> void:
 func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
 		hp -= area.damage
-		if hp < 0:
+		if hp <= 0:
 			if phasetwo == false:
 				phasetwo = true
-				$"../UI/VideoStreamPlayer".visible = true
+				$"../VideoStreamPlayer".visible = true
 				$"../Camera2D".set_enabled(true)
 				$"../Player"/Camera2D.set_enabled(false)
-				$"../UI/VideoStreamPlayer".play()
-				await $"../UI/VideoStreamPlayer".finished
+				$"../VideoStreamPlayer".play()
+				await $"../VideoStreamPlayer".finished
 				$"../Camera2D".set_enabled(false)
 				$"../Player"/Camera2D.set_enabled(true)				
 				$"../TileMapLayer2".set_enabled(false)
@@ -119,9 +119,17 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 				$"../TileMapLayer".set_enabled(false)
 				$"../Sprite2D".hide()
 				target.gravity = 1
-				$"../UI/VideoStreamPlayer".visible = false
+				$"../VideoStreamPlayer".visible = false
+				
 			else:
-				return
+				$"../UI/Interface/CanvasLayer".hide()
+				$"../Player/Camera2D".enabled = false
+				Bossclean.bosswin()
+				Bossclean.dimension = true
+				var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
+				loading_scene.target_scene = "res://Scene/UI/select-door.tscn"
+				get_tree().current_scene.add_child(loading_scene)
+
 func _on_cooldown_move_timeout() -> void:
 	$AttackTime.start()
 

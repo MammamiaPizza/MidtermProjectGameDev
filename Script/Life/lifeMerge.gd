@@ -39,4 +39,11 @@ func _process(delta: float) -> void:
 func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
 		hp -= area.getDamage()
-		print(hp)
+		if hp <= 0:
+			$"../UI/Interface/CanvasLayer".hide()
+			$"../Player/Camera2D".enabled = false
+			Bossclean.bosswin()
+			Bossclean.life = true
+			var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
+			loading_scene.target_scene = "res://Scene/UI/select-door.tscn"
+			get_tree().current_scene.add_child(loading_scene)

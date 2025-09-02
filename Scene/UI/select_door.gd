@@ -61,13 +61,13 @@ func _ready() -> void:
 		await $AudioStreamPlayer2D.finished
 		$AudioStreamPlayer2D.stop()
 	elif Bossclean.getbossdie() == 3 :
-		$StreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ.wav"))
+		$AudioStreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ.wav"))
 		$Camera2D/Control/TextureRect2/Label.set_text("เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ")
 		$AudioStreamPlayer2D.play()
 		await $AudioStreamPlayer2D.finished
 		$AudioStreamPlayer2D.stop()
 	elif Bossclean.getbossdie() == 4 :
-		$StreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/ยินดีด้วยนะ นายทำสำเร็จแล้วละ.wav"))
+		$AudioStreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/ยินดีด้วยนะ นายทำสำเร็จแล้วละ.wav"))
 		$Camera2D/Control/TextureRect2/Label.set_text("ยินดีด้วยนะ นายทำสำเร็จแล้วละ")
 		$AudioStreamPlayer2D.play()
 		await $AudioStreamPlayer2D.finished
@@ -137,7 +137,7 @@ func deathdoor() -> void:
 		get_tree().current_scene.add_child(loading_scene)
 		pass
 	else:
-		$StreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง.wav"))
+		$AudioStreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง.wav"))
 		$Camera2D/Control/TextureRect2/Label.set_text("โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง")
 		$AudioStreamPlayer2D.play()
 		await $AudioStreamPlayer2D.finished
@@ -154,7 +154,7 @@ func lifedoor() -> void:
 		get_tree().current_scene.add_child(loading_scene)
 		pass
 	else:
-		$StreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง.wav"))
+		$AudioStreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง.wav"))
 		$Camera2D/Control/TextureRect2/Label.set_text("โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง")
 		$AudioStreamPlayer2D.play()
 		await $AudioStreamPlayer2D.finished
@@ -171,7 +171,7 @@ func dimensiondoor() -> void:
 		get_tree().current_scene.add_child(loading_scene)
 		pass # Replace with function body.
 	else:
-		$StreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง.wav"))
+		$AudioStreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง.wav"))
 		$Camera2D/Control/TextureRect2/Label.set_text("โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง")
 		$AudioStreamPlayer2D.play()
 		await $AudioStreamPlayer2D.finished
@@ -183,11 +183,11 @@ func timedoor() -> void:
 			dialogend()	
 		var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
 		camera.set_enabled(false)
-		loading_scene.target_scene = "res://Scene/UI/MainMenu.tscn"
+		loading_scene.target_scene = "res://Scene/Level/TimeLevel.tscn"
 		get_tree().current_scene.add_child(loading_scene)
 		pass # Replace with function body.
 	else:
-		$StreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง.wav"))
+		$AudioStreamPlayer2D.set_stream(load("res://asset/OperatorwithDialog/dialog/voice/โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง.wav"))
 		$Camera2D/Control/TextureRect2/Label.set_text("โถ่ห้องนั้นนายเข้าไปแล้วนะลืมรึไง")
 		$AudioStreamPlayer2D.play()
 		await $AudioStreamPlayer2D.finished

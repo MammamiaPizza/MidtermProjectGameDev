@@ -105,6 +105,14 @@ func _on_node_2d_tower_power_on() -> void:
 		await scaletween.finished
 		scaletween.tween_property(self, "scale", Vector2(0, 0), 2)
 		self.queue_free()
+		
+		$"../UI/Interface/CanvasLayer".hide()
+		$"../Player/Camera2D".enabled = false
+		Bossclean.bosswin()
+		Bossclean.death = true
+		var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
+		loading_scene.target_scene = "res://Scene/UI/select-door.tscn"
+		get_tree().current_scene.add_child(loading_scene)
 	else:
 		debuffBoss()
 
@@ -126,4 +134,5 @@ func _process(delta: float) -> void:
 		velocity = direction.normalized() * 20 
 		$Body.disabled = true
 		move_and_slide()
+		
 		

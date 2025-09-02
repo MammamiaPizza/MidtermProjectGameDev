@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://1h3hibvtv1yv"]
+[gd_scene load_steps=107 format=3 uid="uid://1h3hibvtv1yv"]
 
 [ext_resource type="Texture2D" uid="uid://b8y5lmkrrkgbh" path="res://asset/Boss/Life/Second/1_00000.png" id="1_56jat"]
 [ext_resource type="Script" uid="uid://bxusimem6redv" path="res://Script/Life/life_0.5_2.gd" id="1_h41ar"]
@@ -101,10 +101,6 @@
 [ext_resource type="Texture2D" uid="uid://c2vb1ave12ogo" path="res://asset/Boss/Life/Second/1_00096.png" id="97_4demm"]
 [ext_resource type="Texture2D" uid="uid://cdy254bj30cc4" path="res://asset/Boss/Life/Second/1_00097.png" id="98_mbr1y"]
 [ext_resource type="Script" uid="uid://85argttswg8h" path="res://Script/Life/AttackLifeTwo.gd" id="99_77407"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s5dn0"]
-shader = ExtResource("2_s5dn0")
-shader_parameter/flashEnabled = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tj5de"]
 shader = ExtResource("2_s5dn0")
@@ -422,7 +418,6 @@ size = Vector2(330, 526)
 size = Vector2(308, 506)
 
 [node name="Life0_5_2" type="CharacterBody2D" groups=["Enemy"]]
-material = SubResource("ShaderMaterial_s5dn0")
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_h41ar")

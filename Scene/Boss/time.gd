@@ -49,15 +49,19 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
 		hp -= area.getDamage()
 		print(hp)
-	if hp < 0 :
+	if hp <= 0 :
 		if !phasetwo:
 			phasetwo = true
 			$ResetWorld.start()
 			$Label.visible = true
-			hp = 10000
+			#hp = 10000
+			hp = 100
 			$"../AudioStreamPlayer2D".stop()
 			$"../AudioStreamPlayer2D2".play()
 		else:
+			$"../UI/Interface/CanvasLayer".hide()
+			$"../Player/Camera2D2".enabled = false
+			$"../Player/Camera2D".enabled = false
 			Bossclean.bosswin()
 			Bossclean.time = true
 			var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
