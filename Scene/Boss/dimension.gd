@@ -11,7 +11,7 @@ var hp = 10
 var randommove
 var cooldown = 3.5
 #var checkrandom = true
-var sealcheck = false
+var alive = true
 var phasetwo = false
 var gravityset = 0
 func _ready() -> void:
@@ -27,7 +27,7 @@ func _on_attack_time_timeout() -> void:
 		$".".rotateevery(gravityset)
 	#print(target.position.x)
 	#print(position.x)
-	if !sealcheck:
+	if alive:
 		if randommove == "Attack1":
 			$body.play("warp")
 			await $body.animation_finished
@@ -113,39 +113,3 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 				return
 func _on_cooldown_move_timeout() -> void:
 	$AttackTime.start()
-
-var counttower = 0
-
-func _on_node_2d_tower_power_on() -> void:
-	counttower += 1
-	if counttower >= 4:
-		sealcheck = true
-		$AttackTime.stop()
-		$CooldownMove.stop()
-		var scaletween = create_tween()
-		scaletween.tween_property(self, "scale", Vector2(0.14, 0.14), 2)
-		await scaletween.finished
-		scaletween.tween_property(self, "scale", Vector2(0, 0), 2)
-		self.queue_free()
-	else:
-		debuffBoss()
-
-var debuffSet = [1,2,3]
-
-func debuffBoss():
-	var randomvar = debuffSet.pick_random()
-	debuffSet.remove_at(debuffSet.find(randomvar))
-	if randomvar == 1:
-		Moveset.remove_at(Moveset.find(Moveset.pick_random()))
-	elif randomvar == 2:
-		cooldown = 8
-	elif randomvar == 3:
-		Moveset.remove_at(Moveset.find(Moveset.pick_random()))
-
-func _process(delta: float) -> void:
-	if sealcheck:
-		var direction = Vector2(625,300) - global_position
-		velocity = direction.normalized() * 20 
-		$Body.disabled = true
-		move_and_slide()
-		

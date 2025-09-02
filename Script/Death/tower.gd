@@ -22,10 +22,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			TowerIsOpen.emit()
 
 
-func _process(delta: float) -> void:
-	if target != null:
-		var direction1 = target - position
-		position += direction1 * delta
+#func _process(delta: float) -> void:
+	#if target != null:
+		#var direction1 = target - position
+		#position += direction1 * delta
 	
 func setTarget(targetposition : Vector2) -> void:
 	target = targetposition

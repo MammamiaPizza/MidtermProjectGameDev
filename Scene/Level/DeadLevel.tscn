@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bcg2u6fv2soqh"]
+[gd_scene load_steps=10 format=4 uid="uid://bcg2u6fv2soqh"]
 
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="1_3e0tl"]
 [ext_resource type="Script" uid="uid://vtp6brdjyrjd" path="res://Script/Level/dead_level.gd" id="1_14i0j"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player/Player.tscn" id="2_fqeg3"]
 [ext_resource type="Texture2D" uid="uid://d14as6x0e0nyn" path="res://asset/map/ChatGPT Image 15 ส.ค. 2568 15_38_09.png" id="3_d8qpg"]
 [ext_resource type="PackedScene" uid="uid://cno5ogm4dy45g" path="res://Scene/UI/UI.tscn" id="6_1cb1g"]
+[ext_resource type="VideoStream" uid="uid://lnu88pt0rawr" path="res://asset/Boss/fasthelp.ogv" id="7_b1t6i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d8qpg"]
 size = Vector2(21, 824)
@@ -16,11 +17,13 @@ script/source = "extends Control
 @onready var player = $\"../Player\"
 @onready var boss = $\"../Dead\"
 
+var showOrnot = true
+
 func _process(delta: float) -> void:
-	if player != null:
+	if player != null and showOrnot:
 		$Interface/CanvasLayer/TextureProgressBar.value = player.stamina
 		$Interface/CanvasLayer/TextureProgressBar2.value = player.hp
-	if boss != null:
+	if boss != null and showOrnot:
 		$Interface/CanvasLayer/BossBar.value = boss.hp / 100
 "
 
@@ -48,9 +51,6 @@ scale = Vector2(0.25, 0.25)
 position = Vector2(199, 646)
 scale = Vector2(0.2, 0.2)
 platform_wall_layers = 1
-
-[node name="Camera2D2" type="Camera2D" parent="Player"]
-zoom = Vector2(1.3, 1.3)
 
 [node name="TowerLocate" type="Marker2D" parent="."]
 position = Vector2(152, 205)
@@ -90,5 +90,14 @@ offset_top = -226.0
 offset_right = -218.0
 offset_bottom = -266.0
 
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="UI"]
+process_mode = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("7_b1t6i")
+paused = true
+
 [connection signal="towerPowerOn" from="." to="Dead" method="_on_node_2d_tower_power_on"]
+[connection signal="turnonVideo" from="." to="UI/VideoStreamPlayer" method="playvid"]
 [connection signal="changePhase" from="Dead" to="." method="_on_dead_change_phase"]

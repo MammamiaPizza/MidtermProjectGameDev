@@ -42,6 +42,7 @@ func _process(delta: float) -> void:
 			var direction = Vector2(850 - position.x, 250 - position.y)
 			velocity = direction * speed * delta
 		
+		
 		move_and_slide()
 	
 
