@@ -1,7 +1,7 @@
 extends Node
 var death = false
 var time = false
-var dimension = false
+var dimensionboss = false
 var life = false
 var bossdie = 0
 
@@ -22,7 +22,7 @@ func getd():
 func gett():
 	return time
 func getdi():
-	return dimension
+	return dimensionboss
 func getl():
 	return life
 
