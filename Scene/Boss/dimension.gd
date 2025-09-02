@@ -25,7 +25,7 @@ func _on_attack_time_timeout() -> void:
 		if gravityset != 0 :
 			gravityset = randi_range(1,4)
 			target.gravity_set = gravityset
-			$".".rotateevery(gravityset)
+			$"..".rotateevery(gravityset)
 		#print(target.position.x)
 		#print(position.x)
 		if !sealcheck:
@@ -53,10 +53,11 @@ func _on_attack_time_timeout() -> void:
 					position.y = target.global_position.y
 					$body.play_backwards("warp")
 					await $body.animation_finished
-					$body.scale *= -1
+					$body.scale.x *= -1
 					$body.play("Attack2")
 					$HitArea/CollisionShape2D.disabled = false
 					await $body.animation_finished
+<<<<<<< HEAD
 					$body.scale *= -1
 					$Hit/Attack2ef.set_frame_and_progress(0, 0)
 					$Hit/Attack2ef.play("Attack2")
@@ -67,6 +68,19 @@ func _on_attack_time_timeout() -> void:
 					$Hit/Attack2.disabled = true
 					$Hit/Attack2ef.hide()
 					$HitArea/CollisionShape2D.disabled = true
+=======
+					
+					$Hit/AnimatedSprite2D.set_frame_and_progress(0, 0)
+					$Hit/AnimatedSprite2D.play("Attack2")
+					$Hit/AnimatedSprite2D.show()
+					
+					await $Hit/AnimatedSprite2D.animation_finished
+					$Hit/Attack2.disabled = false
+					await get_tree().create_timer(0.05).timeout
+					$Hit/Attack2.disabled = true
+					$body.scale.x *= -1
+					$Hit/AnimatedSprite2D.hide()
+>>>>>>> c35613662a493f1295740a85e16aa763a31972c5
 					
 				elif (position.x < target.position.x):
 					$body.play("warp")

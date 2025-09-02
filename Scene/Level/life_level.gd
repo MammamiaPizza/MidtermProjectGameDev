@@ -4,13 +4,13 @@ var merge : bool
 
 var lifemerge = preload("res://Scene/Boss/Life.tscn").instantiate()
 
-
+var plus = false
 
 func checkmerge():
 	if $Life0_5_2.merge == $Life0_5_1.merge:
 		merge = true
 		var cameratween = create_tween()
-		cameratween.tween_property($Player/Camera2D, "global_transform", $Marker2D/Camera2D.global_transform, 1)
+		cameratween.tween_property($Player/Camera2D, "global_transform", $Marker2D.global_transform, 1)
 		await cameratween.finished
 		$Marker2D/Camera2D.make_current()
 		#$Player/Camera2D.make_current()
@@ -57,7 +57,25 @@ func checkmerge():
 	$Player	
 		
 func _process(delta: float) -> void:
-	if get_node_or_null("$Player") != null:
-		$Player.hp -= 1 * delta
+	if get_node_or_null("Player") != null:
+		print($Player.hp)
+		if plus:
+			$Player.hp += 1 * delta
+		else:
+			$Player.hp -= 1 * delta
 	else:
 		return
+
+
+func _on_timer_timeout() -> void:
+	plus = !plus
+	if !plus:
+		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(0,0,0))
+	else:
+		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(255,255,255))
+	$Cooldown.start()
+		
+
+
+func _on_cooldown_timeout() -> void:
+	$Change.start()
