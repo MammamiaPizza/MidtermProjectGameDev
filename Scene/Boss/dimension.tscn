@@ -1110,6 +1110,8 @@ script = ExtResource("1_kp0jm")
 [node name="body" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_aliwu")
 animation = &"Attack2"
+frame = 3
+frame_progress = 1.0
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-34.5, 4.5)
@@ -1141,6 +1143,8 @@ rotation = -0.301917
 scale = Vector2(4.23906, 2.2375)
 sprite_frames = SubResource("SpriteFrames_r2blc")
 animation = &"Attack2"
+frame = 12
+frame_progress = 1.0
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Hit"]
 rotation = 0.234166
@@ -1181,5 +1185,4 @@ one_shot = true
 
 [connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]
 [connection signal="timeout" from="AttackTime" to="." method="_on_attack_time_timeout"]
-[connection signal="timeout" from="ChangePhase" to="." method="_on_change_phase_timeout"]
 [connection signal="timeout" from="CooldownMove" to="." method="_on_cooldown_move_timeout"]
