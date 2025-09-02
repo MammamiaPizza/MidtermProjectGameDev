@@ -35,13 +35,16 @@ func _on_attack_time_timeout() -> void:
 				position = target.global_position
 				$body.play_backwards("warp")
 				await $body.animation_finished
-				$body.play(randommove)
-				await get_tree().create_timer(0.6).timeout
+				$body.play("Attack1")
+				$HitArea/CollisionShape2D.disabled = false
+				$Hit/Attack1ef.play("Attack")
+				await get_tree().create_timer(0.15).timeout
 				$Hit/Attack1.disabled = false
-				await get_tree().create_timer(0.2).timeout
+				await $Hit/Attack1ef.animation_finished
 				$Hit/Attack1.disabled = true
 				await $body.animation_finished
-			
+				$HitArea/CollisionShape2D.disabled = true
+				
 			elif randommove == "Attack2":
 				if (position.x > target.position.x):
 					$body.play("warp")
@@ -52,17 +55,18 @@ func _on_attack_time_timeout() -> void:
 					await $body.animation_finished
 					$body.scale *= -1
 					$body.play("Attack2")
+					$HitArea/CollisionShape2D.disabled = false
 					await $body.animation_finished
 					$body.scale *= -1
-					$Hit/AnimatedSprite2D.set_frame_and_progress(0, 0)
-					$Hit/AnimatedSprite2D.play("Attack2")
-					$Hit/AnimatedSprite2D.show()
-					
-					await $Hit/AnimatedSprite2D2.animation_finished
+					$Hit/Attack2ef.set_frame_and_progress(0, 0)
+					$Hit/Attack2ef.play("Attack2")
+					$Hit/Attack2ef.show()
+					await $Hit/Attack2ef.animation_finished
 					$Hit/Attack2.disabled = false
 					await get_tree().create_timer(0.05).timeout
 					$Hit/Attack2.disabled = true
-					$Hit/AnimatedSprite2D.hide()
+					$Hit/Attack2ef.hide()
+					$HitArea/CollisionShape2D.disabled = true
 					
 				elif (position.x < target.position.x):
 					$body.play("warp")
@@ -72,26 +76,33 @@ func _on_attack_time_timeout() -> void:
 					$body.play_backwards("warp")
 					await $body.animation_finished
 					$body.play("Attack2")
+					$HitArea/CollisionShape2D.disabled = false
 					await $body.animation_finished
-					$Hit/AnimatedSprite2D3.set_frame_and_progress(0, 0)
-					$Hit/AnimatedSprite2D3.play("Attack3")
-					$Hit/AnimatedSprite2D3.show()
+					$Hit/Attack3ef.set_frame_and_progress(0, 0)
+					$Hit/Attack3ef.play("Attack3")
+					$Hit/Attack3ef.show()
 					
-					await $Hit/AnimatedSprite2D3.animation_finished
+					await $Hit/Attack3ef.animation_finished
 					$Hit/Attack3.disabled = false
 					await get_tree().create_timer(0.05).timeout
 					$Hit/Attack3.disabled = true
-					$Hit/AnimatedSprite2D3.hide()
-
+					$Hit/Attack3ef.hide()
+					$HitArea/CollisionShape2D.disabled = true
+					
 			elif randommove == "Attack4":
 				position = target.global_position
-				$body.play(randommove)
+				$body.play("Attack4")
+				$HitArea/CollisionShape2D.disabled = false
+				$Hit/Attack4ef.play("Attack")
+				$Hit/Attack4ef.show()
 				await get_tree().create_timer(0.6).timeout
 				$Hit/Attack4.disabled = false
 				await get_tree().create_timer(0.2).timeout
 				$Hit/Attack4.disabled = true
 				await $body.animation_finished
-			
+				$Hit/Attack4ef.hide()
+				$HitArea/CollisionShape2D.disabled = true
+				
 			$body.play("Idle")
 			$Hit/AnimatedSprite2D2.hide()
 			$CooldownMove.start()
@@ -115,12 +126,11 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 				$"../TileMapLayer2".set_enabled(false)
 				$"../TileMapLayer3".set_enabled(true)
 				gravityset = 2
-				hp = 10000
 				$"../TileMapLayer".set_enabled(false)
 				$"../Sprite2D".hide()
 				target.gravity = 1
 				$"../VideoStreamPlayer".visible = false
-				
+				hp = 10000
 			else:
 				$"../UI/Interface/CanvasLayer".hide()
 				$"../Player/Camera2D".enabled = false

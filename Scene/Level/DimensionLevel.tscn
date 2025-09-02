@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player/Player.tscn" id="4_2ca1t"]
 [ext_resource type="PackedScene" uid="uid://cno5ogm4dy45g" path="res://Scene/UI/UI.tscn" id="5_dyktx"]
 [ext_resource type="AudioStream" uid="uid://kxqid6h5f33g" path="res://asset/Audio/มิติเฟสหนึ่ง.mp3" id="8_2ca1t"]
-[ext_resource type="VideoStream" path="res://asset/Audio/dimensionsalshs.ogv" id="8_6a27f"]
+[ext_resource type="VideoStream" uid="uid://du21kcip6ix3f" path="res://asset/Audio/dimensionsalshs.ogv" id="8_6a27f"]
 [ext_resource type="AudioStream" uid="uid://rpbtuacwb2ti" path="res://asset/Audio/มิติเฟส2.mp3" id="8_dyktx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6a27f"]
