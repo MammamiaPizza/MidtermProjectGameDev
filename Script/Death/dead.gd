@@ -66,7 +66,7 @@ func _on_attack_time_timeout() -> void:
 			elif randommove == "Attack4":
 				position = target.global_position
 				$AnimatedSprite2D.play(randommove)
-				await get_tree().create_timer(0.6).timeout
+				await get_tree().create_timer(1).timeout
 				$Hit/Attack4.disabled = false
 				await get_tree().create_timer(0.2).timeout
 				$Hit/Attack4.disabled = true
@@ -86,7 +86,8 @@ func _on_change_phase_timeout() -> void:
 
 func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
-		hp -= area.damage
+		#hp -= area.damage
+		return
 
 func _on_cooldown_move_timeout() -> void:
 	$AttackTime.start()
