@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://dwbn7uvtlu8jw"]
+[gd_scene load_steps=72 format=3 uid="uid://dwbn7uvtlu8jw"]
 
 [ext_resource type="Script" uid="uid://th51nltwb1sw" path="res://Scene/UI/select_door.gd" id="1_fvn6o"]
 [ext_resource type="Texture2D" uid="uid://hnnt6mab6amx" path="res://asset/UI/Door/deathdoor_00000.jpg" id="2_svsa2"]
@@ -64,6 +64,9 @@
 [ext_resource type="Texture2D" uid="uid://bwoe8kdhld4m8" path="res://asset/map/door/door(16).png" id="62_vcfie"]
 [ext_resource type="Texture2D" uid="uid://c2mdsatd07iu6" path="res://asset/map/door/door(17).png" id="63_gk67n"]
 [ext_resource type="AudioStream" uid="uid://sncgb2pv64dj" path="res://asset/Audio/Aincrad (Sword Art Online) - Unreal Engine - TheGabmeister (1080p, h264, youtube).mp3" id="64_svsa2"]
+[ext_resource type="Texture2D" uid="uid://dumb3ard8opgt" path="res://asset/OperatorwithDialog/operator/operator.png" id="65_pb403"]
+[ext_resource type="Texture2D" uid="uid://c8fqbcee4y43d" path="res://asset/OperatorwithDialog/operator/dialogbox.png" id="66_xtma4"]
+[ext_resource type="AudioStream" uid="uid://bshdq2meajmfd" path="res://asset/OperatorwithDialog/dialog/voice/สวัสดีฉันชื่อโชระเป็นOperatorของนายก็แค่นั้นแหละ.wav" id="67_xtma4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_710lx"]
 animations = [{
@@ -276,7 +279,7 @@ animations = [{
 size = Vector2(266, 572)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkhqh"]
-size = Vector2(248, 700)
+size = Vector2(367.853, 855.922)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fvn6o"]
 size = Vector2(708, 689)
@@ -385,6 +388,15 @@ offset_right = -104.0
 offset_bottom = -277.0
 scale = Vector2(6.70343, 14.2558)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("64_svsa2")
+volume_db = -20.0
+autoplay = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("67_xtma4")
+volume_db = -10.0
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(639, 359)
 
@@ -392,14 +404,16 @@ position = Vector2(639, 359)
 position = Vector2(-1647, -356)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D"]
-position = Vector2(1145, 363)
+position = Vector2(1073, 363)
+scale = Vector2(1.43171, 1.20756)
 shape = SubResource("RectangleShape2D_lkhqh")
 
 [node name="Area2D2" type="Area2D" parent="Camera2D"]
 position = Vector2(-645, -352)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D2"]
-position = Vector2(1145, 363)
+position = Vector2(1218.42, 352)
+scale = Vector2(1.221, -1.06084)
 shape = SubResource("RectangleShape2D_lkhqh")
 
 [node name="Area2D3" type="Area2D" parent="Camera2D"]
@@ -408,10 +422,39 @@ shape = SubResource("RectangleShape2D_lkhqh")
 position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_fvn6o")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("64_svsa2")
-volume_db = -20.0
-autoplay = true
+[node name="Control" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = -5.0
+offset_right = 60.0
+offset_bottom = 35.0
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/Control"]
+offset_left = 451.0
+offset_top = 183.0
+offset_right = 1475.0
+offset_bottom = 1207.0
+scale = Vector2(0.13968, 0.13968)
+texture = ExtResource("65_pb403")
+
+[node name="TextureRect2" type="TextureRect" parent="Camera2D/Control"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 189.0
+offset_right = 1329.0
+offset_bottom = 614.0
+scale = Vector2(0.283696, 0.283696)
+texture = ExtResource("66_xtma4")
+
+[node name="Label" type="Label" parent="Camera2D/Control/TextureRect2"]
+layout_mode = 0
+offset_left = 81.0727
+offset_top = 119.847
+offset_right = 121.073
+offset_bottom = 142.847
+scale = Vector2(2.45237, 2.97888)
+text = "..."
 
 [connection signal="area_entered" from="AnimatedSprite2D3/Area2D3" to="." method="_on_area_2d_3_area_entered"]
 [connection signal="area_exited" from="AnimatedSprite2D3/Area2D3" to="." method="_on_area_2d_3_area_exited"]
@@ -425,8 +468,10 @@ autoplay = true
 [connection signal="area_entered" from="AnimatedSprite2D/Area2D3" to="." method="_on_area_2d_3_area_entered"]
 [connection signal="area_exited" from="AnimatedSprite2D/Area2D3" to="." method="_on_area_2d_3_area_exited"]
 [connection signal="pressed" from="AnimatedSprite2D/TextureButton" to="." method="timedoor"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="mouse_entered" from="Camera2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="Camera2D/Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Area2D2" to="." method="_on_area_2d_2_mouse_exited"]
 [connection signal="area_entered" from="Camera2D/Area2D3" to="." method="_on_area_2d_3_area_entered"]
 [connection signal="area_exited" from="Camera2D/Area2D3" to="." method="_on_area_2d_3_area_exited"]
-[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

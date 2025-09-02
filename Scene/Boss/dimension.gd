@@ -62,6 +62,7 @@ func _on_attack_time_timeout() -> void:
 					$Hit/Attack2.disabled = false
 					await get_tree().create_timer(0.05).timeout
 					$Hit/Attack2.disabled = true
+					$Hit/AnimatedSprite2D.hide()
 					
 				elif (position.x < target.position.x):
 					$body.play("warp")
@@ -76,11 +77,12 @@ func _on_attack_time_timeout() -> void:
 					$Hit/AnimatedSprite2D3.play("Attack3")
 					$Hit/AnimatedSprite2D3.show()
 					
-					await $Hit/AnimatedSprite2D2.animation_finished
+					await $Hit/AnimatedSprite2D3.animation_finished
 					$Hit/Attack3.disabled = false
 					await get_tree().create_timer(0.05).timeout
 					$Hit/Attack3.disabled = true
-				
+					$Hit/AnimatedSprite2D3.hide()
+
 			elif randommove == "Attack4":
 				position = target.global_position
 				$body.play(randommove)
