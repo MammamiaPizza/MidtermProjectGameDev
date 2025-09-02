@@ -118,6 +118,7 @@ autostart = true
 [node name="Cooldown" type="Timer" parent="."]
 
 [node name="Phase1" type="AudioStreamPlayer" parent="."]
+autoplay = true
 
 [node name="Phase2" type="AudioStreamPlayer" parent="."]
 

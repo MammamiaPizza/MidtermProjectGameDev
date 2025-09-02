@@ -21,7 +21,7 @@ func checkmerge():
 		$Marker2D/Camera2D.make_current()
 		get_node("Player").remove_child(cameranew)
 		cameratween.kill()
-		
+		$Phase1.stop()
 		await get_tree().create_timer(2).timeout
 		var tween1 = create_tween()
 		tween1.tween_property($Life0_5_1, "position", Vector2(625,300), 2)
@@ -32,12 +32,14 @@ func checkmerge():
 		tweencolor1.tween_property($Life0_5_1/AnimatedSprite2D.material, "shader_parameter/flashEnabled", 1, 1 )
 		tweencolor2.tween_property($Life0_5_2/AnimatedSprite2D.material, "shader_parameter/flashEnabled", 1, 1 )
 		await tween1.finished and tween2.finished
+		$Phase2.play()
 		tween1.kill()
 		tweencolor1.kill()
 		tween2.kill()
 		tweencolor2.kill()
 		$Life0_5_2.queue_free()
 		$Life0_5_1.queue_free()
+		
 		get_tree().paused = true
 		add_child(lifemerge)
 		lifemerge.position = Vector2(625,250)
