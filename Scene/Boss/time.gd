@@ -58,7 +58,12 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 			$"../AudioStreamPlayer2D".stop()
 			$"../AudioStreamPlayer2D2".play()
 		else:
-			pass
+			Bossclean.bosswin()
+			Bossclean.time = true
+			var loading_scene = preload("res://Scene/load/LoadingScreen.tscn").instantiate()
+			loading_scene.target_scene = "res://Scene/UI/select-door.tscn"
+			get_tree().current_scene.add_child(loading_scene)
+
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):

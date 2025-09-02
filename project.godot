@@ -15,6 +15,10 @@ run/main_scene="uid://cvaixmw2mgc2i"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://asset/icon.svg"
 
+[autoload]
+
+Bossclean="*res://bossclean.gd"
+
 [display]
 
 window/size/viewport_width=1280
