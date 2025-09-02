@@ -67,7 +67,6 @@ func checkmerge():
 		
 		
 		$UI.setLifeMerge(lifemerge)
-	$Player	
 		
 func _process(delta: float) -> void:
 	if get_node_or_null("Player") != null:
