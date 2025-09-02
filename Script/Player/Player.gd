@@ -5,7 +5,7 @@ signal death
 
 var shadow = preload("res://Scene/Player/Shadow.tscn")
 var gravity_set = 1
-var hp = 49
+var hp = 100
 var stamina = 100
 
 var speed = 200

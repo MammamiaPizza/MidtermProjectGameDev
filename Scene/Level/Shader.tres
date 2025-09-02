@@ -1,7 +1,0 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b2tsiushjjnqq"]
-
-[ext_resource type="Shader" uid="uid://bhac2joe6csmr" path="res://Script/Shader/Flash.gdshader" id="1_femrl"]
-
-[resource]
-shader = ExtResource("1_femrl")
-shader_parameter/flashEnabled = 1.0

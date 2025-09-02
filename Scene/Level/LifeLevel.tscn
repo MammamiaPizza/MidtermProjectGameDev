@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=4 uid="uid://lyr07gtkcs20"]
 
 [ext_resource type="Texture2D" uid="uid://d14as6x0e0nyn" path="res://asset/map/ChatGPT Image 15 ส.ค. 2568 15_38_09.png" id="1_qiqkd"]
-[ext_resource type="Script" uid="uid://coc642c7dytpc" path="res://Scene/Level/life_level.gd" id="1_yxwmx"]
+[ext_resource type="Script" uid="uid://coc642c7dytpc" path="res://Script/Level/life_level.gd" id="1_yxwmx"]
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="2_2ujh5"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player/Player.tscn" id="3_2ujh5"]
 [ext_resource type="PackedScene" uid="uid://cno5ogm4dy45g" path="res://Scene/UI/UI.tscn" id="4_btq7k"]
 [ext_resource type="PackedScene" uid="uid://1h3hibvtv1yv" path="res://Scene/Boss/Life0.5-2.tscn" id="5_yxwmx"]
-[ext_resource type="Material" uid="uid://b2tsiushjjnqq" path="res://Scene/Level/Shader.tres" id="6_lbw4l"]
+[ext_resource type="Material" uid="uid://b2tsiushjjnqq" path="res://asset/Prefab/Shader.tres" id="6_lbw4l"]
 [ext_resource type="PackedScene" uid="uid://yxbhfix1ybgt" path="res://Scene/Boss/Life0.5-1.tscn" id="6_r22jc"]
 [ext_resource type="Shader" uid="uid://bhac2joe6csmr" path="res://Script/Shader/Flash.gdshader" id="6_rhuts"]
 
@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 		$Interface/CanvasLayer/TextureProgressBar.value = player.stamina
 		$Interface/CanvasLayer/TextureProgressBar2.value = player.hp
 	if life1 != null and life2 != null:
-		$Interface/CanvasLayer/BossBar.value = (life1.hp + life2.hp) /20
+		$Interface/CanvasLayer/BossBar.value = (life1.hp + life2.hp) /10
 	elif life1 == null and life2 == null:
 		if finalLife != null:
 			$Interface/CanvasLayer/BossBar.value = finalLife.hp / 10
@@ -111,6 +111,7 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="Change" type="Timer" parent="."]
+wait_time = 20.0
 one_shot = true
 autostart = true
 

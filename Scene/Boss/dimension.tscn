@@ -1,6 +1,6 @@
 [gd_scene load_steps=283 format=3 uid="uid://fm0t8ierk500"]
 
-[ext_resource type="Script" uid="uid://c6i4tbvus84cy" path="res://Scene/Boss/dimension.gd" id="1_kp0jm"]
+[ext_resource type="Script" uid="uid://c6i4tbvus84cy" path="res://Script/Boss/dimension.gd" id="1_kp0jm"]
 [ext_resource type="Texture2D" uid="uid://bgk3h7bysmnnd" path="res://asset/Boss/Dimension/animation/standbomb/(22).png" id="2_cujh2"]
 [ext_resource type="Texture2D" uid="uid://bo53fyikpap1i" path="res://asset/Boss/Dimension/animation/ATK/1.png" id="2_kp0jm"]
 [ext_resource type="Texture2D" uid="uid://chw5lu1a3wyfq" path="res://asset/Boss/Dimension/animation/standbomb/(23).png" id="3_5uubi"]

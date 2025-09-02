@@ -1,6 +1,6 @@
 [gd_scene load_steps=103 format=3 uid="uid://bnnl72y5en7ev"]
 
-[ext_resource type="Script" uid="uid://bmagjmrgfpmtn" path="res://Scene/Boss/time.gd" id="1_5otyx"]
+[ext_resource type="Script" uid="uid://bmagjmrgfpmtn" path="res://Script/Boss/time.gd" id="1_5otyx"]
 [ext_resource type="Texture2D" uid="uid://c2j2cwfpuhx05" path="res://asset/Boss/Time/time_00000.png" id="1_24ubn"]
 [ext_resource type="Texture2D" uid="uid://brjy4m80pxuxo" path="res://asset/Boss/Time/time_00001.png" id="2_5otyx"]
 [ext_resource type="Texture2D" uid="uid://dfgc1b4x1mu5t" path="res://asset/Boss/Time/time_00002.png" id="3_hhp5j"]

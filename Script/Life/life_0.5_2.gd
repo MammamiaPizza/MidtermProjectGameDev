@@ -6,7 +6,7 @@ var speed = 200
 @onready var target : CharacterBody2D = $"../Player"
 @onready var friend = $"../Life0_5_1"
 #var hp = 1000
-var hp =  20
+var hp =  500
 var attacking = false
 var random
 var merge = false
