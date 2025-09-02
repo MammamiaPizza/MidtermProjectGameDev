@@ -4,7 +4,7 @@ signal preparemerge
 
 var speed = 200
 @onready var target : CharacterBody2D = $"../Player"
-@onready var friend = $"../Life0_5-2"
+@onready var friend = $"../Life0_5_2"
 #var hp = 1000
 var hp =  20
 var attacking = false
