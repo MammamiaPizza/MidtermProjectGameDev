@@ -15,11 +15,11 @@ func _on_random_attack_timeout() -> void:
 func attack() -> void:
 	random = randi_range(1,10)
 	if random >= 6:
-		$AttackArea/CollisionShape2D.disabled = false
+		$AttackArea/Attack.disabled = false
 		attacking = true
-		await get_tree().create_timer(1.5)
+		await get_tree().create_timer(1.5).timeout
 		attacking = false
-		$AttackArea/CollisionShape2D.disabled = true
+		$AttackArea/Attack.disabled = true
 		$RandomAttack.start()
 
 func _process(delta: float) -> void:
@@ -39,4 +39,4 @@ func _process(delta: float) -> void:
 func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
 		hp -= area.getDamage()
-		#print(hp)
+		print(hp)

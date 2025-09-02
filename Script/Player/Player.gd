@@ -42,14 +42,7 @@ func _process(delta: float) -> void:
 		
 		#check is it floor if not gravity pull to ground and if yes recharge doublejump
 		if !is_on_floor():
-			if(gravity_set == 1):
 				velocity.y += gravity
-			elif(gravity_set == 2):
-				velocity.x += gravity
-			elif(gravity_set == 3):
-				velocity.y -= gravity
-			elif(gravity_set == 4):
-				velocity.x -= gravity
 		elif is_on_floor():
 			doublejump = true
 
@@ -80,7 +73,7 @@ func _process(delta: float) -> void:
 		move_and_slide()
 	
 	#check dead
-	if hp <= 0 and !godmode:
+	if (hp <= 0 or hp > 100) and !godmode:
 		alive = false
 		hp == 100
 		queue_free()
@@ -138,6 +131,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		var getdamagefromattack = area.getDamage()
 		hp -= getdamagefromattack
 		gethit.emit()
+		#print("hit")
 
 
 func _on_shadow_trail_timeout() -> void:

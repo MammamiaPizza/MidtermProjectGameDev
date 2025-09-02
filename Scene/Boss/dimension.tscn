@@ -275,6 +275,50 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_kp0jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6q0ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ualwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_73yly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cjqfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhssh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ptyl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cjqfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhssh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ptyl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cjqfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhssh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ptyl5")
+}],
+"loop": false,
+"name": &"Attack4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_iugsr")
 }, {
 "duration": 1.0,
@@ -1075,19 +1119,16 @@ shape = SubResource("RectangleShape2D_dmeo4")
 script = ExtResource("2_m2kmg")
 
 [node name="Attack3" type="CollisionShape2D" parent="Hit" groups=["attackByBoss"]]
-visible = false
 position = Vector2(1635.5, 15)
 shape = SubResource("RectangleShape2D_q8t34")
 disabled = true
 
 [node name="Attack2" type="CollisionShape2D" parent="Hit" groups=["attackByBoss"]]
-visible = false
 position = Vector2(-1666, 18)
 shape = SubResource("RectangleShape2D_q8t34")
 disabled = true
 
-[node name="Attack1" type="CollisionShape2D" parent="Hit"]
-visible = false
+[node name="Attack1" type="CollisionShape2D" parent="Hit" groups=["attackByBoss"]]
 position = Vector2(-5, -28)
 rotation = 0.796309
 scale = Vector2(3.32133, 2.45778)
@@ -1095,7 +1136,6 @@ shape = SubResource("RectangleShape2D_6q0ve")
 disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Hit"]
-visible = false
 position = Vector2(-1680, 38)
 rotation = -0.301917
 scale = Vector2(4.23906, 2.2375)
@@ -1103,7 +1143,6 @@ sprite_frames = SubResource("SpriteFrames_r2blc")
 animation = &"Attack2"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Hit"]
-visible = false
 rotation = 0.234166
 scale = Vector2(14.1016, 14.1016)
 sprite_frames = SubResource("SpriteFrames_73yly")
@@ -1112,7 +1151,6 @@ frame = 20
 frame_progress = 1.0
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Hit"]
-visible = false
 position = Vector2(1716, 26)
 rotation = -0.340032
 scale = Vector2(4.36319, 2.60897)
@@ -1125,7 +1163,7 @@ frame_progress = 1.0
 
 [node name="HitArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" groups=["Enemy"]]
 position = Vector2(-32.5, 2)
 shape = SubResource("RectangleShape2D_e4bhh")
 

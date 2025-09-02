@@ -2,6 +2,8 @@ extends Node2D
 
 var merge : bool
 
+var lifemerge = preload("res://Scene/Boss/Life.tscn").instantiate()
+
 
 func checkmerge():
 	if $Life0_5_2.merge == $Life0_5_1.merge:
@@ -12,9 +14,16 @@ func checkmerge():
 		var tween2 = create_tween()
 		tween2.tween_property($"Life0_5_2", "position", Vector2(625,250), 2)
 		await tween1.finished and tween2.finished
+		tween1.kill()
+		tween2.kill()
 		$Life0_5_2.free()
 		$Life0_5_1.free()
+		add_child(lifemerge)
+		lifemerge.position = Vector2(625,250)
+		lifemerge.scale = Vector2(0.5,0.5)
+		$UI.setLifeMerge(lifemerge)
+	$Player	
 		
-		#await tween1.finished
-		
-		
+func _process(delta: float) -> void:
+	if $Player != null:
+		$Player.hp -= 1 * delta

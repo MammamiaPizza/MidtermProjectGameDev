@@ -4,8 +4,8 @@ class_name dimension
 
 signal changePhase
 
-var Moveset : Array = ["Attack1", "Attack2"]
-#var Moveset : Array = ["Attack1"]
+#var Moveset : Array = ["Attack1", "Attack2"]
+var Moveset : Array = ["Attack1"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
 var hp = 10
 var randommove
@@ -20,15 +20,16 @@ func _ready() -> void:
 
 
 func _on_attack_time_timeout() -> void:
-	if hp > 0 :
+	if hp > 0 and target != null:
 		randommove = Moveset.pick_random()
 		if gravityset != 0 :
 			gravityset = randi_range(1,4)
 			target.gravity_set = gravityset
-			$".".rotateevery(gravityset)
+			#$".".rotateevery(gravityset)
+			$"..".rotateevery(gravityset)
 		#print(target.position.x)
 		#print(position.x)
-		if !sealcheck:
+		if !sealcheck and target!=null:
 			if randommove == "Attack1":
 				$body.play("warp")
 				await $body.animation_finished
@@ -50,11 +51,11 @@ func _on_attack_time_timeout() -> void:
 					position.y = target.global_position.y
 					$body.play_backwards("warp")
 					await $body.animation_finished
-					$body.scale *= -1
+					$body.scale.x *= -1
 					$body.play("Attack2")
 					await $body.animation_finished
-					$body.scale *= -1
-					$Hit/AnimatedSprite2D.set_frame_and_progress(0, 0)
+					$body.scale.x *= -1
+					$Hit/AnimatedSprite2D.set_frame(0)
 					$Hit/AnimatedSprite2D.play("Attack2")
 					$Hit/AnimatedSprite2D.show()
 					
@@ -76,7 +77,7 @@ func _on_attack_time_timeout() -> void:
 					$Hit/AnimatedSprite2D3.play("Attack3")
 					$Hit/AnimatedSprite2D3.show()
 					
-					await $Hit/AnimatedSprite2D2.animation_finished
+					await $Hit/AnimatedSprite2D3.animation_finished
 					$Hit/Attack3.disabled = false
 					await get_tree().create_timer(0.05).timeout
 					$Hit/Attack3.disabled = true
@@ -85,11 +86,11 @@ func _on_attack_time_timeout() -> void:
 				position = target.global_position
 				$body.play(randommove)
 				await get_tree().create_timer(0.6).timeout
-				$Hit/Attack4.disabled = false
+				$Hit/Attack1.disabled = false
 				await get_tree().create_timer(0.2).timeout
-				$Hit/Attack4.disabled = true
+				$Hit/Attack1.disabled = true
 				await $body.animation_finished
-			
+			print("Final")
 			$body.play("Idle")
 			$Hit/AnimatedSprite2D2.hide()
 			$CooldownMove.start()
@@ -103,21 +104,24 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 		if hp < 0:
 			if phasetwo == false:
 				phasetwo = true
-				$"../UI/VideoStreamPlayer".visible = true
+				$"../VideoStreamPlayer".visible = true
 				$"../Camera2D".set_enabled(true)
 				$"../Player"/Camera2D.set_enabled(false)
-				$"../UI/VideoStreamPlayer".play()
-				await $"../UI/VideoStreamPlayer".finished
+				$"../VideoStreamPlayer".play()
+				await $"../VideoStreamPlayer".finished
 				$"../Camera2D".set_enabled(false)
-				$"../Player"/Camera2D.set_enabled(true)				
+				$"../Player"/Camera2D.set_enabled(true)
 				$"../TileMapLayer2".set_enabled(false)
 				$"../TileMapLayer3".set_enabled(true)
 				gravityset = 2
 				hp = 10000
 				$"../TileMapLayer".set_enabled(false)
 				$"../Sprite2D".hide()
-				target.gravity = 1
-				$"../UI/VideoStreamPlayer".visible = false
+				target.gravity = 2
+				$"../VideoStreamPlayer".visible = false
+				$"../InviWall/CollisionShape2D".disabled = true
+				$"../InviWall/CollisionShape2D2".disabled = true
+				$"../Player".set_floor_max_angle(80)
 			else:
 				return
 func _on_cooldown_move_timeout() -> void:
