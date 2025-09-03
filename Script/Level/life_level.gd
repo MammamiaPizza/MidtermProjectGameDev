@@ -81,7 +81,7 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	plus = !plus
-	if !plus:
+	if plus == true:
 		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(0,0,0))
 	else:
 		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(255,255,255))
