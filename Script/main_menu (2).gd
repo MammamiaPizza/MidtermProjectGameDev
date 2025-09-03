@@ -9,3 +9,7 @@ func _on_button_pressed() -> void:
 	loading_scene.target_scene = "res://Scene/UI/select-door.tscn"
 	get_tree().current_scene.add_child(loading_scene)
 	pass
+
+
+func _on_button_3_pressed() -> void:
+	get_tree().quit()
