@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 		$Interface/CanvasLayer/TextureProgressBar.value = player.stamina
 		$Interface/CanvasLayer/TextureProgressBar2.value = player.hp
 	if boss:
-		$Interface/CanvasLayer/BossBar.value = boss.hp
+		$Interface/CanvasLayer/BossBar.value = boss.hp / 100
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0fc3"]

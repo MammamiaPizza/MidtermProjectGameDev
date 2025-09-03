@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var speed = 200
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
-var hp = 100
+var hp = 10000
 var attacking = false
 var random
 var exhp
@@ -55,7 +55,7 @@ func _on_hit_area_area_entered(area: Area2D) -> void:
 			$ResetWorld.start()
 			$Label.visible = true
 			#hp = 10000
-			hp = 100
+			hp = 10000
 			$"../AudioStreamPlayer2D".stop()
 			$"../AudioStreamPlayer2D2".play()
 		else:
