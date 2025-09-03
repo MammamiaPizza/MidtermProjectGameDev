@@ -68,6 +68,13 @@ func checkmerge():
 		
 		$UI.setLifeMerge(lifemerge)
 		
+		
+func _ready() -> void:
+	if plus == false:
+		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(0,0,0))
+	else:
+		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(255,255,255))
+
 func _process(delta: float) -> void:
 	if get_node_or_null("Player") != null:
 		#print($Player.hp)
@@ -80,11 +87,13 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	plus = !plus
-	if plus == true:
-		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(0,0,0))
-	else:
+	#plus = !plus
+	if plus == false:
+		plus = true
 		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(255,255,255))
+	else:
+		plus = false
+		$UI/Interface/CanvasLayer/TextureProgressBar2.set_tint_progress(Color(0,0,0))
 	$Cooldown.start()
 		
 
