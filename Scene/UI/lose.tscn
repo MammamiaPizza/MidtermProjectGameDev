@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d14q5dyymut87"]
+[gd_scene load_steps=2 format=3 uid="uid://bwf333l2m4gu0"]
 
 [ext_resource type="FontFile" uid="uid://dkjc0aks337d4" path="res://asset/Font/Darksoul.otf" id="1_fqr87"]
 
@@ -28,3 +28,9 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_fqr87")
 theme_override_font_sizes/font_size = 76
 text = "Lose All the Hope"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.109804)
+offset_right = 1278.0
+offset_bottom = 718.0
+color = Color(0.00820202, 0.00820202, 0.00820202, 1)

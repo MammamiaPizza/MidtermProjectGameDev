@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=4 uid="uid://w6lof451gxg7"]
 
-[ext_resource type="Script" uid="uid://gc2w7w2ir1xe" path="res://Script/Level/dimension_level.gd" id="1_07ivq"]
+[ext_resource type="Script" uid="uid://bxicam4ke202k" path="res://Scene/Level/dimension_level.gd" id="1_07ivq"]
 [ext_resource type="Texture2D" uid="uid://d14as6x0e0nyn" path="res://asset/map/ChatGPT Image 15 ส.ค. 2568 15_38_09.png" id="1_tgqvm"]
 [ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="2_4w2nd"]
 [ext_resource type="Texture2D" uid="uid://b3mhqlbe3jrxh" path="res://asset/map/Untitled design (5).png" id="2_6a27f"]
@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 		$Interface/CanvasLayer/TextureProgressBar.value = player.stamina
 		$Interface/CanvasLayer/TextureProgressBar2.value = player.hp
 	if boss != null:
-		$Interface/CanvasLayer/BossBar.value = boss.hp / 100
+		$Interface/CanvasLayer/BossBar.value = boss.hp / 10
 "
 
 [node name="Node2D" type="Node2D"]
@@ -65,6 +65,7 @@ scale = Vector2(0.261837, 0.235269)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dimension"]
 
 [node name="Player" parent="." instance=ExtResource("4_2ca1t")]
+z_index = 1
 position = Vector2(199, 646)
 scale = Vector2(0.2, 0.2)
 floor_max_angle = 0.785398

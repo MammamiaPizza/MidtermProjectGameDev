@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var speed = 200
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
-var hp = 10000
+var hp = 1000
 var attacking = false
 var random
 var exhp

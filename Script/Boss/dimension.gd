@@ -4,10 +4,10 @@ class_name dimension
 
 signal changePhase
 
-var Moveset : Array = ["Attack1", "Attack2"]
+var Moveset : Array = ["Attack1", "Attack2","Attack3"]
 #var Moveset : Array = ["Attack1"]
 @onready var target : CharacterBody2D = get_tree().get_nodes_in_group("player")[0]
-var hp = 10000
+var hp = 1000
 var randommove
 var cooldown = 3.5
 #var checkrandom = true
@@ -39,57 +39,59 @@ func _on_attack_time_timeout() -> void:
 			$body.play("Attack1")
 			$HitArea/CollisionShape2D.disabled = false
 			$Hit/Attack1ef.play("Attack")
+			$Hit/Attack1ef.show()
 			await get_tree().create_timer(0.15).timeout
 			$Hit/Attack1.disabled = false
 			await $Hit/Attack1ef.animation_finished
 			$Hit/Attack1.disabled = true
 			await $body.animation_finished
 			$HitArea/CollisionShape2D.disabled = true
+			$Hit/Attack1ef.hide()
 			
 		elif randommove == "Attack2":
 			$Hit.setDamage(50)
-			if (position.x > target.position.x):
-				$body.play("warp")
-				await $body.animation_finished
-				position.x = target.global_position.x+100
-				position.y = target.global_position.y
-				$body.play_backwards("warp")
-				await $body.animation_finished
-				$body.scale.x *= -1
-				$body.play("Attack2")
-				$HitArea/CollisionShape2D.disabled = false
-				await $body.animation_finished
-				$Hit/Attack2ef.set_frame_and_progress(0, 0)
-				$Hit/Attack2ef.play("Attack")
-				$Hit/Attack2ef.show()
-				await $Hit/Attack2ef.animation_finished
-				$Hit/Attack2.disabled = false
-				await get_tree().create_timer(0.05).timeout
-				$body.scale.x *= -1
-				$Hit/Attack2.disabled = true
-				$Hit/Attack2ef.hide()
-				$HitArea/CollisionShape2D.disabled = true
-				
-			elif (position.x < target.position.x):
-				$body.play("warp")
-				await $body.animation_finished
-				position.x = target.global_position.x-100
-				position.y = target.global_position.y
-				$body.play_backwards("warp")
-				await $body.animation_finished
-				$body.play("Attack2")
-				$HitArea/CollisionShape2D.disabled = false
-				await $body.animation_finished
-				$Hit/Attack3ef.set_frame_and_progress(0, 0)
-				$Hit/Attack3ef.play("Attack3")
-				$Hit/Attack3ef.show()
-				
-				await $Hit/Attack3ef.animation_finished
-				$Hit/Attack3.disabled = false
-				await get_tree().create_timer(0.05).timeout
-				$Hit/Attack3.disabled = true
-				$Hit/Attack3ef.hide()
-				$HitArea/CollisionShape2D.disabled = true
+			$body.play("warp")
+			await $body.animation_finished
+			position.x = target.global_position.x+100
+			position.y = target.global_position.y
+			$body.play_backwards("warp")
+			await $body.animation_finished
+			$body.scale.x *= -1
+			$body.play("Attack2")
+			$HitArea/CollisionShape2D.disabled = false
+			await $body.animation_finished
+			$Hit/Attack2ef.set_frame_and_progress(0, 0)
+			$Hit/Attack2ef.play("Attack")
+			$Hit/Attack2ef.show()
+			await $Hit/Attack2ef.animation_finished
+			$Hit/Attack2.disabled = false
+			await get_tree().create_timer(0.05).timeout
+			$body.scale.x *= -1
+			$Hit/Attack2.disabled = true
+			$Hit/Attack2ef.hide()
+			$HitArea/CollisionShape2D.disabled = true
+			
+		elif randommove == "Attack3":
+			$Hit.setDamage(50)
+			$body.play("warp")
+			await $body.animation_finished
+			position.x = target.global_position.x-100
+			position.y = target.global_position.y
+			$body.play_backwards("warp")
+			await $body.animation_finished
+			$body.play("Attack2")
+			$HitArea/CollisionShape2D.disabled = false
+			await $body.animation_finished
+			$Hit/Attack3ef.set_frame_and_progress(0, 0)
+			$Hit/Attack3ef.play("Attack")
+			$Hit/Attack3ef.show()
+			
+			await $Hit/Attack3ef.animation_finished
+			$Hit/Attack3.disabled = false
+			await get_tree().create_timer(0.05).timeout
+			$Hit/Attack3.disabled = true
+			$Hit/Attack3ef.hide()
+			$HitArea/CollisionShape2D.disabled = true
 				
 		elif randommove == "Attack4":
 			$Hit.setDamage(100)
@@ -108,7 +110,8 @@ func _on_attack_time_timeout() -> void:
 			$HitArea/CollisionShape2D.disabled = true
 				
 		$body.play("Idle")
-		$CooldownMove.start()
+		#$CooldownMove.start()
+		_on_cooldown_move_timeout()
 		
 	else:
 		return

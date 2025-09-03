@@ -430,7 +430,7 @@ position = Vector2(-7, 20)
 shape = SubResource("RectangleShape2D_24ubn")
 
 [node name="RandomTime" type="Timer" parent="."]
-wait_time = 45.0
+wait_time = 10.0
 autostart = true
 
 [node name="Timermove" type="Timer" parent="."]

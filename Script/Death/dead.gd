@@ -7,7 +7,7 @@ signal changePhase
 var Moveset : Array = ["Attack1", "AttackWhole"]
 #var Moveset : Array = ["Attack1"]
 @onready var target : CharacterBody2D = $"../Player"
-var hp = 10000
+var hp = 1000
 var randommove
 var cooldown = 3.5
 #var checkrandom = true
@@ -87,7 +87,7 @@ func _on_change_phase_timeout() -> void:
 
 func _on_hit_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("attackByPlayer"):
-		#hp -= area.damage
+		hp -= area.damage
 		return
 
 func _on_cooldown_move_timeout() -> void:
