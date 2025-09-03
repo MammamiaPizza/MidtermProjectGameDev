@@ -95,5 +95,3 @@ func _on_cooldown_timeout() -> void:
 
 func _on_player_death() -> void:
 	$UI/Interface/CanvasLayer.hide()
-	$UI/Operater/CanvasLayer.hide()	
-	$UI/Operater/CanvasLayer/AnimationPlayer.stop()
