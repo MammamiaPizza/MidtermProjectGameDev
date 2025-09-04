@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cno5ogm4dy45g"]
 
-[ext_resource type="Texture2D" uid="uid://kvwjwe4x3nun" path="res://asset/UI/Bar/Title.png" id="1_vwsht"]
+[ext_resource type="Texture2D" uid="uid://dtke4iql4l67f" path="res://asset/UI/Bar/Title.webp" id="1_us0s5"]
 [ext_resource type="PackedScene" uid="uid://c5dsjcym5hnpc" path="res://Scene/UI/Bar/Stamina.tscn" id="2_us0s5"]
 [ext_resource type="PackedScene" uid="uid://5skj1vbaj7s" path="res://Scene/UI/Bar/HPBar.tscn" id="3_5yiys"]
 [ext_resource type="PackedScene" uid="uid://ccl33bw75tdd2" path="res://Scene/UI/Bar/BossBar.tscn" id="4_us0s5"]
@@ -22,7 +22,7 @@ grow_vertical = 2
 [node name="Title" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(41.5, 629.824)
 scale = Vector2(0.246479, 0.246479)
-texture = ExtResource("1_vwsht")
+texture = ExtResource("1_us0s5")
 
 [node name="TextureProgressBar" parent="CanvasLayer" instance=ExtResource("2_us0s5")]
 offset_left = 69.5

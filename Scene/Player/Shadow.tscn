@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxfd11ueqmm72"]
 
-[ext_resource type="Texture2D" uid="uid://oncs2bmr0miw" path="res://asset/Player/Run/skeleton-run_10.png" id="1_j4rht"]
+[ext_resource type="Texture2D" uid="uid://b4e4iimsaihlx" path="res://asset/Player/Run/skeleton-run_10.webp" id="1_j4rht"]
 [ext_resource type="Script" uid="uid://cniaerb2ekspc" path="res://Script/Player/shadow.gd" id="2_w70vg"]
+
 
 [node name="Shadow" type="Sprite2D"]
 self_modulate = Color(1, 1, 1, 0.32549)
