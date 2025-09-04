@@ -1,6 +1,6 @@
 [gd_scene load_steps=72 format=3 uid="uid://dwbn7uvtlu8jw"]
 
-[ext_resource type="Script" uid="uid://th51nltwb1sw" path="res://Script/select_door.gd" id="1_xtma4"]
+[ext_resource type="Script" uid="uid://th51nltwb1sw" path="res://Script/UI/select_door.gd" id="1_xtma4"]
 [ext_resource type="Texture2D" uid="uid://hnnt6mab6amx" path="res://asset/UI/Door/deathdoor_00000.jpg" id="2_svsa2"]
 [ext_resource type="Texture2D" uid="uid://c7fu3v8wm1lq8" path="res://asset/map/door/door(18).png" id="3_eu2wk"]
 [ext_resource type="Texture2D" uid="uid://d8my3s4ulr3r" path="res://asset/map/door/door(19).png" id="4_pb403"]
@@ -63,10 +63,10 @@
 [ext_resource type="Texture2D" uid="uid://d00uvg6ggil8d" path="res://asset/map/door/door(15).png" id="61_h635u"]
 [ext_resource type="Texture2D" uid="uid://bwoe8kdhld4m8" path="res://asset/map/door/door(16).png" id="62_vcfie"]
 [ext_resource type="Texture2D" uid="uid://c2mdsatd07iu6" path="res://asset/map/door/door(17).png" id="63_gk67n"]
-[ext_resource type="AudioStream" uid="uid://sncgb2pv64dj" path="res://asset/Audio/Aincrad (Sword Art Online) - Unreal Engine - TheGabmeister (1080p, h264, youtube).mp3" id="64_svsa2"]
-[ext_resource type="Texture2D" uid="uid://dumb3ard8opgt" path="res://asset/OperatorwithDialog/operator/operator.png" id="65_pb403"]
-[ext_resource type="Texture2D" uid="uid://c8fqbcee4y43d" path="res://asset/OperatorwithDialog/operator/dialogbox.png" id="66_xtma4"]
-[ext_resource type="AudioStream" uid="uid://bshdq2meajmfd" path="res://asset/OperatorwithDialog/dialog/voice/สวัสดีฉันชื่อโชระเป็นOperatorของนายก็แค่นั้นแหละ.wav" id="67_xtma4"]
+[ext_resource type="AudioStream" uid="uid://c7t0h7444fmuo" path="res://asset/Audio/Aincrad (Sword Art Online) - Unreal Engine - TheGabmeister (1080p, h264, youtube).ogg" id="64_xtma4"]
+[ext_resource type="AudioStream" uid="uid://deurmvr551u74" path="res://asset/OperatorwithDialog/Voice/สวัสดีฉันชื่อโชระเป็นOperatorของนายก็แค่นั้นแหละ.ogg" id="65_xtma4"]
+[ext_resource type="Texture2D" uid="uid://dfmgh8f0kvbn0" path="res://asset/OperatorwithDialog/picture/operator.webp" id="66_xtma4"]
+[ext_resource type="Texture2D" uid="uid://b0m4vx08vgnyu" path="res://asset/OperatorwithDialog/picture/dialogbox.webp" id="67_4ayhl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_710lx"]
 animations = [{
@@ -318,7 +318,7 @@ color = Color(1, 0, 0, 1)
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
 position = Vector2(-778, 350)
 sprite_frames = SubResource("SpriteFrames_710lx")
-animation = &"open"
+animation = &"close"
 
 [node name="Area2D3" type="Area2D" parent="AnimatedSprite2D3" groups=["door"]]
 
@@ -389,12 +389,12 @@ offset_bottom = -277.0
 scale = Vector2(6.70343, 14.2558)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("64_svsa2")
+stream = ExtResource("64_xtma4")
 volume_db = -20.0
 autoplay = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("67_xtma4")
+stream = ExtResource("65_xtma4")
 volume_db = -10.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -437,7 +437,7 @@ offset_top = 183.0
 offset_right = 1475.0
 offset_bottom = 1207.0
 scale = Vector2(0.13968, 0.13968)
-texture = ExtResource("65_pb403")
+texture = ExtResource("66_xtma4")
 
 [node name="TextureRect2" type="TextureRect" parent="Camera2D/Control"]
 layout_mode = 0
@@ -446,7 +446,7 @@ offset_top = 189.0
 offset_right = 1329.0
 offset_bottom = 614.0
 scale = Vector2(0.283696, 0.283696)
-texture = ExtResource("66_xtma4")
+texture = ExtResource("67_4ayhl")
 
 [node name="Label" type="Label" parent="Camera2D/Control/TextureRect2"]
 layout_mode = 0

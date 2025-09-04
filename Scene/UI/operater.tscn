@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://balgepo06k4ii"]
 
-[ext_resource type="Texture2D" uid="uid://dumb3ard8opgt" path="res://asset/OperatorwithDialog/operator/operator.png" id="1_0v1jf"]
-[ext_resource type="Texture2D" uid="uid://c8fqbcee4y43d" path="res://asset/OperatorwithDialog/operator/dialogbox.png" id="2_14v4m"]
-[ext_resource type="AudioStream" uid="uid://q0lybi3scepx" path="res://asset/OperatorwithDialog/dialog/voice/ในที่สุดต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย.wav" id="3_14v4m"]
+[ext_resource type="Texture2D" uid="uid://dfmgh8f0kvbn0" path="res://asset/OperatorwithDialog/picture/operator.webp" id="1_14v4m"]
+[ext_resource type="Texture2D" uid="uid://b0m4vx08vgnyu" path="res://asset/OperatorwithDialog/picture/dialogbox.webp" id="2_kv6q6"]
+[ext_resource type="AudioStream" uid="uid://bfoue6bnd3kyq" path="res://asset/OperatorwithDialog/Voice/ในที่สุดต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย.ogg" id="3_14v4m"]
 
 [sub_resource type="Animation" id="Animation_kv6q6"]
 resource_name = "Conver"
@@ -50,7 +50,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_left = 1063.0
@@ -58,7 +57,7 @@ offset_top = 526.0
 offset_right = 2087.0
 offset_bottom = 1550.0
 scale = Vector2(0.13968, 0.13968)
-texture = ExtResource("1_0v1jf")
+texture = ExtResource("1_14v4m")
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
 offset_left = 688.0
@@ -66,7 +65,7 @@ offset_top = 532.0
 offset_right = 1941.0
 offset_bottom = 957.0
 scale = Vector2(0.283696, 0.283696)
-texture = ExtResource("2_14v4m")
+texture = ExtResource("2_kv6q6")
 
 [node name="text" type="Label" parent="CanvasLayer/TextureRect2"]
 layout_mode = 0

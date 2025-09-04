@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rfjo63jfdgyc"
+path="res://.godot/imported/สำเร็จไปแล้ว1นะ แต่อย่ารีบดีใจไป เพราะMissionมันพึ่งเริ่ม.ogg-ac3e0e44641fe95e8b0973eb6d7615ed.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/สำเร็จไปแล้ว1นะ แต่อย่ารีบดีใจไป เพราะMissionมันพึ่งเริ่ม.ogg"
+dest_files=["res://.godot/imported/สำเร็จไปแล้ว1นะ แต่อย่ารีบดีใจไป เพราะMissionมันพึ่งเริ่ม.ogg-ac3e0e44641fe95e8b0973eb6d7615ed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

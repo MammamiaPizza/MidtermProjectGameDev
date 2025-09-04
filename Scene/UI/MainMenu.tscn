@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvaixmw2mgc2i"]
 
-[ext_resource type="Script" uid="uid://dopayve1whw8w" path="res://Scene/UI/main_menu.gd" id="1_sqy52"]
+[ext_resource type="Script" uid="uid://is7bjg8k1sh3" path="res://Script/UI/main_menu.gd" id="1_d8rp3"]
 [ext_resource type="FontFile" uid="uid://dkjc0aks337d4" path="res://asset/Font/Darksoul.otf" id="2_d8rp3"]
-[ext_resource type="VideoStream" uid="uid://bb12jbfwaduu1" path="res://asset/map/Aincrad-_Sword-Art-Online_-Unreal-Engine-TheGabmeister-_1080p_-h264_-youtube_.ogv" id="2_sqy52"]
+[ext_resource type="VideoStream" uid="uid://bb12jbfwaduu1" path="res://asset/map/MainMenu/Aincrad-_Sword-Art-Online_-Unreal-Engine-TheGabmeister-_1080p_-h264_-youtube_.ogv" id="2_sqy52"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,7 +15,7 @@ offset_right = -1.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sqy52")
+script = ExtResource("1_d8rp3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c83msiewfub0u"
+path="res://.godot/imported/เทพเจ้ามักจะหยิ่งในศักดิ์ศรี และไม่ชอบสุงสิงกัน.ogg-34009cb3fbcee95e3747c6a8c340888d.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/เทพเจ้ามักจะหยิ่งในศักดิ์ศรี และไม่ชอบสุงสิงกัน.ogg"
+dest_files=["res://.godot/imported/เทพเจ้ามักจะหยิ่งในศักดิ์ศรี และไม่ชอบสุงสิงกัน.ogg-34009cb3fbcee95e3747c6a8c340888d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

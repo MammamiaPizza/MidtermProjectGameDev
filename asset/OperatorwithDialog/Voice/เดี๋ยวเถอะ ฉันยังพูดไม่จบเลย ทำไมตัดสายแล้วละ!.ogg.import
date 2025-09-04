@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://v1iffp86kwxv"
+path="res://.godot/imported/เดี๋ยวเถอะ ฉันยังพูดไม่จบเลย ทำไมตัดสายแล้วละ!.ogg-ec228331a4e09fbcf898a64ea5fcd073.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/เดี๋ยวเถอะ ฉันยังพูดไม่จบเลย ทำไมตัดสายแล้วละ!.ogg"
+dest_files=["res://.godot/imported/เดี๋ยวเถอะ ฉันยังพูดไม่จบเลย ทำไมตัดสายแล้วละ!.ogg-ec228331a4e09fbcf898a64ea5fcd073.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cwo2k6xg0blt"
+path="res://.godot/imported/แต่ต้องระวังอย่างนึง เทพพวกนั้นมีพลังที่มากเกินมนุษย์จะเข้าใจ.ogg-632b3c4f8b82e52f2bba71085f9b85ed.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/แต่ต้องระวังอย่างนึง เทพพวกนั้นมีพลังที่มากเกินมนุษย์จะเข้าใจ.ogg"
+dest_files=["res://.godot/imported/แต่ต้องระวังอย่างนึง เทพพวกนั้นมีพลังที่มากเกินมนุษย์จะเข้าใจ.ogg-632b3c4f8b82e52f2bba71085f9b85ed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

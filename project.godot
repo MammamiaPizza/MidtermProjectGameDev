@@ -17,7 +17,7 @@ config/icon="res://asset/icon.svg"
 
 [autoload]
 
-Bossclean="*res://bossclean.gd"
+Bossclean="*res://Script/bossclean.gd"
 
 [display]
 
