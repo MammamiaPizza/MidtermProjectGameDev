@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=4 uid="uid://lyr07gtkcs20"]
 
 [ext_resource type="Script" uid="uid://coc642c7dytpc" path="res://Script/Level/life_level.gd" id="1_uvp05"]
-[ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="2_2ujh5"]
+[ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/map/TitleMap/MapTile.tres" id="2_2ujh5"]
 [ext_resource type="Texture2D" uid="uid://dybmdgy04fr11" path="res://asset/map/BG/ChatGPT Image 15 ส.ค. 2568 15_38_09.jpg" id="2_uvp05"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player/Player.tscn" id="3_2ujh5"]
 [ext_resource type="PackedScene" uid="uid://cno5ogm4dy45g" path="res://Scene/UI/UI.tscn" id="4_btq7k"]

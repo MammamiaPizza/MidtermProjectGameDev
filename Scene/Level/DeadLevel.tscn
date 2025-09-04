@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://bcg2u6fv2soqh"]
 
-[ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/TitleMap/MapTile.tres" id="1_3e0tl"]
+[ext_resource type="TileSet" uid="uid://b8j5r4on7bsuw" path="res://asset/map/TitleMap/MapTile.tres" id="1_3e0tl"]
 [ext_resource type="Script" uid="uid://vtp6brdjyrjd" path="res://Script/Level/dead_level.gd" id="1_14i0j"]
 [ext_resource type="PackedScene" uid="uid://c51bk8gubpoi6" path="res://Scene/Boss/Dead.tscn" id="2_4ywva"]
 [ext_resource type="PackedScene" uid="uid://cxlh3634jlcsk" path="res://Scene/Player/Player.tscn" id="2_fqeg3"]
