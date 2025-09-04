@@ -1,596 +1,551 @@
-[gd_scene load_steps=408 format=3 uid="uid://c51bk8gubpoi6"]
+[gd_scene load_steps=363 format=3 uid="uid://c51bk8gubpoi6"]
 
-[ext_resource type="Texture2D" uid="uid://drjqiqmdpmnou" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00000.png" id="1_dmeo4"]
-[ext_resource type="Script" uid="uid://cjwnh4f6dtds5" path="res://Script/Death/dead.gd" id="1_q8t34"]
-[ext_resource type="Texture2D" uid="uid://dct7yp3a8lqrb" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00001.png" id="2_q8t34"]
-[ext_resource type="Texture2D" uid="uid://cvtbt2pa68dkd" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00002.png" id="3_6a2k8"]
-[ext_resource type="Texture2D" uid="uid://cvj4r36gobexu" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00003.png" id="4_3h8pq"]
-[ext_resource type="Texture2D" uid="uid://dsrko1dghn1y3" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00004.png" id="5_vs84t"]
-[ext_resource type="Texture2D" uid="uid://cmxmv36ugpd58" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00005.png" id="6_iee8k"]
-[ext_resource type="Texture2D" uid="uid://b8umh51pq7iyr" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00006.png" id="7_hylyl"]
-[ext_resource type="Texture2D" uid="uid://d01kv30cx4hj5" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00007.png" id="8_e4jnw"]
-[ext_resource type="Texture2D" uid="uid://c2e07q4hvkfxe" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00008.png" id="9_nn74k"]
-[ext_resource type="Texture2D" uid="uid://ban5y4j71tn4m" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00009.png" id="10_2s7o8"]
-[ext_resource type="Texture2D" uid="uid://chs0fccvx66ow" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00010.png" id="11_rjsbp"]
-[ext_resource type="Texture2D" uid="uid://yvf7525qvt84" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00011.png" id="12_tim6h"]
-[ext_resource type="Texture2D" uid="uid://bc6c74ofbsbh6" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00012.png" id="13_nyqjw"]
-[ext_resource type="Texture2D" uid="uid://cicsu7m0lg5pc" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00013.png" id="14_be1va"]
-[ext_resource type="Texture2D" uid="uid://chf4sajy8wjxa" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00014.png" id="15_u4jtw"]
-[ext_resource type="Texture2D" uid="uid://nvim8e4ut6mi" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00015.png" id="16_j05d2"]
-[ext_resource type="Texture2D" uid="uid://dyoqo78cefqe1" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00016.png" id="17_kh5j8"]
-[ext_resource type="Texture2D" uid="uid://bc1kgasij76yt" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00017.png" id="18_nacm6"]
-[ext_resource type="Texture2D" uid="uid://iot0ay4a3mk5" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00018.png" id="19_44er7"]
-[ext_resource type="Texture2D" uid="uid://ccvduv8wpxkb6" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00019.png" id="20_tpg7j"]
-[ext_resource type="Texture2D" uid="uid://egeq3ehm2y1n" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00020.png" id="21_4rfus"]
-[ext_resource type="Texture2D" uid="uid://btu3mp44rne4d" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00021.png" id="22_gc2vr"]
-[ext_resource type="Texture2D" uid="uid://bmoe2prqt5bqu" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00022.png" id="23_cyhp6"]
-[ext_resource type="Texture2D" uid="uid://cne21j4u6in61" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00023.png" id="24_18d65"]
-[ext_resource type="Texture2D" uid="uid://d4ko1i52xm8sw" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00024.png" id="25_w250e"]
-[ext_resource type="Texture2D" uid="uid://b512ruc4yulqm" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00025.png" id="26_k0ndi"]
-[ext_resource type="Texture2D" uid="uid://dnuswmpwhx3i6" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00026.png" id="27_3db25"]
-[ext_resource type="Texture2D" uid="uid://bi0m21t837let" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00027.png" id="28_eb8w0"]
-[ext_resource type="Texture2D" uid="uid://b2b48vo3q24iu" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00028.png" id="29_kh2ef"]
-[ext_resource type="Texture2D" uid="uid://bu78v41mjywuj" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00029.png" id="30_uukh6"]
-[ext_resource type="Texture2D" uid="uid://ceh51uoixuhun" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00030.png" id="31_04rhs"]
-[ext_resource type="Texture2D" uid="uid://0fb2v06lb1l1" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00031.png" id="32_8xeq3"]
-[ext_resource type="Texture2D" uid="uid://c0pttufyntcm1" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00032.png" id="33_rjxdr"]
-[ext_resource type="Texture2D" uid="uid://biva61uhl8frm" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00033.png" id="34_54s0a"]
-[ext_resource type="Texture2D" uid="uid://bbmevg7l6jfsc" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00034.png" id="35_oefre"]
-[ext_resource type="Texture2D" uid="uid://c4i1iwkhltbmx" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00035.png" id="36_xoj03"]
-[ext_resource type="Texture2D" uid="uid://c5cphkvsgc1ee" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00036.png" id="37_ena3n"]
-[ext_resource type="Texture2D" uid="uid://eqco4auljomq" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00037.png" id="38_fbd1l"]
-[ext_resource type="Texture2D" uid="uid://cvdw6u6h61pjn" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00038.png" id="39_48wo0"]
-[ext_resource type="Texture2D" uid="uid://dr62m4nj22itq" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00039.png" id="40_kkxr0"]
-[ext_resource type="Texture2D" uid="uid://s2dvek32pp25" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00040.png" id="41_dbevu"]
-[ext_resource type="Texture2D" uid="uid://dd0metx425g7b" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00041.png" id="42_1ni3i"]
-[ext_resource type="Texture2D" uid="uid://cw17hfgivds38" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00042.png" id="43_xa3h2"]
-[ext_resource type="Texture2D" uid="uid://bqy74t122dp78" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00043.png" id="44_hlk7h"]
-[ext_resource type="Texture2D" uid="uid://dsurwbt21ig11" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00044.png" id="45_u6xtp"]
-[ext_resource type="Texture2D" uid="uid://b6ameq0qutt35" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00045.png" id="46_6pk1b"]
-[ext_resource type="Texture2D" uid="uid://b3anwa76oqqwu" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00046.png" id="47_ciird"]
-[ext_resource type="Texture2D" uid="uid://bsutjsf2hcr7c" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00047.png" id="48_xfpt2"]
-[ext_resource type="Texture2D" uid="uid://dflf67vxkjb3n" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00048.png" id="49_15von"]
-[ext_resource type="Texture2D" uid="uid://s8wqvf7hl4m1" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00049.png" id="50_32yn8"]
-[ext_resource type="Texture2D" uid="uid://cej0ad25u4sgm" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00050.png" id="51_23vbc"]
-[ext_resource type="Texture2D" uid="uid://d05116c1h4qft" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00051.png" id="52_07fkt"]
-[ext_resource type="Texture2D" uid="uid://b12ggx6yoq3gb" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00052.png" id="53_05ib7"]
-[ext_resource type="Texture2D" uid="uid://da5ohcv2udjkr" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00053.png" id="54_y4e3k"]
-[ext_resource type="Texture2D" uid="uid://csiosicwds4s6" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00054.png" id="55_cl51q"]
-[ext_resource type="Texture2D" uid="uid://cgpyr5k4l3ksj" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00055.png" id="56_vgp1q"]
-[ext_resource type="Texture2D" uid="uid://cy1a7gdoxnbw2" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00056.png" id="57_wyugn"]
-[ext_resource type="Texture2D" uid="uid://bhif8iht4sn1k" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00057.png" id="58_th01y"]
-[ext_resource type="Texture2D" uid="uid://bo2fid6tuxj3f" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00058.png" id="59_oqxk6"]
-[ext_resource type="Texture2D" uid="uid://birasn8syrwby" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00059.png" id="60_kiacn"]
-[ext_resource type="Texture2D" uid="uid://br55vr0xi06gv" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00060.png" id="61_afvv4"]
-[ext_resource type="Texture2D" uid="uid://w6xmg6gmfyhl" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00061.png" id="62_4oodj"]
-[ext_resource type="Texture2D" uid="uid://bjaupyl4tu6yk" path="res://asset/Boss/Death/animation/attack/Hit1/death 2_00062.png" id="63_ns54e"]
-[ext_resource type="Texture2D" uid="uid://cic4mw4411fhh" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00000.png" id="64_rrafo"]
-[ext_resource type="Texture2D" uid="uid://b808kkmkrgypd" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00001.png" id="65_by3ou"]
-[ext_resource type="Texture2D" uid="uid://rw4ixwo5a3p6" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00002.png" id="66_bu153"]
-[ext_resource type="Texture2D" uid="uid://dw3pvf6vt3cyd" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00003.png" id="67_jr2a3"]
-[ext_resource type="Texture2D" uid="uid://cxgqllj0ec7oq" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00004.png" id="68_210iw"]
-[ext_resource type="Texture2D" uid="uid://brknd00x4b6ay" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00005.png" id="69_jxfx5"]
-[ext_resource type="Texture2D" uid="uid://co102yr7o12y5" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00006.png" id="70_1p571"]
-[ext_resource type="Texture2D" uid="uid://lcvaki7yc738" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00007.png" id="71_7b676"]
-[ext_resource type="Texture2D" uid="uid://co1kdoalvcrvx" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00008.png" id="72_ewyqq"]
-[ext_resource type="Texture2D" uid="uid://dy12rw7w5pame" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00009.png" id="73_xtthh"]
-[ext_resource type="Texture2D" uid="uid://cq75jm6o2aefh" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00010.png" id="74_0b8dn"]
-[ext_resource type="Texture2D" uid="uid://2e2fqcbjgfbe" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00011.png" id="75_erx8e"]
-[ext_resource type="Texture2D" uid="uid://dpuwmsj6vkis7" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00012.png" id="76_g5oxi"]
-[ext_resource type="Texture2D" uid="uid://dc4gybtc7ebjt" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00013.png" id="77_or0jj"]
-[ext_resource type="Texture2D" uid="uid://dkbokv86kjydr" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00014.png" id="78_n65kr"]
-[ext_resource type="Texture2D" uid="uid://448n77wtj7f0" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00015.png" id="79_ssaoo"]
-[ext_resource type="Texture2D" uid="uid://dtkuchsh5jb0w" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00016.png" id="80_1f8om"]
-[ext_resource type="Texture2D" uid="uid://bte0t647mo3ai" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00017.png" id="81_kup5m"]
-[ext_resource type="Texture2D" uid="uid://dpaxlowj6rf1h" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00018.png" id="82_34ulp"]
-[ext_resource type="Texture2D" uid="uid://yo4dclad6nhg" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00019.png" id="83_usnah"]
-[ext_resource type="Texture2D" uid="uid://dcswqoslgbto2" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00020.png" id="84_i4bt8"]
-[ext_resource type="Texture2D" uid="uid://egcm6h3ln7fm" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00021.png" id="85_am3mx"]
-[ext_resource type="Texture2D" uid="uid://uvyrhm156g4l" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00022.png" id="86_jckvb"]
-[ext_resource type="Texture2D" uid="uid://b3c4msxt6gkt5" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00023.png" id="87_vxjj7"]
-[ext_resource type="Texture2D" uid="uid://bya66ktvuuxnu" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00024.png" id="88_r1162"]
-[ext_resource type="Texture2D" uid="uid://dpuckp64p05kn" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00025.png" id="89_lcl78"]
-[ext_resource type="Texture2D" uid="uid://c3ot75pjexv0k" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00026.png" id="90_r5j36"]
-[ext_resource type="Texture2D" uid="uid://dc0tc8hfydvj6" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00027.png" id="91_q08hq"]
-[ext_resource type="Texture2D" uid="uid://d0o1lufo6i46k" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00028.png" id="92_501iu"]
-[ext_resource type="Texture2D" uid="uid://dahmuf3u7n1pw" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00029.png" id="93_6rdux"]
-[ext_resource type="Texture2D" uid="uid://bc0emiaxk24r6" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00030.png" id="94_3yu5y"]
-[ext_resource type="Texture2D" uid="uid://cy5mmk1cbqlow" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00031.png" id="95_h175a"]
-[ext_resource type="Texture2D" uid="uid://cebjfjfo2lwiv" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00032.png" id="96_xmiod"]
-[ext_resource type="Texture2D" uid="uid://ctdkxoothrqr7" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00033.png" id="97_k77hv"]
-[ext_resource type="Texture2D" uid="uid://dm6j07qudpyd2" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00034.png" id="98_1182o"]
-[ext_resource type="Texture2D" uid="uid://15ltfgl4fjib" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00035.png" id="99_6g0st"]
-[ext_resource type="Texture2D" uid="uid://b5d16l3ivlwnl" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00036.png" id="100_vfnha"]
-[ext_resource type="Texture2D" uid="uid://2ofdaqjes26m" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00037.png" id="101_45oin"]
-[ext_resource type="Texture2D" uid="uid://nmhmgflk21d3" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00038.png" id="102_e4bhh"]
-[ext_resource type="Texture2D" uid="uid://cica0bt0qdx0f" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00039.png" id="103_gp6y3"]
-[ext_resource type="Texture2D" uid="uid://c0vam56l07xpr" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00040.png" id="104_h6qqw"]
-[ext_resource type="Texture2D" uid="uid://jx7pkq0dvy4" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00041.png" id="105_b6356"]
-[ext_resource type="Texture2D" uid="uid://1dmvgjxm1fc8" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00042.png" id="106_03cit"]
-[ext_resource type="Texture2D" uid="uid://baebasybw15og" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00043.png" id="107_b203e"]
-[ext_resource type="Texture2D" uid="uid://cma3ixnohpjkv" path="res://asset/Boss/Death/animation/attack/leftwaveattack/death 2/death 2_00044.png" id="108_f8x2l"]
-[ext_resource type="Texture2D" uid="uid://bok4nmvin3exs" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00000.png" id="109_7hdf8"]
-[ext_resource type="Texture2D" uid="uid://vy0klsm3lffg" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00001.png" id="110_mot3o"]
-[ext_resource type="Texture2D" uid="uid://c25fcyw8u45bv" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00002.png" id="111_hpvrr"]
-[ext_resource type="Texture2D" uid="uid://bqc881utcwa5x" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00003.png" id="112_yytvl"]
-[ext_resource type="Texture2D" uid="uid://b5sqfmwdhkq8m" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00004.png" id="113_6alwd"]
-[ext_resource type="Texture2D" uid="uid://oyn0jrt3efmy" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00005.png" id="114_p6lev"]
-[ext_resource type="Texture2D" uid="uid://bscdrtcwk75t6" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00006.png" id="115_42ul0"]
-[ext_resource type="Texture2D" uid="uid://u2bvqipgrp54" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00007.png" id="116_ld5p7"]
-[ext_resource type="Texture2D" uid="uid://sday5yg6b2gj" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00008.png" id="117_q3hdf"]
-[ext_resource type="Texture2D" uid="uid://b3cjuu5thfy8t" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00009.png" id="118_a6m4d"]
-[ext_resource type="Texture2D" uid="uid://ckrvqi1si65hh" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00010.png" id="119_ppvvm"]
-[ext_resource type="Texture2D" uid="uid://ckveryvpx3sbj" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00011.png" id="120_cqud1"]
-[ext_resource type="Texture2D" uid="uid://bun7t3w8e4ann" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00012.png" id="121_l1nev"]
-[ext_resource type="Texture2D" uid="uid://dk22l4xk5p5kg" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00013.png" id="122_4ohgy"]
-[ext_resource type="Texture2D" uid="uid://c8fw1j3hnhpv2" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00014.png" id="123_80xte"]
-[ext_resource type="Texture2D" uid="uid://chsqt6ayrxj5w" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00015.png" id="124_4h813"]
-[ext_resource type="Texture2D" uid="uid://b1x7x66jxwnms" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00016.png" id="125_440ai"]
-[ext_resource type="Texture2D" uid="uid://pc66v75al3ug" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00017.png" id="126_bat0u"]
-[ext_resource type="Texture2D" uid="uid://d2e7aaou28hq7" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00018.png" id="127_8ejg0"]
-[ext_resource type="Texture2D" uid="uid://b4reportyxc8n" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00019.png" id="128_2f0wa"]
-[ext_resource type="Texture2D" uid="uid://bl4h0b2ia4jdq" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00020.png" id="129_pf1cm"]
-[ext_resource type="Texture2D" uid="uid://btwerp0pulvqx" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00021.png" id="130_2dqj8"]
-[ext_resource type="Texture2D" uid="uid://dyxy668x8qdwk" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00022.png" id="131_jnrsr"]
-[ext_resource type="Texture2D" uid="uid://doasb44oodlqn" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00023.png" id="132_niika"]
-[ext_resource type="Texture2D" uid="uid://dtimhr356ol8t" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00024.png" id="133_mpjgg"]
-[ext_resource type="Texture2D" uid="uid://bwi8b2kcvfuis" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00025.png" id="134_o0oeb"]
-[ext_resource type="Texture2D" uid="uid://ctllk41sqaasi" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00026.png" id="135_t2hu5"]
-[ext_resource type="Texture2D" uid="uid://cvemwnqxwqdrs" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00027.png" id="136_yavab"]
-[ext_resource type="Texture2D" uid="uid://bratbryj0ihq" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00028.png" id="137_gudxk"]
-[ext_resource type="Texture2D" uid="uid://3s0li3rdcfx1" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00029.png" id="138_wnpr4"]
-[ext_resource type="Texture2D" uid="uid://bg5u47otqakth" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00030.png" id="139_c5kkl"]
-[ext_resource type="Texture2D" uid="uid://bu30cebp32cd" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00031.png" id="140_gby5u"]
-[ext_resource type="Texture2D" uid="uid://dr2mfuds24al4" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00032.png" id="141_2ejvy"]
-[ext_resource type="Texture2D" uid="uid://bjk1tkvltko57" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00033.png" id="142_dw4id"]
-[ext_resource type="Texture2D" uid="uid://uabxkomfhw76" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00034.png" id="143_ytp1y"]
-[ext_resource type="Texture2D" uid="uid://b54ay30qrg8aj" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00035.png" id="144_lrpnr"]
-[ext_resource type="Texture2D" uid="uid://c6edqg2p0uqyj" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00036.png" id="145_y1hak"]
-[ext_resource type="Texture2D" uid="uid://bfpnpxhbo6w1n" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00037.png" id="146_l2akv"]
-[ext_resource type="Texture2D" uid="uid://cccc6aik7v0j5" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00038.png" id="147_68wcw"]
-[ext_resource type="Texture2D" uid="uid://dq8ucuwkkbtpn" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00039.png" id="148_uchc0"]
-[ext_resource type="Texture2D" uid="uid://b11suwjpjwrc5" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00040.png" id="149_q1mn0"]
-[ext_resource type="Texture2D" uid="uid://bhq5mljm8v7ic" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00041.png" id="150_hrufa"]
-[ext_resource type="Texture2D" uid="uid://bix8v0ai5bcsb" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00042.png" id="151_apxri"]
-[ext_resource type="Texture2D" uid="uid://6j121vrnn33" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00043.png" id="152_621hk"]
-[ext_resource type="Texture2D" uid="uid://2ffucup2iudn" path="res://asset/Boss/Death/animation/attack/rightwaveattact/death 2/death 2_00044.png" id="153_mcetv"]
-[ext_resource type="Texture2D" uid="uid://cwyo5ff3tfs8d" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00000.png" id="154_2lofw"]
-[ext_resource type="Texture2D" uid="uid://nngkqbg78l8v" path="res://asset/Boss/Death/animation/attack/End/death 2_00000.png" id="155_cqud1"]
-[ext_resource type="Texture2D" uid="uid://d1mjwxivnxrem" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00001.png" id="155_qja5r"]
-[ext_resource type="Texture2D" uid="uid://cq563qp0l1yrp" path="res://asset/Boss/Death/animation/attack/End/death 2_00001.png" id="156_l1nev"]
-[ext_resource type="Texture2D" uid="uid://d2u2oeh5ddn3y" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00002.png" id="156_m8mac"]
-[ext_resource type="Texture2D" uid="uid://p2yfny0djjgq" path="res://asset/Boss/Death/animation/attack/End/death 2_00002.png" id="157_4ohgy"]
-[ext_resource type="Texture2D" uid="uid://de0dm47vj1wvl" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00003.png" id="157_ke4bv"]
-[ext_resource type="Texture2D" uid="uid://blihmve54x5ms" path="res://asset/Boss/Death/animation/attack/End/death 2_00003.png" id="158_80xte"]
-[ext_resource type="Texture2D" uid="uid://bjn7a0hukecbw" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00004.png" id="158_jwsld"]
-[ext_resource type="Texture2D" uid="uid://dfblilinj5r53" path="res://asset/Boss/Death/animation/attack/End/death 2_00004.png" id="159_4h813"]
-[ext_resource type="Texture2D" uid="uid://ccwjhgem7knf4" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00005.png" id="159_dehn8"]
-[ext_resource type="Texture2D" uid="uid://b0u0w0yr2hute" path="res://asset/Boss/Death/animation/attack/End/death 2_00005.png" id="160_440ai"]
-[ext_resource type="Texture2D" uid="uid://c68k2ck38hd0s" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00006.png" id="160_kn5sr"]
-[ext_resource type="Texture2D" uid="uid://cbbtfhbfwr3mh" path="res://asset/Boss/Death/animation/attack/End/death 2_00006.png" id="161_bat0u"]
-[ext_resource type="Texture2D" uid="uid://cwb0csk0y8ccj" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00007.png" id="161_cy4yg"]
-[ext_resource type="Texture2D" uid="uid://wr2dd0o75xxp" path="res://asset/Boss/Death/animation/attack/End/death 2_00007.png" id="162_8ejg0"]
-[ext_resource type="Texture2D" uid="uid://co6frqcaj3y66" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00008.png" id="162_j1cy2"]
-[ext_resource type="Texture2D" uid="uid://36nojh27xep5" path="res://asset/Boss/Death/animation/attack/End/death 2_00008.png" id="163_2f0wa"]
-[ext_resource type="Texture2D" uid="uid://c3uglp5i11dpp" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00009.png" id="163_2ioqe"]
-[ext_resource type="Texture2D" uid="uid://o3nnhkvid3gv" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00010.png" id="164_ojepo"]
-[ext_resource type="Texture2D" uid="uid://c22nk1wa8pciv" path="res://asset/Boss/Death/animation/attack/End/death 2_00009.png" id="164_pf1cm"]
-[ext_resource type="Texture2D" uid="uid://c27j77x583ok2" path="res://asset/Boss/Death/animation/attack/End/death 2_00010.png" id="165_2dqj8"]
-[ext_resource type="Texture2D" uid="uid://dvrxx1wilwb30" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00011.png" id="165_dgirp"]
-[ext_resource type="Texture2D" uid="uid://bfanfr8knnxga" path="res://asset/Boss/Death/animation/attack/End/death 2_00011.png" id="166_jnrsr"]
-[ext_resource type="Texture2D" uid="uid://cher064i31dwt" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00012.png" id="166_m50sv"]
-[ext_resource type="Texture2D" uid="uid://crqh1dfmq8ifd" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00013.png" id="167_7y8m8"]
-[ext_resource type="Texture2D" uid="uid://k7u6j1e66ol4" path="res://asset/Boss/Death/animation/attack/End/death 2_00012.png" id="167_niika"]
-[ext_resource type="Texture2D" uid="uid://bu3ox2ml6vkc6" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00014.png" id="168_chtr6"]
-[ext_resource type="Texture2D" uid="uid://c5s3gmw6uom6w" path="res://asset/Boss/Death/animation/attack/End/death 2_00013.png" id="168_mpjgg"]
-[ext_resource type="Texture2D" uid="uid://4t4osyb4coco" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00015.png" id="169_m1bew"]
-[ext_resource type="Texture2D" uid="uid://b6fsnrs2jhg5c" path="res://asset/Boss/Death/animation/attack/End/death 2_00014.png" id="169_o0oeb"]
-[ext_resource type="Texture2D" uid="uid://d2eolhy8e4hd4" path="res://asset/Boss/Death/animation/attack/End/death 2_00015.png" id="170_t2hu5"]
-[ext_resource type="Texture2D" uid="uid://dmfqroqw2ui8j" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00016.png" id="170_tl1lm"]
-[ext_resource type="Texture2D" uid="uid://cwdiafnjmawnd" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00017.png" id="171_wgw8c"]
-[ext_resource type="Texture2D" uid="uid://b6hem27cg3u8w" path="res://asset/Boss/Death/animation/attack/End/death 2_00016.png" id="171_yavab"]
-[ext_resource type="Texture2D" uid="uid://d4rnuymwnvt6" path="res://asset/Boss/Death/animation/attack/End/death 2_00017.png" id="172_gudxk"]
-[ext_resource type="Texture2D" uid="uid://d3kcnkcxou17x" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00018.png" id="172_xjh24"]
-[ext_resource type="Texture2D" uid="uid://gubsy1mbb325" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00019.png" id="173_ugagt"]
-[ext_resource type="Texture2D" uid="uid://dndt3uv5j6acn" path="res://asset/Boss/Death/animation/attack/End/death 2_00018.png" id="173_wnpr4"]
-[ext_resource type="Texture2D" uid="uid://cu3vbky0qqm3t" path="res://asset/Boss/Death/animation/attack/End/death 2_00019.png" id="174_c5kkl"]
-[ext_resource type="Texture2D" uid="uid://sjmxb4ylkbst" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00020.png" id="174_rd5dg"]
-[ext_resource type="Texture2D" uid="uid://c7hmqk07ub7ns" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00021.png" id="175_087px"]
-[ext_resource type="Texture2D" uid="uid://dulf0n6ufb0lp" path="res://asset/Boss/Death/animation/attack/End/death 2_00020.png" id="175_gby5u"]
-[ext_resource type="Texture2D" uid="uid://ccvvyjqr0vqln" path="res://asset/Boss/Death/animation/attack/End/death 2_00021.png" id="176_2ejvy"]
-[ext_resource type="Texture2D" uid="uid://dvfnevxl20li8" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00022.png" id="176_astra"]
-[ext_resource type="Texture2D" uid="uid://bnulfld4st0mt" path="res://asset/Boss/Death/animation/attack/End/death 2_00022.png" id="177_dw4id"]
-[ext_resource type="Texture2D" uid="uid://c8udmksqva2xn" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00023.png" id="177_ic51i"]
-[ext_resource type="Texture2D" uid="uid://6hy40cwrlog" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00024.png" id="178_lger7"]
-[ext_resource type="Texture2D" uid="uid://dkdf7yqwjidn8" path="res://asset/Boss/Death/animation/attack/End/death 2_00023.png" id="178_ytp1y"]
-[ext_resource type="Texture2D" uid="uid://buyjony8bomb3" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00025.png" id="179_h1imk"]
-[ext_resource type="Texture2D" uid="uid://bjlc0v2gv0hbn" path="res://asset/Boss/Death/animation/attack/End/death 2_00024.png" id="179_lrpnr"]
-[ext_resource type="Texture2D" uid="uid://bpu4p6fq5mwcc" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00026.png" id="180_l4uxk"]
-[ext_resource type="Texture2D" uid="uid://c5y80c25e0011" path="res://asset/Boss/Death/animation/attack/End/death 2_00025.png" id="180_y1hak"]
-[ext_resource type="Texture2D" uid="uid://ccn2cwqif7tud" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00027.png" id="181_82bag"]
-[ext_resource type="Texture2D" uid="uid://bri7hdq087w37" path="res://asset/Boss/Death/animation/attack/End/death 2_00026.png" id="181_l2akv"]
-[ext_resource type="Texture2D" uid="uid://dwxvr1aisidm3" path="res://asset/Boss/Death/animation/attack/End/death 2_00027.png" id="182_68wcw"]
-[ext_resource type="Texture2D" uid="uid://deqvv1lbyu88k" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00028.png" id="182_faosf"]
-[ext_resource type="Texture2D" uid="uid://dkmkc5wc7teru" path="res://asset/Boss/Death/animation/attack/End/death 2_00028.png" id="183_uchc0"]
-[ext_resource type="Texture2D" uid="uid://bfdcwcvck2pw4" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00029.png" id="183_vhhq3"]
-[ext_resource type="Texture2D" uid="uid://bj64i15lf3qns" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00030.png" id="184_nntgb"]
-[ext_resource type="Texture2D" uid="uid://ck36172l1xkeu" path="res://asset/Boss/Death/animation/attack/End/death 2_00029.png" id="184_q1mn0"]
-[ext_resource type="Texture2D" uid="uid://dmvyx8eayg1et" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00031.png" id="185_6qro6"]
-[ext_resource type="Texture2D" uid="uid://yxrk6ft2s85e" path="res://asset/Boss/Death/animation/attack/End/death 2_00030.png" id="185_hrufa"]
-[ext_resource type="Texture2D" uid="uid://b6y2ni5npotnc" path="res://asset/Boss/Death/animation/attack/End/death 2_00031.png" id="186_apxri"]
-[ext_resource type="Texture2D" uid="uid://g52yb666gxg1" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00032.png" id="186_mfqom"]
-[ext_resource type="Texture2D" uid="uid://b7gxoaucnev3r" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00033.png" id="187_45k8e"]
-[ext_resource type="Texture2D" uid="uid://db45lrjfgku01" path="res://asset/Boss/Death/animation/attack/End/death 2_00032.png" id="187_621hk"]
-[ext_resource type="Texture2D" uid="uid://cqoeqycrn6eef" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00034.png" id="188_5gauq"]
-[ext_resource type="Texture2D" uid="uid://dmhy8do0j6txt" path="res://asset/Boss/Death/animation/attack/End/death 2_00033.png" id="188_mcetv"]
-[ext_resource type="Texture2D" uid="uid://cnhfgay2kjvij" path="res://asset/Boss/Death/animation/attack/End/death 2_00034.png" id="189_2lofw"]
-[ext_resource type="Texture2D" uid="uid://1aeskmt3iweb" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00035.png" id="189_e4etq"]
-[ext_resource type="Texture2D" uid="uid://c3cde6fl4a3hj" path="res://asset/Boss/Death/animation/attack/End/death 2_00035.png" id="190_qja5r"]
-[ext_resource type="Texture2D" uid="uid://dvpbdnik01jam" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00036.png" id="190_xugnc"]
-[ext_resource type="Texture2D" uid="uid://s5gfbci4sys5" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00037.png" id="191_j0cxu"]
-[ext_resource type="Texture2D" uid="uid://cver5jnjoxahw" path="res://asset/Boss/Death/animation/attack/End/death 2_00036.png" id="191_m8mac"]
-[ext_resource type="Texture2D" uid="uid://ckdtqyfya5p06" path="res://asset/Boss/Death/animation/attack/End/death 2_00037.png" id="192_ke4bv"]
-[ext_resource type="Texture2D" uid="uid://pj3vsqaeytu8" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00038.png" id="192_kvhs1"]
-[ext_resource type="Texture2D" uid="uid://lve23enautso" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00039.png" id="193_d3i0p"]
-[ext_resource type="Texture2D" uid="uid://cvhf272gyvs84" path="res://asset/Boss/Death/animation/attack/End/death 2_00038.png" id="193_jwsld"]
-[ext_resource type="Texture2D" uid="uid://cuolfggw267dv" path="res://asset/Boss/Death/animation/attack/End/death 2_00039.png" id="194_dehn8"]
-[ext_resource type="Texture2D" uid="uid://bft0vs67sushu" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00040.png" id="194_maqfm"]
-[ext_resource type="Texture2D" uid="uid://bifki4075ice8" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00041.png" id="195_48nog"]
-[ext_resource type="Texture2D" uid="uid://dqj2s18mbqmkr" path="res://asset/Boss/Death/animation/attack/End/death 2_00040.png" id="195_kn5sr"]
-[ext_resource type="Texture2D" uid="uid://pako3adsltnb" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00042.png" id="196_14uwl"]
-[ext_resource type="Texture2D" uid="uid://bvgsumb7eopj1" path="res://asset/Boss/Death/animation/attack/End/death 2_00041.png" id="196_cy4yg"]
-[ext_resource type="Texture2D" uid="uid://b44agw664gssh" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00043.png" id="197_fi48s"]
-[ext_resource type="Texture2D" uid="uid://cmhni8opf33ey" path="res://asset/Boss/Death/animation/attack/End/death 2_00042.png" id="197_j1cy2"]
-[ext_resource type="Texture2D" uid="uid://ba6283lcokpq4" path="res://asset/Boss/Death/animation/attack/End/death 2_00043.png" id="198_2ioqe"]
-[ext_resource type="Texture2D" uid="uid://bc73p7fc51ep0" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00044.png" id="198_ouikj"]
-[ext_resource type="Texture2D" uid="uid://d4nouss7g2jxs" path="res://asset/Boss/Death/animation/attack/End/death 2_00044.png" id="199_ojepo"]
-[ext_resource type="Texture2D" uid="uid://cuejj27w5bk6p" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00045.png" id="199_q1eq8"]
-[ext_resource type="Texture2D" uid="uid://cnm1br14jm0l7" path="res://asset/Boss/Death/animation/attack/End/death 2_00045.png" id="200_dgirp"]
-[ext_resource type="Texture2D" uid="uid://j4p5f7fcqk5i" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00046.png" id="200_yhkw5"]
-[ext_resource type="Texture2D" uid="uid://bcu6u1vamhjvq" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00047.png" id="201_4y7er"]
-[ext_resource type="Texture2D" uid="uid://br1vnka433n5d" path="res://asset/Boss/Death/animation/attack/End/death 2_00046.png" id="201_m50sv"]
-[ext_resource type="Texture2D" uid="uid://crayefldexp3d" path="res://asset/Boss/Death/animation/attack/End/death 2_00047.png" id="202_7y8m8"]
-[ext_resource type="Texture2D" uid="uid://cmsix03cadvfm" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00048.png" id="202_sx5pd"]
-[ext_resource type="Texture2D" uid="uid://cquj4ttin8xfq" path="res://asset/Boss/Death/animation/attack/End/death 2_00048.png" id="203_chtr6"]
-[ext_resource type="Texture2D" uid="uid://rie1xt0areli" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00049.png" id="203_jb0pa"]
-[ext_resource type="Texture2D" uid="uid://bkr6ea1i586eb" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00050.png" id="204_fphka"]
-[ext_resource type="Texture2D" uid="uid://dabp27i0duj4q" path="res://asset/Boss/Death/animation/attack/End/death 2_00049.png" id="204_m1bew"]
-[ext_resource type="Texture2D" uid="uid://dwy744nvat3vw" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00051.png" id="205_0xjs7"]
-[ext_resource type="Texture2D" uid="uid://dd3vpc1bjymy7" path="res://asset/Boss/Death/animation/attack/End/death 2_00050.png" id="205_tl1lm"]
-[ext_resource type="Texture2D" uid="uid://b5kk2vshj70ev" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00052.png" id="206_fd62u"]
-[ext_resource type="Texture2D" uid="uid://h8lb8s0nmi2l" path="res://asset/Boss/Death/animation/attack/End/death 2_00051.png" id="206_wgw8c"]
-[ext_resource type="Texture2D" uid="uid://dn7eyv61w5ovj" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00053.png" id="207_n7aqc"]
-[ext_resource type="Texture2D" uid="uid://cpt74uef71kgn" path="res://asset/Boss/Death/animation/attack/End/death 2_00052.png" id="207_xjh24"]
-[ext_resource type="Texture2D" uid="uid://bp4jaw35canbk" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00054.png" id="208_4a0ih"]
-[ext_resource type="Texture2D" uid="uid://cbskg3dpj73xe" path="res://asset/Boss/Death/animation/attack/End/death 2_00053.png" id="208_ugagt"]
-[ext_resource type="Texture2D" uid="uid://dmm6f1sougok1" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00055.png" id="209_i47i8"]
-[ext_resource type="Texture2D" uid="uid://dxe17gqahwo7l" path="res://asset/Boss/Death/animation/attack/End/death 2_00054.png" id="209_rd5dg"]
-[ext_resource type="Texture2D" uid="uid://dg7ejr5sr6l1m" path="res://asset/Boss/Death/animation/attack/End/death 2_00055.png" id="210_087px"]
-[ext_resource type="Texture2D" uid="uid://bpg2xkkr3wmqa" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00056.png" id="210_icgjq"]
-[ext_resource type="Texture2D" uid="uid://cwagfcgd7tm8e" path="res://asset/Boss/Death/animation/attack/End/death 2_00056.png" id="211_astra"]
-[ext_resource type="Texture2D" uid="uid://dcwpj7rxxk0km" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00057.png" id="211_upub6"]
-[ext_resource type="Texture2D" uid="uid://bhupd0olfpyo1" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00058.png" id="212_i843d"]
-[ext_resource type="Texture2D" uid="uid://vhsdb0cr2lxs" path="res://asset/Boss/Death/animation/attack/End/death 2_00057.png" id="212_ic51i"]
-[ext_resource type="Texture2D" uid="uid://bpkwq3hmqlwwx" path="res://asset/Boss/Death/animation/attack/End/death 2_00058.png" id="213_lger7"]
-[ext_resource type="Texture2D" uid="uid://c7pn8e62rocy7" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00059.png" id="213_tg3a1"]
-[ext_resource type="Texture2D" uid="uid://c7dyofdqvvnmw" path="res://asset/Boss/Death/animation/attack/End/death 2_00059.png" id="214_h1imk"]
-[ext_resource type="Texture2D" uid="uid://qkhh264evrbq" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00060.png" id="214_nydfm"]
-[ext_resource type="Texture2D" uid="uid://cxr74v8wut5kh" path="res://asset/Boss/Death/animation/attack/End/death 2_00060.png" id="215_l4uxk"]
-[ext_resource type="Texture2D" uid="uid://nqvn2tlvwjl6" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00061.png" id="215_s4qt3"]
-[ext_resource type="Texture2D" uid="uid://d1fl1138yrs8r" path="res://asset/Boss/Death/animation/attack/End/death 2_00061.png" id="216_82bag"]
-[ext_resource type="Texture2D" uid="uid://c4o8fm1d0ryes" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00062.png" id="216_jwdaq"]
-[ext_resource type="Texture2D" uid="uid://bg8jp5g02f8ai" path="res://asset/Boss/Death/animation/attack/End/death 2_00062.png" id="217_faosf"]
-[ext_resource type="Texture2D" uid="uid://o3firub1i7v3" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00063.png" id="217_ltygq"]
-[ext_resource type="Texture2D" uid="uid://blomancuh4mqu" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00064.png" id="218_sjse6"]
-[ext_resource type="Texture2D" uid="uid://cd0oi0282llcx" path="res://asset/Boss/Death/animation/attack/End/death 2_00063.png" id="218_vhhq3"]
-[ext_resource type="Texture2D" uid="uid://5abdcvvogrme" path="res://asset/Boss/Death/animation/attack/End/death 2_00064.png" id="219_nntgb"]
-[ext_resource type="Texture2D" uid="uid://d0q01r5cfwxfb" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00065.png" id="219_tvbrd"]
-[ext_resource type="Texture2D" uid="uid://dw0w7icdxayve" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00066.png" id="220_0e31h"]
-[ext_resource type="Texture2D" uid="uid://bns4rt480e1gi" path="res://asset/Boss/Death/animation/attack/End/death 2_00065.png" id="220_6qro6"]
-[ext_resource type="Texture2D" uid="uid://bw4v8eypndovh" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00067.png" id="221_6kux1"]
-[ext_resource type="Texture2D" uid="uid://fny8igf8oftw" path="res://asset/Boss/Death/animation/attack/End/death 2_00066.png" id="221_mfqom"]
-[ext_resource type="Texture2D" uid="uid://igxklrr6j8uu" path="res://asset/Boss/Death/animation/attack/End/death 2_00067.png" id="222_45k8e"]
-[ext_resource type="Texture2D" uid="uid://c3on7r4lgjyoc" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00068.png" id="222_wet8w"]
-[ext_resource type="Texture2D" uid="uid://beusflwu4lb5q" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00069.png" id="223_3r8xn"]
-[ext_resource type="Texture2D" uid="uid://cwpkjqtny7ux8" path="res://asset/Boss/Death/animation/attack/End/death 2_00068.png" id="223_5gauq"]
-[ext_resource type="Texture2D" uid="uid://clonvr4bi5ppe" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00070.png" id="224_0541r"]
-[ext_resource type="Texture2D" uid="uid://4dqxqm5j0kwx" path="res://asset/Boss/Death/animation/attack/End/death 2_00069.png" id="224_e4etq"]
-[ext_resource type="Texture2D" uid="uid://yi2jxnbgavq6" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00071.png" id="225_tjpql"]
-[ext_resource type="Texture2D" uid="uid://cvxi6y8fnwl7a" path="res://asset/Boss/Death/animation/attack/End/death 2_00070.png" id="225_xugnc"]
-[ext_resource type="Texture2D" uid="uid://bwbogdf6hi8mh" path="res://asset/Boss/Death/animation/attack/End/death 2_00071.png" id="226_j0cxu"]
-[ext_resource type="Texture2D" uid="uid://ca12pa2hf07i6" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00072.png" id="226_nsum7"]
-[ext_resource type="Texture2D" uid="uid://dvlhcd135vahs" path="res://asset/Boss/Death/animation/attack/End/death 2_00072.png" id="227_kvhs1"]
-[ext_resource type="Texture2D" uid="uid://coogkpcjk3hxr" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00073.png" id="227_ys5vl"]
-[ext_resource type="Texture2D" uid="uid://dofponub52usc" path="res://asset/Boss/Death/animation/attack/End/death 2_00073.png" id="228_d3i0p"]
-[ext_resource type="Texture2D" uid="uid://d0p6641rq0tka" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00074.png" id="228_macta"]
-[ext_resource type="Texture2D" uid="uid://boo8jnmyg2hfk" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00075.png" id="229_d41iq"]
-[ext_resource type="Texture2D" uid="uid://piowkskdu7q" path="res://asset/Boss/Death/animation/attack/End/death 2_00074.png" id="229_maqfm"]
-[ext_resource type="Texture2D" uid="uid://bsb5we30dkxwg" path="res://asset/Boss/Death/animation/attack/End/death 2_00075.png" id="230_48nog"]
-[ext_resource type="Texture2D" uid="uid://8coou6ryu8xu" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00076.png" id="230_rqbjk"]
-[ext_resource type="Texture2D" uid="uid://b78eib1hixgrt" path="res://asset/Boss/Death/animation/attack/End/death 2_00076.png" id="231_14uwl"]
-[ext_resource type="Texture2D" uid="uid://bs1riavh6g6bf" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00077.png" id="231_hulvw"]
-[ext_resource type="Texture2D" uid="uid://de6ogewxeaxqc" path="res://asset/Boss/Death/animation/attack/End/death 2_00077.png" id="232_fi48s"]
-[ext_resource type="Texture2D" uid="uid://okh22o6fghy6" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00078.png" id="232_ymfkm"]
-[ext_resource type="Texture2D" uid="uid://b0gqkjx6pjw6d" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00079.png" id="233_ft7sj"]
-[ext_resource type="Texture2D" uid="uid://raacs3gupeen" path="res://asset/Boss/Death/animation/attack/End/death 2_00078.png" id="233_ouikj"]
-[ext_resource type="Texture2D" uid="uid://dlmo7woemewyj" path="res://asset/Boss/Death/animation/attack/End/death 2_00079.png" id="234_q1eq8"]
-[ext_resource type="Texture2D" uid="uid://bedts72184y6u" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00080.png" id="234_qmsss"]
-[ext_resource type="Texture2D" uid="uid://bymu8p0iii0sj" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00081.png" id="235_mn7la"]
-[ext_resource type="Texture2D" uid="uid://cyflcso5cjola" path="res://asset/Boss/Death/animation/attack/End/death 2_00080.png" id="235_yhkw5"]
-[ext_resource type="Texture2D" uid="uid://b6bil2i0m5n7p" path="res://asset/Boss/Death/animation/attack/End/death 2_00081.png" id="236_4y7er"]
-[ext_resource type="Texture2D" uid="uid://c5jtcj5j3ews4" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00082.png" id="236_gte62"]
-[ext_resource type="Texture2D" uid="uid://c61gqpa4uym3g" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00083.png" id="237_8dp7a"]
-[ext_resource type="Texture2D" uid="uid://cmqkkxncq1tor" path="res://asset/Boss/Death/animation/attack/End/death 2_00082.png" id="237_sx5pd"]
-[ext_resource type="Texture2D" uid="uid://ntbm7idq4wi" path="res://asset/Boss/Death/animation/attack/End/death 2_00083.png" id="238_jb0pa"]
-[ext_resource type="Texture2D" uid="uid://wx138bs80v6a" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00084.png" id="238_ypxvj"]
-[ext_resource type="Texture2D" uid="uid://bwna7wxnc258c" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00085.png" id="239_8yooi"]
-[ext_resource type="Texture2D" uid="uid://tslwyragp4pb" path="res://asset/Boss/Death/animation/attack/End/death 2_00084.png" id="239_fphka"]
-[ext_resource type="Texture2D" uid="uid://buirj5yy5j865" path="res://asset/Boss/Death/animation/attack/End/death 2_00085.png" id="240_0xjs7"]
-[ext_resource type="Texture2D" uid="uid://eca8dneeve1t" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00086.png" id="240_r52rn"]
-[ext_resource type="Texture2D" uid="uid://bsft2xu4rhtd3" path="res://asset/Boss/Death/animation/attack/End/death 2_00086.png" id="241_fd62u"]
-[ext_resource type="Texture2D" uid="uid://b26lkr8d0mp2" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00087.png" id="241_fv43x"]
-[ext_resource type="Texture2D" uid="uid://b80vkimlbtv26" path="res://asset/Boss/Death/animation/attack/End/death 2_00087.png" id="242_n7aqc"]
-[ext_resource type="Texture2D" uid="uid://chiy2ey2msakm" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00088.png" id="242_updsk"]
-[ext_resource type="Texture2D" uid="uid://cs0jey4h35kmv" path="res://asset/Boss/Death/animation/attack/End/death 2_00088.png" id="243_4a0ih"]
-[ext_resource type="Texture2D" uid="uid://c7tytjybx3e4h" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00089.png" id="243_ff0m0"]
-[ext_resource type="Texture2D" uid="uid://dtyr4mbbk7d4r" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00090.png" id="244_0q6b7"]
-[ext_resource type="Texture2D" uid="uid://bupkovnexxh5m" path="res://asset/Boss/Death/animation/attack/End/death 2_00089.png" id="244_i47i8"]
-[ext_resource type="Texture2D" uid="uid://o0uylktq87h" path="res://asset/Boss/Death/animation/attack/End/death 2_00090.png" id="245_icgjq"]
-[ext_resource type="Texture2D" uid="uid://bedy20jp6quc2" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00091.png" id="245_jay3s"]
-[ext_resource type="Texture2D" uid="uid://kla04v0sedaq" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00092.png" id="246_3htsp"]
-[ext_resource type="Texture2D" uid="uid://bhehjiuopessm" path="res://asset/Boss/Death/animation/attack/End/death 2_00091.png" id="246_upub6"]
-[ext_resource type="Texture2D" uid="uid://t43psg38do3n" path="res://asset/Boss/Death/animation/attack/End/death 2_00092.png" id="247_i843d"]
-[ext_resource type="Texture2D" uid="uid://c86o7ptdmsxed" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00093.png" id="247_s1fcn"]
-[ext_resource type="Texture2D" uid="uid://bx86leh5xvjud" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00094.png" id="248_t5jy8"]
-[ext_resource type="Texture2D" uid="uid://caf5iqfq2cjwd" path="res://asset/Boss/Death/animation/attack/End/death 2_00093.png" id="248_tg3a1"]
-[ext_resource type="Texture2D" uid="uid://byeyvjy0cwbfs" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00095.png" id="249_8v045"]
-[ext_resource type="Texture2D" uid="uid://b2s8arje0tib4" path="res://asset/Boss/Death/animation/attack/End/death 2_00094.png" id="249_nydfm"]
-[ext_resource type="Texture2D" uid="uid://d00br1p441uv8" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00096.png" id="250_go8kj"]
-[ext_resource type="Texture2D" uid="uid://gfq8wsr04hf3" path="res://asset/Boss/Death/animation/attack/End/death 2_00095.png" id="250_s4qt3"]
-[ext_resource type="Texture2D" uid="uid://dapy28poy4ir0" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00097.png" id="251_jvukl"]
-[ext_resource type="Texture2D" uid="uid://btbyf1p3l2mkw" path="res://asset/Boss/Death/animation/attack/End/death 2_00096.png" id="251_jwdaq"]
-[ext_resource type="Texture2D" uid="uid://cnyrqacw43f0o" path="res://asset/Boss/Death/animation/attack/End/death 2_00097.png" id="252_ltygq"]
-[ext_resource type="Texture2D" uid="uid://bt1yoj0ams8w1" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00098.png" id="252_wymjd"]
-[ext_resource type="Texture2D" uid="uid://ct5y5qathrukm" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00099.png" id="253_oetix"]
-[ext_resource type="Texture2D" uid="uid://dvouydu804rlx" path="res://asset/Boss/Death/animation/attack/End/death 2_00098.png" id="253_sjse6"]
-[ext_resource type="Texture2D" uid="uid://cq8rylkf548o1" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00100.png" id="254_6rnhr"]
-[ext_resource type="Texture2D" uid="uid://barlwq4s4217i" path="res://asset/Boss/Death/animation/attack/End/death 2_00099.png" id="254_tvbrd"]
-[ext_resource type="Texture2D" uid="uid://b6e6aulfle6t3" path="res://asset/Boss/Death/animation/attack/End/death 2_00100.png" id="255_0e31h"]
-[ext_resource type="Texture2D" uid="uid://c824xwyjtx812" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00101.png" id="255_4qutd"]
-[ext_resource type="Texture2D" uid="uid://brypl87asvgvt" path="res://asset/Boss/Death/animation/attack/End/death 2_00101.png" id="256_6kux1"]
-[ext_resource type="Texture2D" uid="uid://bpatji5dbe6xh" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00102.png" id="256_atb6r"]
-[ext_resource type="Texture2D" uid="uid://c0f6iwoc776xr" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00103.png" id="257_4wq7h"]
-[ext_resource type="Texture2D" uid="uid://c6xqls807gdg4" path="res://asset/Boss/Death/animation/attack/End/death 2_00102.png" id="257_wet8w"]
-[ext_resource type="Texture2D" uid="uid://d2se6uanlwv4w" path="res://asset/Boss/Death/animation/attack/End/death 2_00103.png" id="258_3r8xn"]
-[ext_resource type="Texture2D" uid="uid://dbvafko8ald3" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00104.png" id="258_blcoa"]
-[ext_resource type="Texture2D" uid="uid://dgsayygbsmpic" path="res://asset/Boss/Death/animation/attack/End/death 2_00104.png" id="259_0541r"]
-[ext_resource type="Texture2D" uid="uid://c5cjojnamo1kf" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00105.png" id="259_m28nb"]
-[ext_resource type="Texture2D" uid="uid://cky3d2w6m2kbn" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00106.png" id="260_du5jl"]
-[ext_resource type="Texture2D" uid="uid://beeoatxwuvsj4" path="res://asset/Boss/Death/animation/attack/End/death 2_00105.png" id="260_tjpql"]
-[ext_resource type="Texture2D" uid="uid://qsncc8eqfegu" path="res://asset/Boss/Death/animation/attack/End/death 2_00106.png" id="261_nsum7"]
-[ext_resource type="Texture2D" uid="uid://cw2p0t5t118tw" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00107.png" id="261_tpk2a"]
-[ext_resource type="Texture2D" uid="uid://dbu7owistdvp7" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00108.png" id="262_0jdha"]
-[ext_resource type="Texture2D" uid="uid://c1aumaqws4sx3" path="res://asset/Boss/Death/animation/attack/End/death 2_00107.png" id="262_ys5vl"]
-[ext_resource type="Texture2D" uid="uid://c6iheie8ji7m6" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00109.png" id="263_8wjr6"]
-[ext_resource type="Texture2D" uid="uid://dmjvewbsyqjig" path="res://asset/Boss/Death/animation/attack/End/death 2_00108.png" id="263_macta"]
-[ext_resource type="Texture2D" uid="uid://c7yf2b8ffc8r5" path="res://asset/Boss/Death/animation/attack/End/death 2_00109.png" id="264_d41iq"]
-[ext_resource type="Texture2D" uid="uid://c642wwpei4q8c" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00110.png" id="264_vqqu7"]
-[ext_resource type="Texture2D" uid="uid://brk67xcmqfpf0" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00111.png" id="265_ciar7"]
-[ext_resource type="Texture2D" uid="uid://dq3fgci18yps2" path="res://asset/Boss/Death/animation/attack/End/death 2_00110.png" id="265_rqbjk"]
-[ext_resource type="Texture2D" uid="uid://cev7yb3x18m48" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00112.png" id="266_fv7ar"]
-[ext_resource type="Texture2D" uid="uid://cq8naadt2igds" path="res://asset/Boss/Death/animation/attack/End/death 2_00111.png" id="266_hulvw"]
-[ext_resource type="Texture2D" uid="uid://bqml7a17ghkr7" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00113.png" id="267_lkor8"]
-[ext_resource type="Texture2D" uid="uid://bwy3e3ysf6ukq" path="res://asset/Boss/Death/animation/attack/End/death 2_00112.png" id="267_ymfkm"]
-[ext_resource type="Texture2D" uid="uid://b8b3w7j2ifqii" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00114.png" id="268_5hv5o"]
-[ext_resource type="Texture2D" uid="uid://crosmqn2fj6u8" path="res://asset/Boss/Death/animation/attack/End/death 2_00113.png" id="268_ft7sj"]
-[ext_resource type="Texture2D" uid="uid://n6r4cw4tderv" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00115.png" id="269_k6ybs"]
-[ext_resource type="Texture2D" uid="uid://b17hg53me20pt" path="res://asset/Boss/Death/animation/attack/End/death 2_00114.png" id="269_qmsss"]
-[ext_resource type="Texture2D" uid="uid://c1qxs2mhpo6n7" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00116.png" id="270_4wv7o"]
-[ext_resource type="Texture2D" uid="uid://cm8xtq201wgpv" path="res://asset/Boss/Death/animation/attack/End/death 2_00115.png" id="270_mn7la"]
-[ext_resource type="Texture2D" uid="uid://flt6ioog5gkk" path="res://asset/Boss/Death/animation/stand/death 2/death 2_00117.png" id="271_4poet"]
-[ext_resource type="Texture2D" uid="uid://b50tjj5mnflhm" path="res://asset/Boss/Death/animation/attack/End/death 2_00116.png" id="271_gte62"]
-[ext_resource type="Texture2D" uid="uid://dbfh65lsm5ibp" path="res://asset/Boss/Death/animation/attack/End/death 2_00117.png" id="272_8dp7a"]
-[ext_resource type="Texture2D" uid="uid://cuuh6cdl80kkh" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame1.png" id="291_cxyja"]
-[ext_resource type="Texture2D" uid="uid://cttse86xhxmk2" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame2.png" id="292_6mx24"]
-[ext_resource type="Texture2D" uid="uid://xyyjhc8tipt4" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame3.png" id="293_3qw65"]
-[ext_resource type="Texture2D" uid="uid://qx71s4jk507y" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame4.png" id="294_iuy7b"]
-[ext_resource type="Texture2D" uid="uid://fpruntnnads0" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame5.png" id="295_hk7le"]
-[ext_resource type="Texture2D" uid="uid://gcv2jl4p0d54" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame6.png" id="296_fpat5"]
-[ext_resource type="Texture2D" uid="uid://c1x63mqo7xb76" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame7.png" id="297_pgeon"]
-[ext_resource type="Texture2D" uid="uid://db10y2qcqgqt5" path="res://asset/Boss/Death/animation/attack/leftwaveattack/Frames/warrior_skill5_frame8.png" id="298_u4ikh"]
-[ext_resource type="Script" uid="uid://clsoagbaaw7mi" path="res://Script/Death/hit.gd" id="391_e4bhh"]
+[ext_resource type="Script" uid="uid://cjwnh4f6dtds5" path="res://Script/Boss/Death/dead.gd" id="1_q8t34"]
+[ext_resource type="Texture2D" uid="uid://b356kl3lduugo" path="res://asset/Boss/Death/Attack/Hit1/death 2_00000.webp" id="2_e4bhh"]
+[ext_resource type="Texture2D" uid="uid://dcyo5rlrfcwl4" path="res://asset/Boss/Death/Attack/Hit1/death 2_00001.webp" id="3_gp6y3"]
+[ext_resource type="Texture2D" uid="uid://n10xuhmqc772" path="res://asset/Boss/Death/Attack/Hit1/death 2_00002.webp" id="4_h6qqw"]
+[ext_resource type="Texture2D" uid="uid://ci0b2uk6ymny8" path="res://asset/Boss/Death/Attack/Hit1/death 2_00003.webp" id="5_b6356"]
+[ext_resource type="Texture2D" uid="uid://c0i6glk6mgpie" path="res://asset/Boss/Death/Attack/Hit1/death 2_00004.webp" id="6_03cit"]
+[ext_resource type="Texture2D" uid="uid://bciextsvmu2iw" path="res://asset/Boss/Death/Attack/Hit1/death 2_00005.webp" id="7_b203e"]
+[ext_resource type="Texture2D" uid="uid://cinf3pul4sgxh" path="res://asset/Boss/Death/Attack/Hit1/death 2_00006.webp" id="8_f8x2l"]
+[ext_resource type="Texture2D" uid="uid://bfp5k7ybsudyb" path="res://asset/Boss/Death/Attack/Hit1/death 2_00007.webp" id="9_7hdf8"]
+[ext_resource type="Texture2D" uid="uid://cq1x4j62v274y" path="res://asset/Boss/Death/Attack/Hit1/death 2_00008.webp" id="10_mot3o"]
+[ext_resource type="Texture2D" uid="uid://bbup52bwo0hf3" path="res://asset/Boss/Death/Attack/Hit1/death 2_00009.webp" id="11_hpvrr"]
+[ext_resource type="Texture2D" uid="uid://brqyedsg34g5u" path="res://asset/Boss/Death/Attack/Hit1/death 2_00010.webp" id="12_yytvl"]
+[ext_resource type="Texture2D" uid="uid://oh8h2u2u44n7" path="res://asset/Boss/Death/Attack/Hit1/death 2_00011.webp" id="13_6alwd"]
+[ext_resource type="Texture2D" uid="uid://dueuv4ugkq8xe" path="res://asset/Boss/Death/Attack/Hit1/death 2_00012.webp" id="14_p6lev"]
+[ext_resource type="Texture2D" uid="uid://o2fg6o37fkmq" path="res://asset/Boss/Death/Attack/Hit1/death 2_00013.webp" id="15_42ul0"]
+[ext_resource type="Texture2D" uid="uid://cy84vc6cewk7s" path="res://asset/Boss/Death/Attack/Hit1/death 2_00014.webp" id="16_ld5p7"]
+[ext_resource type="Texture2D" uid="uid://brpd8xudagjl6" path="res://asset/Boss/Death/Attack/Hit1/death 2_00015.webp" id="17_q3hdf"]
+[ext_resource type="Texture2D" uid="uid://b4023etcffk36" path="res://asset/Boss/Death/Attack/Hit1/death 2_00016.webp" id="18_a6m4d"]
+[ext_resource type="Texture2D" uid="uid://4iliwuy1a2dt" path="res://asset/Boss/Death/Attack/Hit1/death 2_00017.webp" id="19_ppvvm"]
+[ext_resource type="Texture2D" uid="uid://b4s4jnmb067tn" path="res://asset/Boss/Death/Attack/Hit1/death 2_00018.webp" id="20_cqud1"]
+[ext_resource type="Texture2D" uid="uid://byt411c05ebmt" path="res://asset/Boss/Death/Attack/Hit1/death 2_00019.webp" id="21_l1nev"]
+[ext_resource type="Texture2D" uid="uid://cxjd02tm7yh6l" path="res://asset/Boss/Death/Attack/Hit1/death 2_00020.webp" id="22_4ohgy"]
+[ext_resource type="Texture2D" uid="uid://cyi0mbgovk48a" path="res://asset/Boss/Death/Attack/Hit1/death 2_00021.webp" id="23_80xte"]
+[ext_resource type="Texture2D" uid="uid://0mwyxwyouujy" path="res://asset/Boss/Death/Attack/Hit1/death 2_00022.webp" id="24_4h813"]
+[ext_resource type="Texture2D" uid="uid://bxuvyktmqmobk" path="res://asset/Boss/Death/Attack/Hit1/death 2_00023.webp" id="25_440ai"]
+[ext_resource type="Texture2D" uid="uid://bloa101x01rvh" path="res://asset/Boss/Death/Attack/Hit1/death 2_00024.webp" id="26_bat0u"]
+[ext_resource type="Texture2D" uid="uid://bdwu208m2cmt0" path="res://asset/Boss/Death/Attack/Hit1/death 2_00025.webp" id="27_8ejg0"]
+[ext_resource type="Texture2D" uid="uid://c7stk581sngkv" path="res://asset/Boss/Death/Attack/Hit1/death 2_00026.webp" id="28_2f0wa"]
+[ext_resource type="Texture2D" uid="uid://cjw505dylpf4p" path="res://asset/Boss/Death/Attack/Hit1/death 2_00027.webp" id="29_pf1cm"]
+[ext_resource type="Texture2D" uid="uid://dp32gomamea2h" path="res://asset/Boss/Death/Attack/Hit1/death 2_00028.webp" id="30_2dqj8"]
+[ext_resource type="Texture2D" uid="uid://buy8s0jdg38tt" path="res://asset/Boss/Death/Attack/Hit1/death 2_00029.webp" id="31_jnrsr"]
+[ext_resource type="Texture2D" uid="uid://cnatybn1d1wub" path="res://asset/Boss/Death/Attack/Hit1/death 2_00030.webp" id="32_niika"]
+[ext_resource type="Texture2D" uid="uid://d0l8ijo78dxc5" path="res://asset/Boss/Death/Attack/Hit1/death 2_00031.webp" id="33_mpjgg"]
+[ext_resource type="Texture2D" uid="uid://bbss4l8l7d5lm" path="res://asset/Boss/Death/Attack/Hit1/death 2_00032.webp" id="34_o0oeb"]
+[ext_resource type="Texture2D" uid="uid://bf0lvac2cahat" path="res://asset/Boss/Death/Attack/Hit1/death 2_00033.webp" id="35_t2hu5"]
+[ext_resource type="Texture2D" uid="uid://cvefr0yfbepcq" path="res://asset/Boss/Death/Attack/Hit1/death 2_00034.webp" id="36_yavab"]
+[ext_resource type="Texture2D" uid="uid://boc1i62lyidxn" path="res://asset/Boss/Death/Attack/Hit1/death 2_00035.webp" id="37_gudxk"]
+[ext_resource type="Texture2D" uid="uid://divcbikmo1rm8" path="res://asset/Boss/Death/Attack/Hit1/death 2_00036.webp" id="38_wnpr4"]
+[ext_resource type="Texture2D" uid="uid://56a6kmfmjc0l" path="res://asset/Boss/Death/Attack/Hit1/death 2_00037.webp" id="39_c5kkl"]
+[ext_resource type="Texture2D" uid="uid://bglhx2kyo3e8e" path="res://asset/Boss/Death/Attack/Hit1/death 2_00038.webp" id="40_gby5u"]
+[ext_resource type="Texture2D" uid="uid://dw8e4iqr60hph" path="res://asset/Boss/Death/Attack/Hit1/death 2_00039.webp" id="41_2ejvy"]
+[ext_resource type="Texture2D" uid="uid://dt40563gmxe58" path="res://asset/Boss/Death/Attack/Hit1/death 2_00040.webp" id="42_dw4id"]
+[ext_resource type="Texture2D" uid="uid://rfgxmll3cvkk" path="res://asset/Boss/Death/Attack/Hit1/death 2_00041.webp" id="43_ytp1y"]
+[ext_resource type="Texture2D" uid="uid://d1i7cxdsnu6se" path="res://asset/Boss/Death/Attack/Hit1/death 2_00042.webp" id="44_lrpnr"]
+[ext_resource type="Texture2D" uid="uid://b662o2as3qrdv" path="res://asset/Boss/Death/Attack/Hit1/death 2_00043.webp" id="45_y1hak"]
+[ext_resource type="Texture2D" uid="uid://cykgj55olq6vx" path="res://asset/Boss/Death/Attack/Hit1/death 2_00044.webp" id="46_l2akv"]
+[ext_resource type="Texture2D" uid="uid://cv3yy8oeeablw" path="res://asset/Boss/Death/Attack/Hit1/death 2_00045.webp" id="47_68wcw"]
+[ext_resource type="Texture2D" uid="uid://dh0715a7w5k4b" path="res://asset/Boss/Death/Attack/Hit1/death 2_00046.webp" id="48_uchc0"]
+[ext_resource type="Texture2D" uid="uid://dnl6vvvgm6khb" path="res://asset/Boss/Death/Attack/Hit1/death 2_00047.webp" id="49_q1mn0"]
+[ext_resource type="Texture2D" uid="uid://dlcb57c61t6ek" path="res://asset/Boss/Death/Attack/Hit1/death 2_00048.webp" id="50_hrufa"]
+[ext_resource type="Texture2D" uid="uid://f1eev7qt26wq" path="res://asset/Boss/Death/Attack/Hit1/death 2_00049.webp" id="51_apxri"]
+[ext_resource type="Texture2D" uid="uid://bfa40e1fk40r6" path="res://asset/Boss/Death/Attack/Hit1/death 2_00050.webp" id="52_621hk"]
+[ext_resource type="Texture2D" uid="uid://rolu5gippovc" path="res://asset/Boss/Death/Attack/Hit1/death 2_00051.webp" id="53_mcetv"]
+[ext_resource type="Texture2D" uid="uid://b4id3npfxwaoj" path="res://asset/Boss/Death/Attack/Hit1/death 2_00052.webp" id="54_2lofw"]
+[ext_resource type="Texture2D" uid="uid://6y477u2bhdaf" path="res://asset/Boss/Death/Attack/Hit1/death 2_00053.webp" id="55_qja5r"]
+[ext_resource type="Texture2D" uid="uid://kxnlqb8e1ukr" path="res://asset/Boss/Death/Attack/Hit1/death 2_00054.webp" id="56_m8mac"]
+[ext_resource type="Texture2D" uid="uid://dflmqvnfe6i6n" path="res://asset/Boss/Death/Attack/Hit1/death 2_00055.webp" id="57_ke4bv"]
+[ext_resource type="Texture2D" uid="uid://dljsgdidoeg8n" path="res://asset/Boss/Death/Attack/Hit1/death 2_00056.webp" id="58_jwsld"]
+[ext_resource type="Texture2D" uid="uid://oxn1bfviwy44" path="res://asset/Boss/Death/Attack/Hit1/death 2_00057.webp" id="59_dehn8"]
+[ext_resource type="Texture2D" uid="uid://cqhx31bd7t36p" path="res://asset/Boss/Death/Attack/Hit1/death 2_00058.webp" id="60_kn5sr"]
+[ext_resource type="Texture2D" uid="uid://c36xj1px3es7t" path="res://asset/Boss/Death/Attack/Hit1/death 2_00059.webp" id="61_cy4yg"]
+[ext_resource type="Texture2D" uid="uid://c6rf2vn7dxpue" path="res://asset/Boss/Death/Attack/Hit1/death 2_00060.webp" id="62_j1cy2"]
+[ext_resource type="Texture2D" uid="uid://cgk2ch5qg6wnn" path="res://asset/Boss/Death/Attack/Hit1/death 2_00061.webp" id="63_2ioqe"]
+[ext_resource type="Texture2D" uid="uid://c6pt3f6u7canf" path="res://asset/Boss/Death/Attack/Hit1/death 2_00062.webp" id="64_ojepo"]
+[ext_resource type="Texture2D" uid="uid://b3xg3y0vrnxec" path="res://asset/Boss/Death/Attack/End/death 2_00000.webp" id="155_e4bhh"]
+[ext_resource type="Texture2D" uid="uid://bsg6hd58wts64" path="res://asset/Boss/Death/Attack/End/death 2_00001.webp" id="156_gp6y3"]
+[ext_resource type="Texture2D" uid="uid://b2kbqtdoj5ewq" path="res://asset/Boss/Death/Attack/End/death 2_00002.webp" id="157_h6qqw"]
+[ext_resource type="Texture2D" uid="uid://oyno7c5njoqu" path="res://asset/Boss/Death/Attack/End/death 2_00003.webp" id="158_b6356"]
+[ext_resource type="Texture2D" uid="uid://fuawfw3u3tev" path="res://asset/Boss/Death/Attack/End/death 2_00004.webp" id="159_03cit"]
+[ext_resource type="Texture2D" uid="uid://cvey0551041c6" path="res://asset/Boss/Death/Attack/End/death 2_00005.webp" id="160_b203e"]
+[ext_resource type="Texture2D" uid="uid://mb6ol073j85f" path="res://asset/Boss/Death/Attack/End/death 2_00006.webp" id="161_f8x2l"]
+[ext_resource type="Texture2D" uid="uid://bpendlhhsenyp" path="res://asset/Boss/Death/Attack/End/death 2_00007.webp" id="162_7hdf8"]
+[ext_resource type="Texture2D" uid="uid://cscj18gtayrud" path="res://asset/Boss/Death/Attack/End/death 2_00008.webp" id="163_mot3o"]
+[ext_resource type="Texture2D" uid="uid://224m1bnfi8pb" path="res://asset/Boss/Death/Attack/End/death 2_00009.webp" id="164_hpvrr"]
+[ext_resource type="Texture2D" uid="uid://cqruowp4e1pwa" path="res://asset/Boss/Death/Attack/End/death 2_00010.webp" id="165_yytvl"]
+[ext_resource type="Texture2D" uid="uid://bl3pqd0pe7sy0" path="res://asset/Boss/Death/Attack/End/death 2_00011.webp" id="166_6alwd"]
+[ext_resource type="Texture2D" uid="uid://dnuig33mot34u" path="res://asset/Boss/Death/Attack/End/death 2_00012.webp" id="167_p6lev"]
+[ext_resource type="Texture2D" uid="uid://bhauw4dahmonx" path="res://asset/Boss/Death/Attack/End/death 2_00013.webp" id="168_42ul0"]
+[ext_resource type="Texture2D" uid="uid://bfyfipuwfprbm" path="res://asset/Boss/Death/Attack/End/death 2_00014.webp" id="169_ld5p7"]
+[ext_resource type="Texture2D" uid="uid://ctvdxgt1qj7qs" path="res://asset/Boss/Death/Attack/End/death 2_00015.webp" id="170_q3hdf"]
+[ext_resource type="Texture2D" uid="uid://bj18fhbb753l3" path="res://asset/Boss/Death/Attack/End/death 2_00016.webp" id="171_a6m4d"]
+[ext_resource type="Texture2D" uid="uid://coahfceki0b8f" path="res://asset/Boss/Death/Attack/End/death 2_00017.webp" id="172_ppvvm"]
+[ext_resource type="Texture2D" uid="uid://batbejtcekfx4" path="res://asset/Boss/Death/Attack/End/death 2_00018.webp" id="173_cqud1"]
+[ext_resource type="Texture2D" uid="uid://dgl5nku2rlmus" path="res://asset/Boss/Death/Attack/End/death 2_00019.webp" id="174_l1nev"]
+[ext_resource type="Texture2D" uid="uid://bopr0pi5vrnnj" path="res://asset/Boss/Death/Attack/End/death 2_00020.webp" id="175_4ohgy"]
+[ext_resource type="Texture2D" uid="uid://dvsgfor15r4c3" path="res://asset/Boss/Death/Attack/End/death 2_00021.webp" id="176_80xte"]
+[ext_resource type="Texture2D" uid="uid://db2im0jk1wdm3" path="res://asset/Boss/Death/Attack/End/death 2_00022.webp" id="177_4h813"]
+[ext_resource type="Texture2D" uid="uid://dc0wdqshlwn4h" path="res://asset/Boss/Death/Attack/End/death 2_00023.webp" id="178_440ai"]
+[ext_resource type="Texture2D" uid="uid://gu3sm2iv06hs" path="res://asset/Boss/Death/Attack/End/death 2_00024.webp" id="179_bat0u"]
+[ext_resource type="Texture2D" uid="uid://d0e0s2nvrybk4" path="res://asset/Boss/Death/Attack/End/death 2_00025.webp" id="180_8ejg0"]
+[ext_resource type="Texture2D" uid="uid://ckphrjeydvr84" path="res://asset/Boss/Death/Attack/End/death 2_00026.webp" id="181_2f0wa"]
+[ext_resource type="Texture2D" uid="uid://cjdpl7j6er0wm" path="res://asset/Boss/Death/Attack/End/death 2_00027.webp" id="182_pf1cm"]
+[ext_resource type="Texture2D" uid="uid://dje1oso4em4w" path="res://asset/Boss/Death/Attack/End/death 2_00028.webp" id="183_2dqj8"]
+[ext_resource type="Texture2D" uid="uid://gihlu3wo5yhu" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00000.webp" id="183_wyugn"]
+[ext_resource type="Texture2D" uid="uid://dbwam0hoyssy1" path="res://asset/Boss/Death/Attack/End/death 2_00029.webp" id="184_jnrsr"]
+[ext_resource type="Texture2D" uid="uid://crx0ktytdracg" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00001.webp" id="184_th01y"]
+[ext_resource type="Texture2D" uid="uid://b26aaemm6161y" path="res://asset/Boss/Death/Attack/End/death 2_00030.webp" id="185_niika"]
+[ext_resource type="Texture2D" uid="uid://cum0i6uxhggia" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00002.webp" id="185_oqxk6"]
+[ext_resource type="Texture2D" uid="uid://csapwhi8s0te0" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00003.webp" id="186_kiacn"]
+[ext_resource type="Texture2D" uid="uid://cvfo8nppbnac4" path="res://asset/Boss/Death/Attack/End/death 2_00031.webp" id="186_mpjgg"]
+[ext_resource type="Texture2D" uid="uid://blrgsl6xfye58" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00004.webp" id="187_afvv4"]
+[ext_resource type="Texture2D" uid="uid://cmdcpcijco66m" path="res://asset/Boss/Death/Attack/End/death 2_00032.webp" id="187_o0oeb"]
+[ext_resource type="Texture2D" uid="uid://bjlgltvrfm2ir" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00005.webp" id="188_4oodj"]
+[ext_resource type="Texture2D" uid="uid://dfib0tjus30mn" path="res://asset/Boss/Death/Attack/End/death 2_00033.webp" id="188_t2hu5"]
+[ext_resource type="Texture2D" uid="uid://b8ta5r5crmdqt" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00006.webp" id="189_ns54e"]
+[ext_resource type="Texture2D" uid="uid://0r83xi0mm4vr" path="res://asset/Boss/Death/Attack/End/death 2_00034.webp" id="189_yavab"]
+[ext_resource type="Texture2D" uid="uid://u7nuq2va6htt" path="res://asset/Boss/Death/Attack/End/death 2_00035.webp" id="190_gudxk"]
+[ext_resource type="Texture2D" uid="uid://ch1v6770jtxig" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00007.webp" id="190_rrafo"]
+[ext_resource type="Texture2D" uid="uid://ce7d77bicbh7x" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00008.webp" id="191_by3ou"]
+[ext_resource type="Texture2D" uid="uid://3p7insb8r3hm" path="res://asset/Boss/Death/Attack/End/death 2_00036.webp" id="191_wnpr4"]
+[ext_resource type="Texture2D" uid="uid://beoa8p3otqe3a" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00009.webp" id="192_bu153"]
+[ext_resource type="Texture2D" uid="uid://dhnxika2uxwcw" path="res://asset/Boss/Death/Attack/End/death 2_00037.webp" id="192_c5kkl"]
+[ext_resource type="Texture2D" uid="uid://dau6pau6sg8od" path="res://asset/Boss/Death/Attack/End/death 2_00038.webp" id="193_gby5u"]
+[ext_resource type="Texture2D" uid="uid://cq7d5owti7s1" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00010.webp" id="193_jr2a3"]
+[ext_resource type="Texture2D" uid="uid://bg6i3cw0q4bqq" path="res://asset/Boss/Death/Attack/End/death 2_00039.webp" id="194_2ejvy"]
+[ext_resource type="Texture2D" uid="uid://bft2chvblvsn0" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00011.webp" id="194_210iw"]
+[ext_resource type="Texture2D" uid="uid://cj1t2rrglyqod" path="res://asset/Boss/Death/Attack/End/death 2_00040.webp" id="195_dw4id"]
+[ext_resource type="Texture2D" uid="uid://d0nepq60h7urd" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00012.webp" id="195_jxfx5"]
+[ext_resource type="Texture2D" uid="uid://csgqwnc6focfv" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00013.webp" id="196_1p571"]
+[ext_resource type="Texture2D" uid="uid://c048asrl5iepq" path="res://asset/Boss/Death/Attack/End/death 2_00041.webp" id="196_ytp1y"]
+[ext_resource type="Texture2D" uid="uid://n2s3ye2stkcn" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00014.webp" id="197_7b676"]
+[ext_resource type="Texture2D" uid="uid://b7cns2i4hrkvn" path="res://asset/Boss/Death/Attack/End/death 2_00042.webp" id="197_lrpnr"]
+[ext_resource type="Texture2D" uid="uid://bp4uqjcvs5qsu" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00015.webp" id="198_ewyqq"]
+[ext_resource type="Texture2D" uid="uid://mjy1hlplu4l4" path="res://asset/Boss/Death/Attack/End/death 2_00043.webp" id="198_y1hak"]
+[ext_resource type="Texture2D" uid="uid://dneqlg8biteu7" path="res://asset/Boss/Death/Attack/End/death 2_00044.webp" id="199_l2akv"]
+[ext_resource type="Texture2D" uid="uid://cofp6mwxfvk7w" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00016.webp" id="199_xtthh"]
+[ext_resource type="Texture2D" uid="uid://crco2xafrojrk" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00017.webp" id="200_0b8dn"]
+[ext_resource type="Texture2D" uid="uid://brbex5whn80tu" path="res://asset/Boss/Death/Attack/End/death 2_00045.webp" id="200_68wcw"]
+[ext_resource type="Texture2D" uid="uid://bkwljwcvnnouj" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00018.webp" id="201_erx8e"]
+[ext_resource type="Texture2D" uid="uid://hy5phlt41xwb" path="res://asset/Boss/Death/Attack/End/death 2_00046.webp" id="201_uchc0"]
+[ext_resource type="Texture2D" uid="uid://it00f6fie1ej" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00019.webp" id="202_g5oxi"]
+[ext_resource type="Texture2D" uid="uid://1voihkvgguyv" path="res://asset/Boss/Death/Attack/End/death 2_00047.webp" id="202_q1mn0"]
+[ext_resource type="Texture2D" uid="uid://csu33454hr408" path="res://asset/Boss/Death/Attack/End/death 2_00048.webp" id="203_hrufa"]
+[ext_resource type="Texture2D" uid="uid://cyid8gupdivm7" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00020.webp" id="203_or0jj"]
+[ext_resource type="Texture2D" uid="uid://jk3aturtxenr" path="res://asset/Boss/Death/Attack/End/death 2_00049.webp" id="204_apxri"]
+[ext_resource type="Texture2D" uid="uid://fooyorso2os3" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00021.webp" id="204_n65kr"]
+[ext_resource type="Texture2D" uid="uid://b620eo4bsc5cu" path="res://asset/Boss/Death/Attack/End/death 2_00050.webp" id="205_621hk"]
+[ext_resource type="Texture2D" uid="uid://be0h1qctnvpph" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00022.webp" id="205_ssaoo"]
+[ext_resource type="Texture2D" uid="uid://d3ug3o0703tlk" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00023.webp" id="206_1f8om"]
+[ext_resource type="Texture2D" uid="uid://duxgkjxby88ek" path="res://asset/Boss/Death/Attack/End/death 2_00051.webp" id="206_mcetv"]
+[ext_resource type="Texture2D" uid="uid://bp6ahc2ouqdqk" path="res://asset/Boss/Death/Attack/End/death 2_00052.webp" id="207_2lofw"]
+[ext_resource type="Texture2D" uid="uid://bo16qdbwinbpu" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00024.webp" id="207_kup5m"]
+[ext_resource type="Texture2D" uid="uid://dmm374qbq5h7o" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00025.webp" id="208_34ulp"]
+[ext_resource type="Texture2D" uid="uid://cifyhp5i3ppgo" path="res://asset/Boss/Death/Attack/End/death 2_00053.webp" id="208_qja5r"]
+[ext_resource type="Texture2D" uid="uid://df1d67tjgyofo" path="res://asset/Boss/Death/Attack/End/death 2_00054.webp" id="209_m8mac"]
+[ext_resource type="Texture2D" uid="uid://cl2f08vgrmspi" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00026.webp" id="209_usnah"]
+[ext_resource type="Texture2D" uid="uid://b04melsi6e13k" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00027.webp" id="210_i4bt8"]
+[ext_resource type="Texture2D" uid="uid://bi71njqs37n4h" path="res://asset/Boss/Death/Attack/End/death 2_00055.webp" id="210_ke4bv"]
+[ext_resource type="Texture2D" uid="uid://7fvyc3q3oi0y" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00028.webp" id="211_am3mx"]
+[ext_resource type="Texture2D" uid="uid://ci2djh3fx3lyf" path="res://asset/Boss/Death/Attack/End/death 2_00056.webp" id="211_jwsld"]
+[ext_resource type="Texture2D" uid="uid://860u2lkgc7iu" path="res://asset/Boss/Death/Attack/End/death 2_00057.webp" id="212_dehn8"]
+[ext_resource type="Texture2D" uid="uid://damaxcad2ks7k" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00029.webp" id="212_jckvb"]
+[ext_resource type="Texture2D" uid="uid://cxqd0fqi7vuxs" path="res://asset/Boss/Death/Attack/End/death 2_00058.webp" id="213_kn5sr"]
+[ext_resource type="Texture2D" uid="uid://bea0ng4bcgaf7" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00030.webp" id="213_vxjj7"]
+[ext_resource type="Texture2D" uid="uid://bsvn5d77rpej7" path="res://asset/Boss/Death/Attack/End/death 2_00059.webp" id="214_cy4yg"]
+[ext_resource type="Texture2D" uid="uid://dcw0hdyxpms44" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00031.webp" id="214_r1162"]
+[ext_resource type="Texture2D" uid="uid://cr8ff2y6hmrgd" path="res://asset/Boss/Death/Attack/End/death 2_00060.webp" id="215_j1cy2"]
+[ext_resource type="Texture2D" uid="uid://4g35aswhuktb" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00032.webp" id="215_lcl78"]
+[ext_resource type="Texture2D" uid="uid://c4kaabgatk7rk" path="res://asset/Boss/Death/Attack/End/death 2_00061.webp" id="216_2ioqe"]
+[ext_resource type="Texture2D" uid="uid://d2sh5yv00gutj" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00033.webp" id="216_r5j36"]
+[ext_resource type="Texture2D" uid="uid://i7eo2m34temx" path="res://asset/Boss/Death/Attack/End/death 2_00062.webp" id="217_ojepo"]
+[ext_resource type="Texture2D" uid="uid://bkynrcsvccbl4" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00034.webp" id="217_q08hq"]
+[ext_resource type="Texture2D" uid="uid://c8q2pcksa7n2p" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00035.webp" id="218_501iu"]
+[ext_resource type="Texture2D" uid="uid://cbvnqqgaux22u" path="res://asset/Boss/Death/Attack/End/death 2_00063.webp" id="218_dgirp"]
+[ext_resource type="Texture2D" uid="uid://c3lgat5hl7f5v" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00036.webp" id="219_6rdux"]
+[ext_resource type="Texture2D" uid="uid://ficnerse1xnn" path="res://asset/Boss/Death/Attack/End/death 2_00064.webp" id="219_m50sv"]
+[ext_resource type="Texture2D" uid="uid://cuwjnli1xlmpn" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00037.webp" id="220_3yu5y"]
+[ext_resource type="Texture2D" uid="uid://dtw4lc5olnxya" path="res://asset/Boss/Death/Attack/End/death 2_00065.webp" id="220_7y8m8"]
+[ext_resource type="Texture2D" uid="uid://cd4m73ke0ihd8" path="res://asset/Boss/Death/Attack/End/death 2_00066.webp" id="221_chtr6"]
+[ext_resource type="Texture2D" uid="uid://dm46gh8vym4py" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00038.webp" id="221_h175a"]
+[ext_resource type="Texture2D" uid="uid://bs7yqj8j24qhi" path="res://asset/Boss/Death/Attack/End/death 2_00067.webp" id="222_m1bew"]
+[ext_resource type="Texture2D" uid="uid://c85447nlpgk87" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00039.webp" id="222_xmiod"]
+[ext_resource type="Texture2D" uid="uid://bwsg4cqgwf4e5" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00040.webp" id="223_k77hv"]
+[ext_resource type="Texture2D" uid="uid://drtutc8k36si1" path="res://asset/Boss/Death/Attack/End/death 2_00068.webp" id="223_tl1lm"]
+[ext_resource type="Texture2D" uid="uid://beicw48dxu32m" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00041.webp" id="224_1182o"]
+[ext_resource type="Texture2D" uid="uid://boau1emgsu7ex" path="res://asset/Boss/Death/Attack/End/death 2_00069.webp" id="224_wgw8c"]
+[ext_resource type="Texture2D" uid="uid://gs8yv4p608p3" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00042.webp" id="225_6g0st"]
+[ext_resource type="Texture2D" uid="uid://d0seakeqvp4wn" path="res://asset/Boss/Death/Attack/End/death 2_00070.webp" id="225_xjh24"]
+[ext_resource type="Texture2D" uid="uid://dlxickpwsbqjf" path="res://asset/Boss/Death/Attack/End/death 2_00071.webp" id="226_ugagt"]
+[ext_resource type="Texture2D" uid="uid://cwy60ah258ch0" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00043.webp" id="226_vfnha"]
+[ext_resource type="Texture2D" uid="uid://dunme38vwxg1w" path="res://asset/Boss/Death/Attack/Wave/Move/death 2_00044.webp" id="227_45oin"]
+[ext_resource type="Texture2D" uid="uid://4wa4by4nl61b" path="res://asset/Boss/Death/Attack/End/death 2_00072.webp" id="227_rd5dg"]
+[ext_resource type="Texture2D" uid="uid://bw2npmdpw134w" path="res://asset/Boss/Death/Attack/End/death 2_00073.webp" id="228_087px"]
+[ext_resource type="Texture2D" uid="uid://780ffqeymyh4" path="res://asset/Boss/Death/Attack/End/death 2_00074.webp" id="229_astra"]
+[ext_resource type="Texture2D" uid="uid://vo3xbfajwofc" path="res://asset/Boss/Death/Attack/End/death 2_00075.webp" id="230_ic51i"]
+[ext_resource type="Texture2D" uid="uid://777lc1f5bto4" path="res://asset/Boss/Death/Attack/End/death 2_00076.webp" id="231_lger7"]
+[ext_resource type="Texture2D" uid="uid://c84t676l04wuf" path="res://asset/Boss/Death/Attack/End/death 2_00077.webp" id="232_h1imk"]
+[ext_resource type="Texture2D" uid="uid://co2brp4prjrvb" path="res://asset/Boss/Death/Attack/End/death 2_00078.webp" id="233_l4uxk"]
+[ext_resource type="Texture2D" uid="uid://ccwelbfar5x8h" path="res://asset/Boss/Death/Attack/End/death 2_00079.webp" id="234_82bag"]
+[ext_resource type="Texture2D" uid="uid://b5mi8gc04ij1c" path="res://asset/Boss/Death/Attack/End/death 2_00080.webp" id="235_faosf"]
+[ext_resource type="Texture2D" uid="uid://br0vjccxcxmvv" path="res://asset/Boss/Death/Attack/End/death 2_00081.webp" id="236_vhhq3"]
+[ext_resource type="Texture2D" uid="uid://du8v5ibkfd1oe" path="res://asset/Boss/Death/Attack/End/death 2_00082.webp" id="237_nntgb"]
+[ext_resource type="Texture2D" uid="uid://ciddkt8rj8mxx" path="res://asset/Boss/Death/Attack/End/death 2_00083.webp" id="238_6qro6"]
+[ext_resource type="Texture2D" uid="uid://desqfv1el0rla" path="res://asset/Boss/Death/Attack/End/death 2_00084.webp" id="239_mfqom"]
+[ext_resource type="Texture2D" uid="uid://31shgo1j7via" path="res://asset/Boss/Death/Attack/End/death 2_00085.webp" id="240_45k8e"]
+[ext_resource type="Texture2D" uid="uid://k82a5h4maniv" path="res://asset/Boss/Death/Attack/End/death 2_00086.webp" id="241_5gauq"]
+[ext_resource type="Texture2D" uid="uid://dau4yav2f7gqg" path="res://asset/Boss/Death/Attack/End/death 2_00087.webp" id="242_e4etq"]
+[ext_resource type="Texture2D" uid="uid://bfiu42h0a2ba1" path="res://asset/Boss/Death/Attack/End/death 2_00088.webp" id="243_xugnc"]
+[ext_resource type="Texture2D" uid="uid://b36n1p8hy0hpn" path="res://asset/Boss/Death/Attack/End/death 2_00089.webp" id="244_j0cxu"]
+[ext_resource type="Texture2D" uid="uid://7cpb0rfy4f12" path="res://asset/Boss/Death/Attack/End/death 2_00090.webp" id="245_kvhs1"]
+[ext_resource type="Texture2D" uid="uid://dlwbyl4ni23px" path="res://asset/Boss/Death/Attack/End/death 2_00091.webp" id="246_d3i0p"]
+[ext_resource type="Texture2D" uid="uid://bm3qc7d08vdn8" path="res://asset/Boss/Death/Attack/End/death 2_00092.webp" id="247_maqfm"]
+[ext_resource type="Texture2D" uid="uid://ewrwxb7udqel" path="res://asset/Boss/Death/Attack/End/death 2_00093.webp" id="248_48nog"]
+[ext_resource type="Texture2D" uid="uid://cm5afpcmc4iuq" path="res://asset/Boss/Death/Attack/End/death 2_00094.webp" id="249_14uwl"]
+[ext_resource type="Texture2D" uid="uid://ch6d1d0r0b67g" path="res://asset/Boss/Death/Attack/End/death 2_00095.webp" id="250_fi48s"]
+[ext_resource type="Texture2D" uid="uid://vyxiwx5us6nr" path="res://asset/Boss/Death/Attack/End/death 2_00096.webp" id="251_ouikj"]
+[ext_resource type="Texture2D" uid="uid://c7p22xs25dw07" path="res://asset/Boss/Death/Attack/End/death 2_00097.webp" id="252_q1eq8"]
+[ext_resource type="Texture2D" uid="uid://5a3tg615udxl" path="res://asset/Boss/Death/Attack/End/death 2_00098.webp" id="253_yhkw5"]
+[ext_resource type="Texture2D" uid="uid://copno7ma4jc22" path="res://asset/Boss/Death/Attack/End/death 2_00099.webp" id="254_4y7er"]
+[ext_resource type="Texture2D" uid="uid://byyd3cg47i7w5" path="res://asset/Boss/Death/Attack/End/death 2_00100.webp" id="255_sx5pd"]
+[ext_resource type="Texture2D" uid="uid://dvxaudpakssbf" path="res://asset/Boss/Death/Attack/End/death 2_00101.webp" id="256_jb0pa"]
+[ext_resource type="Texture2D" uid="uid://d02qel2iqnqhl" path="res://asset/Boss/Death/Attack/End/death 2_00102.webp" id="257_fphka"]
+[ext_resource type="Texture2D" uid="uid://sjldcninn0ao" path="res://asset/Boss/Death/Attack/End/death 2_00103.webp" id="258_0xjs7"]
+[ext_resource type="Texture2D" uid="uid://dovp2y52ygrmo" path="res://asset/Boss/Death/Attack/End/death 2_00104.webp" id="259_fd62u"]
+[ext_resource type="Texture2D" uid="uid://bxmbidw1a2tkc" path="res://asset/Boss/Death/Attack/End/death 2_00105.webp" id="260_n7aqc"]
+[ext_resource type="Texture2D" uid="uid://dj7crksgb375v" path="res://asset/Boss/Death/Attack/End/death 2_00106.webp" id="261_4a0ih"]
+[ext_resource type="Texture2D" uid="uid://dh73f34uirhi" path="res://asset/Boss/Death/Attack/End/death 2_00107.webp" id="262_i47i8"]
+[ext_resource type="Texture2D" uid="uid://cf2f1jagtjw73" path="res://asset/Boss/Death/Attack/End/death 2_00108.webp" id="263_icgjq"]
+[ext_resource type="Texture2D" uid="uid://dp2vodx0sasyb" path="res://asset/Boss/Death/Attack/End/death 2_00109.webp" id="264_upub6"]
+[ext_resource type="Texture2D" uid="uid://bt0jjox3elia4" path="res://asset/Boss/Death/Attack/End/death 2_00110.webp" id="265_i843d"]
+[ext_resource type="Texture2D" uid="uid://ds1lj73pycpy7" path="res://asset/Boss/Death/Attack/End/death 2_00111.webp" id="266_tg3a1"]
+[ext_resource type="Texture2D" uid="uid://cll2xn8a4lcae" path="res://asset/Boss/Death/Attack/End/death 2_00112.webp" id="267_nydfm"]
+[ext_resource type="Texture2D" uid="uid://bn3ddme8r0te7" path="res://asset/Boss/Death/Attack/End/death 2_00113.webp" id="268_s4qt3"]
+[ext_resource type="Texture2D" uid="uid://c0snkmqk2ew6x" path="res://asset/Boss/Death/Attack/End/death 2_00114.webp" id="269_jwdaq"]
+[ext_resource type="Texture2D" uid="uid://dtodw311qwu2j" path="res://asset/Boss/Death/Attack/End/death 2_00115.webp" id="270_ltygq"]
+[ext_resource type="Texture2D" uid="uid://br1tmtpgoqs11" path="res://asset/Boss/Death/Attack/End/death 2_00116.webp" id="271_sjse6"]
+[ext_resource type="Texture2D" uid="uid://c6c7lhx22lcfa" path="res://asset/Boss/Death/Attack/End/death 2_00117.webp" id="272_tvbrd"]
+[ext_resource type="Texture2D" uid="uid://cjqtekdh146l8" path="res://asset/Boss/Death/Stand/death 2_00000.webp" id="273_e4bhh"]
+[ext_resource type="Texture2D" uid="uid://c0lre65yvr64l" path="res://asset/Boss/Death/Stand/death 2_00001.webp" id="274_gp6y3"]
+[ext_resource type="Texture2D" uid="uid://dpdfdsddquk1h" path="res://asset/Boss/Death/Stand/death 2_00002.webp" id="275_h6qqw"]
+[ext_resource type="Texture2D" uid="uid://dbfhoan61rji0" path="res://asset/Boss/Death/Stand/death 2_00003.webp" id="276_b6356"]
+[ext_resource type="Texture2D" uid="uid://d2guay1iy2duv" path="res://asset/Boss/Death/Stand/death 2_00004.webp" id="277_03cit"]
+[ext_resource type="Texture2D" uid="uid://bnf1ufi2qmgsx" path="res://asset/Boss/Death/Stand/death 2_00005.webp" id="278_b203e"]
+[ext_resource type="Texture2D" uid="uid://bh5et47gf8kiv" path="res://asset/Boss/Death/Stand/death 2_00006.webp" id="279_f8x2l"]
+[ext_resource type="Texture2D" uid="uid://l27xcjl6g6vm" path="res://asset/Boss/Death/Stand/death 2_00007.webp" id="280_7hdf8"]
+[ext_resource type="Texture2D" uid="uid://dg5s7kwvdmdpc" path="res://asset/Boss/Death/Stand/death 2_00008.webp" id="281_mot3o"]
+[ext_resource type="Texture2D" uid="uid://dw1bu8hk0yavd" path="res://asset/Boss/Death/Stand/death 2_00009.webp" id="282_hpvrr"]
+[ext_resource type="Texture2D" uid="uid://op5trb0oagpr" path="res://asset/Boss/Death/Stand/death 2_00010.webp" id="283_yytvl"]
+[ext_resource type="Texture2D" uid="uid://cxl2k6fetfoa2" path="res://asset/Boss/Death/Stand/death 2_00011.webp" id="284_6alwd"]
+[ext_resource type="Texture2D" uid="uid://jxmlf1fj2vrh" path="res://asset/Boss/Death/Stand/death 2_00012.webp" id="285_p6lev"]
+[ext_resource type="Texture2D" uid="uid://bn4qdgwr6ivof" path="res://asset/Boss/Death/Stand/death 2_00013.webp" id="286_42ul0"]
+[ext_resource type="Texture2D" uid="uid://b11fvk47hw0h6" path="res://asset/Boss/Death/Stand/death 2_00014.webp" id="287_ld5p7"]
+[ext_resource type="Texture2D" uid="uid://bqcrn7k601he8" path="res://asset/Boss/Death/Stand/death 2_00015.webp" id="288_q3hdf"]
+[ext_resource type="Texture2D" uid="uid://b72kpa3pni2vy" path="res://asset/Boss/Death/Stand/death 2_00016.webp" id="289_a6m4d"]
+[ext_resource type="Texture2D" uid="uid://y58yij682qkx" path="res://asset/Boss/Death/Stand/death 2_00017.webp" id="290_ppvvm"]
+[ext_resource type="Texture2D" uid="uid://breu2ssnon1cf" path="res://asset/Boss/Death/Stand/death 2_00018.webp" id="291_cqud1"]
+[ext_resource type="Texture2D" uid="uid://dtkmr7vjbx8ny" path="res://asset/Boss/Death/Stand/death 2_00019.webp" id="292_l1nev"]
+[ext_resource type="Texture2D" uid="uid://devr3do7q4rc5" path="res://asset/Boss/Death/Stand/death 2_00020.webp" id="293_4ohgy"]
+[ext_resource type="Texture2D" uid="uid://crrliqf7hox2o" path="res://asset/Boss/Death/Stand/death 2_00021.webp" id="294_80xte"]
+[ext_resource type="Texture2D" uid="uid://8gjusv8c2twa" path="res://asset/Boss/Death/Stand/death 2_00022.webp" id="295_4h813"]
+[ext_resource type="Texture2D" uid="uid://dtyx81o6iue8i" path="res://asset/Boss/Death/Stand/death 2_00023.webp" id="296_440ai"]
+[ext_resource type="Texture2D" uid="uid://cxgveb00jd12l" path="res://asset/Boss/Death/Stand/death 2_00024.webp" id="297_bat0u"]
+[ext_resource type="Texture2D" uid="uid://empf44vicldv" path="res://asset/Boss/Death/Stand/death 2_00025.webp" id="298_8ejg0"]
+[ext_resource type="Texture2D" uid="uid://qnkmdy4ng307" path="res://asset/Boss/Death/Stand/death 2_00026.webp" id="299_2f0wa"]
+[ext_resource type="Texture2D" uid="uid://qnx4hvu7oqbp" path="res://asset/Boss/Death/Stand/death 2_00027.webp" id="300_pf1cm"]
+[ext_resource type="Texture2D" uid="uid://ch7ei4l6q1v7u" path="res://asset/Boss/Death/Stand/death 2_00028.webp" id="301_2dqj8"]
+[ext_resource type="Texture2D" uid="uid://buvth4f5vff7q" path="res://asset/Boss/Death/Stand/death 2_00029.webp" id="302_jnrsr"]
+[ext_resource type="Texture2D" uid="uid://cy4u1srs6a4bx" path="res://asset/Boss/Death/Stand/death 2_00030.webp" id="303_niika"]
+[ext_resource type="Texture2D" uid="uid://4xk8w6jdys5n" path="res://asset/Boss/Death/Stand/death 2_00031.webp" id="304_mpjgg"]
+[ext_resource type="Texture2D" uid="uid://brqs4sv8oxc3s" path="res://asset/Boss/Death/Stand/death 2_00032.webp" id="305_o0oeb"]
+[ext_resource type="Texture2D" uid="uid://dvvhsgg3ti4uv" path="res://asset/Boss/Death/Stand/death 2_00033.webp" id="306_t2hu5"]
+[ext_resource type="Texture2D" uid="uid://cwb6h44j2qk3o" path="res://asset/Boss/Death/Stand/death 2_00034.webp" id="307_yavab"]
+[ext_resource type="Texture2D" uid="uid://bk85ernfichwn" path="res://asset/Boss/Death/Stand/death 2_00035.webp" id="308_gudxk"]
+[ext_resource type="Texture2D" uid="uid://5b36ig23qg3i" path="res://asset/Boss/Death/Stand/death 2_00036.webp" id="309_wnpr4"]
+[ext_resource type="Texture2D" uid="uid://b8i3nibknlc1m" path="res://asset/Boss/Death/Stand/death 2_00037.webp" id="310_c5kkl"]
+[ext_resource type="Texture2D" uid="uid://dsy58sdfeltf0" path="res://asset/Boss/Death/Stand/death 2_00038.webp" id="311_gby5u"]
+[ext_resource type="Texture2D" uid="uid://bdy638f5rmu8j" path="res://asset/Boss/Death/Stand/death 2_00039.webp" id="312_2ejvy"]
+[ext_resource type="Texture2D" uid="uid://b5uw24spgvdxn" path="res://asset/Boss/Death/Stand/death 2_00040.webp" id="313_dw4id"]
+[ext_resource type="Texture2D" uid="uid://d1kyjp3fxntlj" path="res://asset/Boss/Death/Stand/death 2_00041.webp" id="314_ytp1y"]
+[ext_resource type="Texture2D" uid="uid://cop71gryshvhd" path="res://asset/Boss/Death/Stand/death 2_00042.webp" id="315_lrpnr"]
+[ext_resource type="Texture2D" uid="uid://ht2ojosy6pjx" path="res://asset/Boss/Death/Stand/death 2_00043.webp" id="316_y1hak"]
+[ext_resource type="Texture2D" uid="uid://cdjs86xm5vuha" path="res://asset/Boss/Death/Stand/death 2_00044.webp" id="317_l2akv"]
+[ext_resource type="Texture2D" uid="uid://bh8i75utm3vas" path="res://asset/Boss/Death/Stand/death 2_00045.webp" id="318_68wcw"]
+[ext_resource type="Texture2D" uid="uid://bccvyhn70k4kx" path="res://asset/Boss/Death/Stand/death 2_00046.webp" id="319_uchc0"]
+[ext_resource type="Texture2D" uid="uid://cjydjqcynhgb0" path="res://asset/Boss/Death/Stand/death 2_00047.webp" id="320_q1mn0"]
+[ext_resource type="Texture2D" uid="uid://d3b6layg0bls8" path="res://asset/Boss/Death/Stand/death 2_00048.webp" id="321_hrufa"]
+[ext_resource type="Texture2D" uid="uid://c5t3sqkdoewtg" path="res://asset/Boss/Death/Stand/death 2_00049.webp" id="322_apxri"]
+[ext_resource type="Texture2D" uid="uid://cxr1im8mspdw0" path="res://asset/Boss/Death/Stand/death 2_00050.webp" id="323_621hk"]
+[ext_resource type="Texture2D" uid="uid://duo0wcjdqv85a" path="res://asset/Boss/Death/Stand/death 2_00051.webp" id="324_mcetv"]
+[ext_resource type="Texture2D" uid="uid://cmes63x30oxna" path="res://asset/Boss/Death/Stand/death 2_00052.webp" id="325_2lofw"]
+[ext_resource type="Texture2D" uid="uid://cprb2silknomu" path="res://asset/Boss/Death/Stand/death 2_00053.webp" id="326_qja5r"]
+[ext_resource type="Texture2D" uid="uid://u4vrctioh2t3" path="res://asset/Boss/Death/Stand/death 2_00054.webp" id="327_m8mac"]
+[ext_resource type="Texture2D" uid="uid://bdwkdu1si420w" path="res://asset/Boss/Death/Stand/death 2_00055.webp" id="328_ke4bv"]
+[ext_resource type="Texture2D" uid="uid://j6mwdwquxh7k" path="res://asset/Boss/Death/Stand/death 2_00056.webp" id="329_jwsld"]
+[ext_resource type="Texture2D" uid="uid://cmcd7wgru2m0v" path="res://asset/Boss/Death/Stand/death 2_00057.webp" id="330_dehn8"]
+[ext_resource type="Texture2D" uid="uid://drb7tqi0bmxlk" path="res://asset/Boss/Death/Stand/death 2_00058.webp" id="331_kn5sr"]
+[ext_resource type="Texture2D" uid="uid://dyiubkeuwg3l1" path="res://asset/Boss/Death/Stand/death 2_00059.webp" id="332_cy4yg"]
+[ext_resource type="Texture2D" uid="uid://d32uaxk4onsgn" path="res://asset/Boss/Death/Stand/death 2_00060.webp" id="333_j1cy2"]
+[ext_resource type="Texture2D" uid="uid://cchgao24kyh4b" path="res://asset/Boss/Death/Stand/death 2_00061.webp" id="334_2ioqe"]
+[ext_resource type="Texture2D" uid="uid://rkditu60ils4" path="res://asset/Boss/Death/Stand/death 2_00062.webp" id="335_ojepo"]
+[ext_resource type="Texture2D" uid="uid://bp2nxj5v3v31o" path="res://asset/Boss/Death/Stand/death 2_00063.webp" id="336_dgirp"]
+[ext_resource type="Texture2D" uid="uid://c56begttxv3v4" path="res://asset/Boss/Death/Stand/death 2_00064.webp" id="337_m50sv"]
+[ext_resource type="Texture2D" uid="uid://bjdu60gsywp3t" path="res://asset/Boss/Death/Stand/death 2_00065.webp" id="338_7y8m8"]
+[ext_resource type="Texture2D" uid="uid://dkruqoj7eeyqn" path="res://asset/Boss/Death/Stand/death 2_00066.webp" id="339_chtr6"]
+[ext_resource type="Texture2D" uid="uid://ep61tk8m8iif" path="res://asset/Boss/Death/Stand/death 2_00067.webp" id="340_m1bew"]
+[ext_resource type="Texture2D" uid="uid://cd7lkgwt28cio" path="res://asset/Boss/Death/Stand/death 2_00068.webp" id="341_tl1lm"]
+[ext_resource type="Texture2D" uid="uid://re0mv26cqf0u" path="res://asset/Boss/Death/Stand/death 2_00069.webp" id="342_wgw8c"]
+[ext_resource type="Texture2D" uid="uid://dji5jbnvdus0q" path="res://asset/Boss/Death/Stand/death 2_00070.webp" id="343_xjh24"]
+[ext_resource type="Texture2D" uid="uid://cjwvexp0s0wj" path="res://asset/Boss/Death/Stand/death 2_00071.webp" id="344_ugagt"]
+[ext_resource type="Texture2D" uid="uid://bas4hdh48uas2" path="res://asset/Boss/Death/Stand/death 2_00072.webp" id="345_rd5dg"]
+[ext_resource type="Texture2D" uid="uid://7yumthutagku" path="res://asset/Boss/Death/Stand/death 2_00073.webp" id="346_087px"]
+[ext_resource type="Texture2D" uid="uid://bqdqg34hyp465" path="res://asset/Boss/Death/Stand/death 2_00074.webp" id="347_astra"]
+[ext_resource type="Texture2D" uid="uid://dfoers0qcm6ig" path="res://asset/Boss/Death/Attack/Wave/Frame/warrior_skill5_frame1.webp" id="347_wyugn"]
+[ext_resource type="Texture2D" uid="uid://dgj11mdh6hjmf" path="res://asset/Boss/Death/Stand/death 2_00075.webp" id="348_ic51i"]
+[ext_resource type="Texture2D" uid="uid://bv4245t01fudm" path="res://asset/Boss/Death/Attack/Wave/Frame/warrior_skill5_frame2.webp" id="348_th01y"]
+[ext_resource type="Texture2D" uid="uid://c4kcu28gb66fw" path="res://asset/Boss/Death/Stand/death 2_00076.webp" id="349_lger7"]
+[ext_resource type="Texture2D" uid="uid://dhunccfhxa0ol" path="res://asset/Boss/Death/Attack/Wave/Frame/warrior_skill5_frame3.webp" id="349_oqxk6"]
+[ext_resource type="Texture2D" uid="uid://bgqct0ekn5u1s" path="res://asset/Boss/Death/Stand/death 2_00077.webp" id="350_h1imk"]
+[ext_resource type="Texture2D" uid="uid://cryoc31856f74" path="res://asset/Boss/Death/Attack/Wave/Frame/warrior_skill5_frame4.webp" id="350_kiacn"]
+[ext_resource type="Texture2D" uid="uid://crf5jnno6jva7" path="res://asset/Boss/Death/Attack/Wave/Frame/warrior_skill5_frame5.webp" id="351_afvv4"]
+[ext_resource type="Texture2D" uid="uid://dvckpxb6ncwnh" path="res://asset/Boss/Death/Stand/death 2_00078.webp" id="351_l4uxk"]
+[ext_resource type="Texture2D" uid="uid://2c57od7xdah" path="res://asset/Boss/Death/Attack/Wave/Frame/warrior_skill5_frame6.webp" id="352_4oodj"]
+[ext_resource type="Texture2D" uid="uid://dnq8metvcuqas" path="res://asset/Boss/Death/Stand/death 2_00079.webp" id="352_82bag"]
+[ext_resource type="Texture2D" uid="uid://cgkmxoia30ll1" path="res://asset/Boss/Death/Stand/death 2_00080.webp" id="353_faosf"]
+[ext_resource type="Texture2D" uid="uid://b4q6s5wpgpebl" path="res://asset/Boss/Death/Attack/Wave/Frame/warrior_skill5_frame7.webp" id="353_ns54e"]
+[ext_resource type="Texture2D" uid="uid://8ev6qm8vrc0h" path="res://asset/Boss/Death/Attack/Wave/Frame/warrior_skill5_frame8.webp" id="354_rrafo"]
+[ext_resource type="Texture2D" uid="uid://clgipctgenmb" path="res://asset/Boss/Death/Stand/death 2_00081.webp" id="354_vhhq3"]
+[ext_resource type="Texture2D" uid="uid://jhfmggw033ka" path="res://asset/Boss/Death/Stand/death 2_00082.webp" id="355_nntgb"]
+[ext_resource type="Texture2D" uid="uid://tqggbl5xywg2" path="res://asset/Boss/Death/Stand/death 2_00083.webp" id="356_6qro6"]
+[ext_resource type="Texture2D" uid="uid://trqxd1qx5uxp" path="res://asset/Boss/Death/Stand/death 2_00084.webp" id="357_mfqom"]
+[ext_resource type="Texture2D" uid="uid://i47jjd5aycv0" path="res://asset/Boss/Death/Stand/death 2_00085.webp" id="358_45k8e"]
+[ext_resource type="Texture2D" uid="uid://c5dfai6f7w5uf" path="res://asset/Boss/Death/Stand/death 2_00086.webp" id="359_5gauq"]
+[ext_resource type="Texture2D" uid="uid://calxg8lqb8t7f" path="res://asset/Boss/Death/Stand/death 2_00087.webp" id="360_e4etq"]
+[ext_resource type="Texture2D" uid="uid://c6tssyc48q5tp" path="res://asset/Boss/Death/Stand/death 2_00088.webp" id="361_xugnc"]
+[ext_resource type="Texture2D" uid="uid://odu2fypodl51" path="res://asset/Boss/Death/Stand/death 2_00089.webp" id="362_j0cxu"]
+[ext_resource type="Texture2D" uid="uid://k35kby80kaaf" path="res://asset/Boss/Death/Stand/death 2_00090.webp" id="363_kvhs1"]
+[ext_resource type="Texture2D" uid="uid://detxycmrbqrsr" path="res://asset/Boss/Death/Stand/death 2_00091.webp" id="364_d3i0p"]
+[ext_resource type="Texture2D" uid="uid://s8icdj6s6urw" path="res://asset/Boss/Death/Stand/death 2_00092.webp" id="365_maqfm"]
+[ext_resource type="Texture2D" uid="uid://be46fapsyw01u" path="res://asset/Boss/Death/Stand/death 2_00093.webp" id="366_48nog"]
+[ext_resource type="Texture2D" uid="uid://qtb3fdwam43v" path="res://asset/Boss/Death/Stand/death 2_00094.webp" id="367_14uwl"]
+[ext_resource type="Texture2D" uid="uid://ge3kskreo8wc" path="res://asset/Boss/Death/Stand/death 2_00095.webp" id="368_fi48s"]
+[ext_resource type="Texture2D" uid="uid://f5wxkvyiai2u" path="res://asset/Boss/Death/Stand/death 2_00096.webp" id="369_ouikj"]
+[ext_resource type="Texture2D" uid="uid://3ud7300mrbfy" path="res://asset/Boss/Death/Stand/death 2_00097.webp" id="370_q1eq8"]
+[ext_resource type="Texture2D" uid="uid://ub4f763t5ofp" path="res://asset/Boss/Death/Stand/death 2_00098.webp" id="371_yhkw5"]
+[ext_resource type="Texture2D" uid="uid://c3v2mrqsm18mn" path="res://asset/Boss/Death/Stand/death 2_00099.webp" id="372_4y7er"]
+[ext_resource type="Texture2D" uid="uid://debqpnsb3pqh4" path="res://asset/Boss/Death/Stand/death 2_00100.webp" id="373_sx5pd"]
+[ext_resource type="Texture2D" uid="uid://bxwpyowr01uxb" path="res://asset/Boss/Death/Stand/death 2_00101.webp" id="374_jb0pa"]
+[ext_resource type="Texture2D" uid="uid://qnodd0w2cye" path="res://asset/Boss/Death/Stand/death 2_00102.webp" id="375_fphka"]
+[ext_resource type="Texture2D" uid="uid://tpx8e3nq8syp" path="res://asset/Boss/Death/Stand/death 2_00103.webp" id="376_0xjs7"]
+[ext_resource type="Texture2D" uid="uid://b2kbr013k2p4g" path="res://asset/Boss/Death/Stand/death 2_00104.webp" id="377_fd62u"]
+[ext_resource type="Texture2D" uid="uid://3dh4m6gktlt" path="res://asset/Boss/Death/Stand/death 2_00105.webp" id="378_n7aqc"]
+[ext_resource type="Texture2D" uid="uid://du0p4grm68q2h" path="res://asset/Boss/Death/Stand/death 2_00106.webp" id="379_4a0ih"]
+[ext_resource type="Texture2D" uid="uid://nbbf53hpt0lg" path="res://asset/Boss/Death/Stand/death 2_00107.webp" id="380_i47i8"]
+[ext_resource type="Texture2D" uid="uid://dv2oe3g46he46" path="res://asset/Boss/Death/Stand/death 2_00108.webp" id="381_icgjq"]
+[ext_resource type="Texture2D" uid="uid://3kjs30u2pqbq" path="res://asset/Boss/Death/Stand/death 2_00109.webp" id="382_upub6"]
+[ext_resource type="Texture2D" uid="uid://bfaks2j34l84p" path="res://asset/Boss/Death/Stand/death 2_00110.webp" id="383_i843d"]
+[ext_resource type="Texture2D" uid="uid://b2txb6akirhlh" path="res://asset/Boss/Death/Stand/death 2_00111.webp" id="384_tg3a1"]
+[ext_resource type="Texture2D" uid="uid://b5t3lh0h4mrq2" path="res://asset/Boss/Death/Stand/death 2_00112.webp" id="385_nydfm"]
+[ext_resource type="Texture2D" uid="uid://bltgh45fkynoo" path="res://asset/Boss/Death/Stand/death 2_00113.webp" id="386_s4qt3"]
+[ext_resource type="Texture2D" uid="uid://cv437t0dj7lyv" path="res://asset/Boss/Death/Stand/death 2_00114.webp" id="387_jwdaq"]
+[ext_resource type="Texture2D" uid="uid://d8llmks23qv4" path="res://asset/Boss/Death/Stand/death 2_00115.webp" id="388_ltygq"]
+[ext_resource type="Texture2D" uid="uid://ha0qi0lrv1ae" path="res://asset/Boss/Death/Stand/death 2_00116.webp" id="389_sjse6"]
+[ext_resource type="Texture2D" uid="uid://cg6ricv3qr1je" path="res://asset/Boss/Death/Stand/death 2_00117.webp" id="390_tvbrd"]
+[ext_resource type="Script" uid="uid://clsoagbaaw7mi" path="res://Script/Boss/Death/hit.gd" id="391_e4bhh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rm2fl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_dmeo4")
+"texture": ExtResource("2_e4bhh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_q8t34")
+"texture": ExtResource("3_gp6y3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_6a2k8")
+"texture": ExtResource("4_h6qqw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_3h8pq")
+"texture": ExtResource("5_b6356")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_vs84t")
+"texture": ExtResource("6_03cit")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_iee8k")
+"texture": ExtResource("7_b203e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_hylyl")
+"texture": ExtResource("8_f8x2l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_e4jnw")
+"texture": ExtResource("9_7hdf8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_nn74k")
+"texture": ExtResource("10_mot3o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_2s7o8")
+"texture": ExtResource("11_hpvrr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_rjsbp")
+"texture": ExtResource("12_yytvl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_tim6h")
+"texture": ExtResource("13_6alwd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_nyqjw")
+"texture": ExtResource("14_p6lev")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_be1va")
+"texture": ExtResource("15_42ul0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_u4jtw")
+"texture": ExtResource("16_ld5p7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_j05d2")
+"texture": ExtResource("17_q3hdf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_kh5j8")
+"texture": ExtResource("18_a6m4d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_nacm6")
+"texture": ExtResource("19_ppvvm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_44er7")
+"texture": ExtResource("20_cqud1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_tpg7j")
+"texture": ExtResource("21_l1nev")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_4rfus")
+"texture": ExtResource("22_4ohgy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_gc2vr")
+"texture": ExtResource("23_80xte")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_cyhp6")
+"texture": ExtResource("24_4h813")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_18d65")
+"texture": ExtResource("25_440ai")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_w250e")
+"texture": ExtResource("26_bat0u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_k0ndi")
+"texture": ExtResource("27_8ejg0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_3db25")
+"texture": ExtResource("28_2f0wa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_eb8w0")
+"texture": ExtResource("29_pf1cm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_kh2ef")
+"texture": ExtResource("30_2dqj8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_uukh6")
+"texture": ExtResource("31_jnrsr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_04rhs")
+"texture": ExtResource("32_niika")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_8xeq3")
+"texture": ExtResource("33_mpjgg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_rjxdr")
+"texture": ExtResource("34_o0oeb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_54s0a")
+"texture": ExtResource("35_t2hu5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_oefre")
+"texture": ExtResource("36_yavab")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_xoj03")
+"texture": ExtResource("37_gudxk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_ena3n")
+"texture": ExtResource("38_wnpr4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_fbd1l")
+"texture": ExtResource("39_c5kkl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_48wo0")
+"texture": ExtResource("40_gby5u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_kkxr0")
+"texture": ExtResource("41_2ejvy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_dbevu")
+"texture": ExtResource("42_dw4id")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_1ni3i")
+"texture": ExtResource("43_ytp1y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_xa3h2")
+"texture": ExtResource("44_lrpnr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_hlk7h")
+"texture": ExtResource("45_y1hak")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_u6xtp")
+"texture": ExtResource("46_l2akv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_6pk1b")
+"texture": ExtResource("47_68wcw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_ciird")
+"texture": ExtResource("48_uchc0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_xfpt2")
+"texture": ExtResource("49_q1mn0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_15von")
+"texture": ExtResource("50_hrufa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_32yn8")
+"texture": ExtResource("51_apxri")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_23vbc")
+"texture": ExtResource("52_621hk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_07fkt")
+"texture": ExtResource("53_mcetv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_05ib7")
+"texture": ExtResource("54_2lofw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("54_y4e3k")
+"texture": ExtResource("55_qja5r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("55_cl51q")
+"texture": ExtResource("56_m8mac")
 }, {
 "duration": 1.0,
-"texture": ExtResource("56_vgp1q")
+"texture": ExtResource("57_ke4bv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("57_wyugn")
+"texture": ExtResource("58_jwsld")
 }, {
 "duration": 1.0,
-"texture": ExtResource("58_th01y")
+"texture": ExtResource("59_dehn8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("59_oqxk6")
+"texture": ExtResource("60_kn5sr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("60_kiacn")
+"texture": ExtResource("61_cy4yg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("61_afvv4")
+"texture": ExtResource("62_j1cy2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("62_4oodj")
+"texture": ExtResource("63_2ioqe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("63_ns54e")
+"texture": ExtResource("64_ojepo")
 }],
 "loop": false,
 "name": &"Attack1",
@@ -598,638 +553,358 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("64_rrafo")
+"texture": ExtResource("155_e4bhh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("65_by3ou")
+"texture": ExtResource("156_gp6y3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("66_bu153")
+"texture": ExtResource("157_h6qqw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("67_jr2a3")
+"texture": ExtResource("158_b6356")
 }, {
 "duration": 1.0,
-"texture": ExtResource("68_210iw")
+"texture": ExtResource("159_03cit")
 }, {
 "duration": 1.0,
-"texture": ExtResource("69_jxfx5")
+"texture": ExtResource("160_b203e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("70_1p571")
+"texture": ExtResource("161_f8x2l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("71_7b676")
+"texture": ExtResource("162_7hdf8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("72_ewyqq")
+"texture": ExtResource("163_mot3o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("73_xtthh")
+"texture": ExtResource("164_hpvrr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("74_0b8dn")
+"texture": ExtResource("165_yytvl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("75_erx8e")
+"texture": ExtResource("166_6alwd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("76_g5oxi")
+"texture": ExtResource("167_p6lev")
 }, {
 "duration": 1.0,
-"texture": ExtResource("77_or0jj")
+"texture": ExtResource("168_42ul0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("78_n65kr")
+"texture": ExtResource("169_ld5p7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("79_ssaoo")
+"texture": ExtResource("170_q3hdf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("80_1f8om")
+"texture": ExtResource("171_a6m4d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("81_kup5m")
+"texture": ExtResource("172_ppvvm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("82_34ulp")
+"texture": ExtResource("173_cqud1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("83_usnah")
+"texture": ExtResource("174_l1nev")
 }, {
 "duration": 1.0,
-"texture": ExtResource("84_i4bt8")
+"texture": ExtResource("175_4ohgy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("85_am3mx")
+"texture": ExtResource("176_80xte")
 }, {
 "duration": 1.0,
-"texture": ExtResource("86_jckvb")
+"texture": ExtResource("177_4h813")
 }, {
 "duration": 1.0,
-"texture": ExtResource("87_vxjj7")
+"texture": ExtResource("178_440ai")
 }, {
 "duration": 1.0,
-"texture": ExtResource("88_r1162")
+"texture": ExtResource("179_bat0u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("89_lcl78")
+"texture": ExtResource("180_8ejg0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("90_r5j36")
+"texture": ExtResource("181_2f0wa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("91_q08hq")
+"texture": ExtResource("182_pf1cm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("92_501iu")
+"texture": ExtResource("183_2dqj8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("93_6rdux")
+"texture": ExtResource("184_jnrsr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("94_3yu5y")
+"texture": ExtResource("185_niika")
 }, {
 "duration": 1.0,
-"texture": ExtResource("95_h175a")
+"texture": ExtResource("186_mpjgg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("96_xmiod")
+"texture": ExtResource("187_o0oeb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("97_k77hv")
+"texture": ExtResource("188_t2hu5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("98_1182o")
+"texture": ExtResource("189_yavab")
 }, {
 "duration": 1.0,
-"texture": ExtResource("99_6g0st")
+"texture": ExtResource("190_gudxk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("100_vfnha")
+"texture": ExtResource("191_wnpr4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("101_45oin")
+"texture": ExtResource("192_c5kkl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("102_e4bhh")
+"texture": ExtResource("193_gby5u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("103_gp6y3")
+"texture": ExtResource("194_2ejvy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("104_h6qqw")
+"texture": ExtResource("195_dw4id")
 }, {
 "duration": 1.0,
-"texture": ExtResource("105_b6356")
+"texture": ExtResource("196_ytp1y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("106_03cit")
+"texture": ExtResource("197_lrpnr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("107_b203e")
+"texture": ExtResource("198_y1hak")
 }, {
 "duration": 1.0,
-"texture": ExtResource("108_f8x2l")
-}],
-"loop": false,
-"name": &"Attack2",
-"speed": 24.0
+"texture": ExtResource("199_l2akv")
 }, {
-"frames": [{
 "duration": 1.0,
-"texture": ExtResource("109_7hdf8")
+"texture": ExtResource("200_68wcw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("110_mot3o")
+"texture": ExtResource("201_uchc0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("111_hpvrr")
+"texture": ExtResource("202_q1mn0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("112_yytvl")
+"texture": ExtResource("203_hrufa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("113_6alwd")
+"texture": ExtResource("204_apxri")
 }, {
 "duration": 1.0,
-"texture": ExtResource("114_p6lev")
+"texture": ExtResource("205_621hk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("115_42ul0")
+"texture": ExtResource("206_mcetv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("116_ld5p7")
+"texture": ExtResource("207_2lofw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("117_q3hdf")
+"texture": ExtResource("208_qja5r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("118_a6m4d")
+"texture": ExtResource("209_m8mac")
 }, {
 "duration": 1.0,
-"texture": ExtResource("119_ppvvm")
+"texture": ExtResource("210_ke4bv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("120_cqud1")
+"texture": ExtResource("211_jwsld")
 }, {
 "duration": 1.0,
-"texture": ExtResource("121_l1nev")
+"texture": ExtResource("212_dehn8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("122_4ohgy")
+"texture": ExtResource("213_kn5sr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("123_80xte")
+"texture": ExtResource("214_cy4yg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("124_4h813")
+"texture": ExtResource("215_j1cy2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("125_440ai")
+"texture": ExtResource("216_2ioqe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("126_bat0u")
+"texture": ExtResource("217_ojepo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("127_8ejg0")
+"texture": ExtResource("218_dgirp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("128_2f0wa")
+"texture": ExtResource("219_m50sv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("129_pf1cm")
+"texture": ExtResource("220_7y8m8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("130_2dqj8")
+"texture": ExtResource("221_chtr6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("131_jnrsr")
+"texture": ExtResource("222_m1bew")
 }, {
 "duration": 1.0,
-"texture": ExtResource("132_niika")
+"texture": ExtResource("223_tl1lm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("133_mpjgg")
+"texture": ExtResource("224_wgw8c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("134_o0oeb")
+"texture": ExtResource("225_xjh24")
 }, {
 "duration": 1.0,
-"texture": ExtResource("135_t2hu5")
+"texture": ExtResource("226_ugagt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("136_yavab")
+"texture": ExtResource("227_rd5dg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("137_gudxk")
+"texture": ExtResource("228_087px")
 }, {
 "duration": 1.0,
-"texture": ExtResource("138_wnpr4")
+"texture": ExtResource("229_astra")
 }, {
 "duration": 1.0,
-"texture": ExtResource("139_c5kkl")
+"texture": ExtResource("230_ic51i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("140_gby5u")
+"texture": ExtResource("231_lger7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("141_2ejvy")
+"texture": ExtResource("232_h1imk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("142_dw4id")
+"texture": ExtResource("233_l4uxk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("143_ytp1y")
+"texture": ExtResource("234_82bag")
 }, {
 "duration": 1.0,
-"texture": ExtResource("144_lrpnr")
+"texture": ExtResource("235_faosf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("145_y1hak")
+"texture": ExtResource("236_vhhq3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("146_l2akv")
+"texture": ExtResource("237_nntgb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("147_68wcw")
+"texture": ExtResource("238_6qro6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("148_uchc0")
+"texture": ExtResource("239_mfqom")
 }, {
 "duration": 1.0,
-"texture": ExtResource("149_q1mn0")
+"texture": ExtResource("240_45k8e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("150_hrufa")
+"texture": ExtResource("241_5gauq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("151_apxri")
+"texture": ExtResource("242_e4etq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("152_621hk")
+"texture": ExtResource("243_xugnc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("153_mcetv")
-}],
-"loop": false,
-"name": &"Attack3",
-"speed": 24.0
+"texture": ExtResource("244_j0cxu")
 }, {
-"frames": [{
 "duration": 1.0,
-"texture": ExtResource("155_cqud1")
+"texture": ExtResource("245_kvhs1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("156_l1nev")
+"texture": ExtResource("246_d3i0p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("157_4ohgy")
+"texture": ExtResource("247_maqfm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("158_80xte")
+"texture": ExtResource("248_48nog")
 }, {
 "duration": 1.0,
-"texture": ExtResource("159_4h813")
+"texture": ExtResource("249_14uwl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("160_440ai")
+"texture": ExtResource("250_fi48s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("161_bat0u")
+"texture": ExtResource("251_ouikj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("162_8ejg0")
+"texture": ExtResource("252_q1eq8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("163_2f0wa")
+"texture": ExtResource("253_yhkw5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("164_pf1cm")
+"texture": ExtResource("254_4y7er")
 }, {
 "duration": 1.0,
-"texture": ExtResource("165_2dqj8")
+"texture": ExtResource("255_sx5pd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("166_jnrsr")
+"texture": ExtResource("256_jb0pa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("167_niika")
+"texture": ExtResource("257_fphka")
 }, {
 "duration": 1.0,
-"texture": ExtResource("168_mpjgg")
+"texture": ExtResource("258_0xjs7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("169_o0oeb")
+"texture": ExtResource("259_fd62u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("170_t2hu5")
+"texture": ExtResource("260_n7aqc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("171_yavab")
+"texture": ExtResource("261_4a0ih")
 }, {
 "duration": 1.0,
-"texture": ExtResource("172_gudxk")
+"texture": ExtResource("262_i47i8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("173_wnpr4")
+"texture": ExtResource("263_icgjq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("174_c5kkl")
+"texture": ExtResource("264_upub6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("175_gby5u")
+"texture": ExtResource("265_i843d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("176_2ejvy")
+"texture": ExtResource("266_tg3a1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("177_dw4id")
+"texture": ExtResource("267_nydfm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("178_ytp1y")
+"texture": ExtResource("268_s4qt3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("179_lrpnr")
+"texture": ExtResource("269_jwdaq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("180_y1hak")
+"texture": ExtResource("270_ltygq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("181_l2akv")
+"texture": ExtResource("271_sjse6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("182_68wcw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("183_uchc0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("184_q1mn0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("185_hrufa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("186_apxri")
-}, {
-"duration": 1.0,
-"texture": ExtResource("187_621hk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("188_mcetv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("189_2lofw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("190_qja5r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("191_m8mac")
-}, {
-"duration": 1.0,
-"texture": ExtResource("192_ke4bv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("193_jwsld")
-}, {
-"duration": 1.0,
-"texture": ExtResource("194_dehn8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("195_kn5sr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("196_cy4yg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("197_j1cy2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("198_2ioqe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("199_ojepo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("200_dgirp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("201_m50sv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("202_7y8m8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("203_chtr6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("204_m1bew")
-}, {
-"duration": 1.0,
-"texture": ExtResource("205_tl1lm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("206_wgw8c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("207_xjh24")
-}, {
-"duration": 1.0,
-"texture": ExtResource("208_ugagt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("209_rd5dg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("210_087px")
-}, {
-"duration": 1.0,
-"texture": ExtResource("211_astra")
-}, {
-"duration": 1.0,
-"texture": ExtResource("212_ic51i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("213_lger7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("214_h1imk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("215_l4uxk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("216_82bag")
-}, {
-"duration": 1.0,
-"texture": ExtResource("217_faosf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("218_vhhq3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("219_nntgb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("220_6qro6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("221_mfqom")
-}, {
-"duration": 1.0,
-"texture": ExtResource("222_45k8e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("223_5gauq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("224_e4etq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("225_xugnc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("226_j0cxu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("227_kvhs1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("228_d3i0p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("229_maqfm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("230_48nog")
-}, {
-"duration": 1.0,
-"texture": ExtResource("231_14uwl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("232_fi48s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("233_ouikj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("234_q1eq8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("235_yhkw5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("236_4y7er")
-}, {
-"duration": 1.0,
-"texture": ExtResource("237_sx5pd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("238_jb0pa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("239_fphka")
-}, {
-"duration": 1.0,
-"texture": ExtResource("240_0xjs7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("241_fd62u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("242_n7aqc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("243_4a0ih")
-}, {
-"duration": 1.0,
-"texture": ExtResource("244_i47i8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("245_icgjq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("246_upub6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("247_i843d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("248_tg3a1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("249_nydfm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("250_s4qt3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("251_jwdaq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("252_ltygq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("253_sjse6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("254_tvbrd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("255_0e31h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("256_6kux1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("257_wet8w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("258_3r8xn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("259_0541r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("260_tjpql")
-}, {
-"duration": 1.0,
-"texture": ExtResource("261_nsum7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("262_ys5vl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("263_macta")
-}, {
-"duration": 1.0,
-"texture": ExtResource("264_d41iq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("265_rqbjk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("266_hulvw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("267_ymfkm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("268_ft7sj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("269_qmsss")
-}, {
-"duration": 1.0,
-"texture": ExtResource("270_mn7la")
-}, {
-"duration": 1.0,
-"texture": ExtResource("271_gte62")
-}, {
-"duration": 1.0,
-"texture": ExtResource("272_8dp7a")
+"texture": ExtResource("272_tvbrd")
 }],
 "loop": false,
 "name": &"Attack4",
@@ -1237,358 +912,498 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("154_2lofw")
+"texture": ExtResource("183_wyugn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("155_qja5r")
+"texture": ExtResource("184_th01y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("156_m8mac")
+"texture": ExtResource("185_oqxk6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("157_ke4bv")
+"texture": ExtResource("186_kiacn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("158_jwsld")
+"texture": ExtResource("187_afvv4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("159_dehn8")
+"texture": ExtResource("188_4oodj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("160_kn5sr")
+"texture": ExtResource("189_ns54e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("161_cy4yg")
+"texture": ExtResource("190_rrafo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("162_j1cy2")
+"texture": ExtResource("191_by3ou")
 }, {
 "duration": 1.0,
-"texture": ExtResource("163_2ioqe")
+"texture": ExtResource("192_bu153")
 }, {
 "duration": 1.0,
-"texture": ExtResource("164_ojepo")
+"texture": ExtResource("193_jr2a3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("165_dgirp")
+"texture": ExtResource("194_210iw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("166_m50sv")
+"texture": ExtResource("195_jxfx5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("167_7y8m8")
+"texture": ExtResource("196_1p571")
 }, {
 "duration": 1.0,
-"texture": ExtResource("168_chtr6")
+"texture": ExtResource("197_7b676")
 }, {
 "duration": 1.0,
-"texture": ExtResource("169_m1bew")
+"texture": ExtResource("198_ewyqq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("170_tl1lm")
+"texture": ExtResource("199_xtthh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("171_wgw8c")
+"texture": ExtResource("200_0b8dn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("172_xjh24")
+"texture": ExtResource("201_erx8e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("173_ugagt")
+"texture": ExtResource("202_g5oxi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("174_rd5dg")
+"texture": ExtResource("203_or0jj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("175_087px")
+"texture": ExtResource("204_n65kr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("176_astra")
+"texture": ExtResource("205_ssaoo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("177_ic51i")
+"texture": ExtResource("206_1f8om")
 }, {
 "duration": 1.0,
-"texture": ExtResource("178_lger7")
+"texture": ExtResource("207_kup5m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("179_h1imk")
+"texture": ExtResource("208_34ulp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("180_l4uxk")
+"texture": ExtResource("209_usnah")
 }, {
 "duration": 1.0,
-"texture": ExtResource("181_82bag")
+"texture": ExtResource("210_i4bt8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("182_faosf")
+"texture": ExtResource("211_am3mx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("183_vhhq3")
+"texture": ExtResource("212_jckvb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("184_nntgb")
+"texture": ExtResource("213_vxjj7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("185_6qro6")
+"texture": ExtResource("214_r1162")
 }, {
 "duration": 1.0,
-"texture": ExtResource("186_mfqom")
+"texture": ExtResource("215_lcl78")
 }, {
 "duration": 1.0,
-"texture": ExtResource("187_45k8e")
+"texture": ExtResource("216_r5j36")
 }, {
 "duration": 1.0,
-"texture": ExtResource("188_5gauq")
+"texture": ExtResource("217_q08hq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("189_e4etq")
+"texture": ExtResource("218_501iu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("190_xugnc")
+"texture": ExtResource("219_6rdux")
 }, {
 "duration": 1.0,
-"texture": ExtResource("191_j0cxu")
+"texture": ExtResource("220_3yu5y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("192_kvhs1")
+"texture": ExtResource("221_h175a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("193_d3i0p")
+"texture": ExtResource("222_xmiod")
 }, {
 "duration": 1.0,
-"texture": ExtResource("194_maqfm")
+"texture": ExtResource("223_k77hv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("195_48nog")
+"texture": ExtResource("224_1182o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("196_14uwl")
+"texture": ExtResource("225_6g0st")
 }, {
 "duration": 1.0,
-"texture": ExtResource("197_fi48s")
+"texture": ExtResource("226_vfnha")
 }, {
 "duration": 1.0,
-"texture": ExtResource("198_ouikj")
+"texture": ExtResource("227_45oin")
+}],
+"loop": false,
+"name": &"AttackWhole",
+"speed": 24.0
 }, {
+"frames": [{
 "duration": 1.0,
-"texture": ExtResource("199_q1eq8")
+"texture": ExtResource("273_e4bhh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("200_yhkw5")
+"texture": ExtResource("274_gp6y3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("201_4y7er")
+"texture": ExtResource("275_h6qqw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("202_sx5pd")
+"texture": ExtResource("276_b6356")
 }, {
 "duration": 1.0,
-"texture": ExtResource("203_jb0pa")
+"texture": ExtResource("277_03cit")
 }, {
 "duration": 1.0,
-"texture": ExtResource("204_fphka")
+"texture": ExtResource("278_b203e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("205_0xjs7")
+"texture": ExtResource("279_f8x2l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("206_fd62u")
+"texture": ExtResource("280_7hdf8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("207_n7aqc")
+"texture": ExtResource("281_mot3o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("208_4a0ih")
+"texture": ExtResource("282_hpvrr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("209_i47i8")
+"texture": ExtResource("283_yytvl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("210_icgjq")
+"texture": ExtResource("284_6alwd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("211_upub6")
+"texture": ExtResource("285_p6lev")
 }, {
 "duration": 1.0,
-"texture": ExtResource("212_i843d")
+"texture": ExtResource("286_42ul0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("213_tg3a1")
+"texture": ExtResource("287_ld5p7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("214_nydfm")
+"texture": ExtResource("288_q3hdf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("215_s4qt3")
+"texture": ExtResource("289_a6m4d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("216_jwdaq")
+"texture": ExtResource("290_ppvvm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("217_ltygq")
+"texture": ExtResource("291_cqud1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("218_sjse6")
+"texture": ExtResource("292_l1nev")
 }, {
 "duration": 1.0,
-"texture": ExtResource("219_tvbrd")
+"texture": ExtResource("293_4ohgy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("220_0e31h")
+"texture": ExtResource("294_80xte")
 }, {
 "duration": 1.0,
-"texture": ExtResource("221_6kux1")
+"texture": ExtResource("295_4h813")
 }, {
 "duration": 1.0,
-"texture": ExtResource("222_wet8w")
+"texture": ExtResource("296_440ai")
 }, {
 "duration": 1.0,
-"texture": ExtResource("223_3r8xn")
+"texture": ExtResource("297_bat0u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("224_0541r")
+"texture": ExtResource("298_8ejg0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("225_tjpql")
+"texture": ExtResource("299_2f0wa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("226_nsum7")
+"texture": ExtResource("300_pf1cm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("227_ys5vl")
+"texture": ExtResource("301_2dqj8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("228_macta")
+"texture": ExtResource("302_jnrsr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("229_d41iq")
+"texture": ExtResource("303_niika")
 }, {
 "duration": 1.0,
-"texture": ExtResource("230_rqbjk")
+"texture": ExtResource("304_mpjgg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("231_hulvw")
+"texture": ExtResource("305_o0oeb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("232_ymfkm")
+"texture": ExtResource("306_t2hu5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("233_ft7sj")
+"texture": ExtResource("307_yavab")
 }, {
 "duration": 1.0,
-"texture": ExtResource("234_qmsss")
+"texture": ExtResource("308_gudxk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("235_mn7la")
+"texture": ExtResource("309_wnpr4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("236_gte62")
+"texture": ExtResource("310_c5kkl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("237_8dp7a")
+"texture": ExtResource("311_gby5u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("238_ypxvj")
+"texture": ExtResource("312_2ejvy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("239_8yooi")
+"texture": ExtResource("313_dw4id")
 }, {
 "duration": 1.0,
-"texture": ExtResource("240_r52rn")
+"texture": ExtResource("314_ytp1y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("241_fv43x")
+"texture": ExtResource("315_lrpnr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("242_updsk")
+"texture": ExtResource("316_y1hak")
 }, {
 "duration": 1.0,
-"texture": ExtResource("243_ff0m0")
+"texture": ExtResource("317_l2akv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("244_0q6b7")
+"texture": ExtResource("318_68wcw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("245_jay3s")
+"texture": ExtResource("319_uchc0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("246_3htsp")
+"texture": ExtResource("320_q1mn0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("247_s1fcn")
+"texture": ExtResource("321_hrufa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("248_t5jy8")
+"texture": ExtResource("322_apxri")
 }, {
 "duration": 1.0,
-"texture": ExtResource("249_8v045")
+"texture": ExtResource("323_621hk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("250_go8kj")
+"texture": ExtResource("324_mcetv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("251_jvukl")
+"texture": ExtResource("325_2lofw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("252_wymjd")
+"texture": ExtResource("326_qja5r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("253_oetix")
+"texture": ExtResource("327_m8mac")
 }, {
 "duration": 1.0,
-"texture": ExtResource("254_6rnhr")
+"texture": ExtResource("328_ke4bv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("255_4qutd")
+"texture": ExtResource("329_jwsld")
 }, {
 "duration": 1.0,
-"texture": ExtResource("256_atb6r")
+"texture": ExtResource("330_dehn8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("257_4wq7h")
+"texture": ExtResource("331_kn5sr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("258_blcoa")
+"texture": ExtResource("332_cy4yg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("259_m28nb")
+"texture": ExtResource("333_j1cy2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("260_du5jl")
+"texture": ExtResource("334_2ioqe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("261_tpk2a")
+"texture": ExtResource("335_ojepo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("262_0jdha")
+"texture": ExtResource("336_dgirp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("263_8wjr6")
+"texture": ExtResource("337_m50sv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("264_vqqu7")
+"texture": ExtResource("338_7y8m8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("265_ciar7")
+"texture": ExtResource("339_chtr6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("266_fv7ar")
+"texture": ExtResource("340_m1bew")
 }, {
 "duration": 1.0,
-"texture": ExtResource("267_lkor8")
+"texture": ExtResource("341_tl1lm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("268_5hv5o")
+"texture": ExtResource("342_wgw8c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("269_k6ybs")
+"texture": ExtResource("343_xjh24")
 }, {
 "duration": 1.0,
-"texture": ExtResource("270_4wv7o")
+"texture": ExtResource("344_ugagt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("271_4poet")
+"texture": ExtResource("345_rd5dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_087px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_astra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_ic51i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_lger7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_h1imk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_l4uxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_82bag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_faosf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_vhhq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_nntgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_6qro6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_mfqom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_45k8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_5gauq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_e4etq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_xugnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_j0cxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_kvhs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_d3i0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("365_maqfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("366_48nog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_14uwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_fi48s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_ouikj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("370_q1eq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("371_yhkw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("372_4y7er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("373_sx5pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("374_jb0pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("375_fphka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("376_0xjs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("377_fd62u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("378_n7aqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("379_4a0ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("380_i47i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("381_icgjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("382_upub6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("383_i843d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("384_tg3a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("385_nydfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("386_s4qt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("387_jwdaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("388_ltygq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("389_sjse6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("390_tvbrd")
 }],
 "loop": true,
 "name": &"Idle",
@@ -1614,31 +1429,31 @@ size = Vector2(2178, 2018)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("291_cxyja")
+"texture": ExtResource("347_wyugn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("292_6mx24")
+"texture": ExtResource("348_th01y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("293_3qw65")
+"texture": ExtResource("349_oqxk6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("294_iuy7b")
+"texture": ExtResource("350_kiacn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("295_hk7le")
+"texture": ExtResource("351_afvv4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("296_fpat5")
+"texture": ExtResource("352_4oodj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("297_pgeon")
+"texture": ExtResource("353_ns54e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("298_u4ikh")
+"texture": ExtResource("354_rrafo")
 }],
 "loop": false,
-"name": &"Attack2",
+"name": &"AttackWhole",
 "speed": 5.0
 }]
 
@@ -1653,7 +1468,7 @@ script = ExtResource("1_q8t34")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Enemy"]]
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_rm2fl")
-animation = &"Idle"
+animation = &"AttackWhole"
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-34.5, 4.5)
@@ -1683,12 +1498,10 @@ shape = SubResource("RectangleShape2D_cqud1")
 disabled = true
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Hit" groups=["attackByBoss"]]
-visible = false
 position = Vector2(-4075, 27)
 scale = Vector2(37.4969, 37.4969)
 sprite_frames = SubResource("SpriteFrames_wg0mq")
-animation = &"Attack2"
-frame_progress = 0.28389
+animation = &"AttackWhole"
 
 [node name="HitArea" type="Area2D" parent="."]
 

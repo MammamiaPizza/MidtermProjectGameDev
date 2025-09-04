@@ -4,8 +4,6 @@ var merge : bool
 
 var lifemerge = preload("res://Scene/Boss/Life.tscn").instantiate()
 
-var hp = 1000
-
 var plus = false
 var cameranew = Camera2D.new()
 

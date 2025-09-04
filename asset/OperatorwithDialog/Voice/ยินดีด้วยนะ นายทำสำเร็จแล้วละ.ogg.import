@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d13q7q6qlbryp"
+path="res://.godot/imported/ยินดีด้วยนะ นายทำสำเร็จแล้วละ.ogg-2122dc3d8875ad4b326ceebffc3a3499.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/ยินดีด้วยนะ นายทำสำเร็จแล้วละ.ogg"
+dest_files=["res://.godot/imported/ยินดีด้วยนะ นายทำสำเร็จแล้วละ.ogg-2122dc3d8875ad4b326ceebffc3a3499.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

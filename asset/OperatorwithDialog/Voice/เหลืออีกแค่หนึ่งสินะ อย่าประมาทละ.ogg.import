@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://byidr8fndicr7"
+path="res://.godot/imported/เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ.ogg-817240b67a2e44dc53b9570a205ce4f4.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ.ogg"
+dest_files=["res://.godot/imported/เหลืออีกแค่หนึ่งสินะ อย่าประมาทละ.ogg-817240b67a2e44dc53b9570a205ce4f4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

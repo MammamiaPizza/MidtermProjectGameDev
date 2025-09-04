@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ci11l8vm451rl"
+path="res://.godot/imported/เดี๋ยวฉันจะอธิบายความสามารถของพวกมันให้ฟัง จำให้ดีละ.ogg-044557b10c001fc36d17459b6fc6aa3e.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/เดี๋ยวฉันจะอธิบายความสามารถของพวกมันให้ฟัง จำให้ดีละ.ogg"
+dest_files=["res://.godot/imported/เดี๋ยวฉันจะอธิบายความสามารถของพวกมันให้ฟัง จำให้ดีละ.ogg-044557b10c001fc36d17459b6fc6aa3e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

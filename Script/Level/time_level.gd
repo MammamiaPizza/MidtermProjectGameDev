@@ -4,6 +4,6 @@ extends Node2D
 	#$AudioStreamPlayer2D.
 
 
+
 func _on_player_death() -> void:
-	$UI/Interface/CanvasLayer.hide()	
-	
+	$UI/Interface/CanvasLayer.hide()

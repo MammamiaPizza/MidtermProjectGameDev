@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ddtd77mopsqlr"
+path="res://.godot/imported/ดังนั้น ภารกิจของนายคือการลอบเข้าไปในที่พำนักของเหล่าเทพ และสังหารพวกมันทีละตน.ogg-9f229e40cdfbfbf0fb3eb9133f414eb3.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/ดังนั้น ภารกิจของนายคือการลอบเข้าไปในที่พำนักของเหล่าเทพ และสังหารพวกมันทีละตน.ogg"
+dest_files=["res://.godot/imported/ดังนั้น ภารกิจของนายคือการลอบเข้าไปในที่พำนักของเหล่าเทพ และสังหารพวกมันทีละตน.ogg-9f229e40cdfbfbf0fb3eb9133f414eb3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfoue6bnd3kyq"
+path="res://.godot/imported/ในที่สุดต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย.ogg-956d9a77fd431b8768597a5447b5d8cf.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/OperatorwithDialog/Voice/ในที่สุดต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย.ogg"
+dest_files=["res://.godot/imported/ในที่สุดต่อสายได้สักที ฉันจะส่งอุปกรณ์ช่วยเหลือไปแล้วนะช่วยรอสักหน่อย.ogg-956d9a77fd431b8768597a5447b5d8cf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

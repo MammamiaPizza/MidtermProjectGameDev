@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwf333l2m4gu0"]
 
-[ext_resource type="FontFile" uid="uid://dkjc0aks337d4" path="res://asset/Font/Darksoul.otf" id="1_fqr87"]
+[ext_resource type="FontFile" uid="uid://dkjc0aks337d4" path="res://asset/UI/Font/Darksoul.otf" id="1_fqr87"]
 
 [node name="Lose" type="Control"]
 layout_mode = 3
