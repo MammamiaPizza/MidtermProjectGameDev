@@ -1166,7 +1166,8 @@ script = ExtResource("1_kp0jm")
 [node name="body" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_aliwu")
 animation = &"warp"
-frame_progress = 0.12433
+frame = 175
+frame_progress = 1.0
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-34.5, 4.5)
