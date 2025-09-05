@@ -367,7 +367,7 @@ script = ExtResource("1_5otyx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_24ubn")
 animation = &"idle"
-frame_progress = 0.970105
+frame_progress = 0.796574
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["Enemy"]]
 position = Vector2(-6.5, 18.5)

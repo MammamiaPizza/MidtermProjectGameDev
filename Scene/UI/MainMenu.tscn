@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://is7bjg8k1sh3" path="res://Script/UI/main_menu.gd" id="1_d8rp3"]
 [ext_resource type="FontFile" uid="uid://dkjc0aks337d4" path="res://asset/UI/Font/Darksoul.otf" id="2_d8rp3"]
-[ext_resource type="VideoStream" uid="uid://bb12jbfwaduu1" path="res://asset/UI/MainMenu/Aincrad-_Sword-Art-Online_-Unreal-Engine-TheGabmeister-_1080p_-h264_-youtube_.ogv" id="2_sqy52"]
+[ext_resource type="VideoStream" uid="uid://b5v7x842lieo4" path="res://asset/UI/MainMenu/ด.ogv" id="3_d8rp3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -63,7 +63,7 @@ alignment = 0
 layout_mode = 0
 offset_right = 1284.0
 offset_bottom = 724.0
-stream = ExtResource("2_sqy52")
+stream = ExtResource("3_d8rp3")
 volume_db = -13.87
 autoplay = true
 expand = true
