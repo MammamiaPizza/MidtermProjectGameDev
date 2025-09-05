@@ -2,7 +2,7 @@
 
 ## วิชา Computer Game Development CP352203
 
-ลิ้ง Demo: 
+ลิ้ง Demo: https://mammamiapizza.itch.io/forth-impact
 
 
 ## สมาชิก
